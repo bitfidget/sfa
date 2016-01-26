@@ -4,11 +4,18 @@
   contents: 
   - one
   - two
+  - three
 
 - name: Tim Rawlings
   github: Head of Training Product Development
   company: Skills for Australia
+  contents: 
+  - one
+  - two
 
 - name: Philip le Feuvre
   github: Head of Engagement
   company: Skills for Australia
+  contents: 
+  - one
+  - two

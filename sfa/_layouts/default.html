@@ -18,7 +18,7 @@
 
     {% include header.html %}
 
-    <!-- <div class="page-content">
+    <div class="page-content">
       <div class="wrapper">
         {{ content }}
 
@@ -31,7 +31,7 @@
             <h3>{{ member.company  }}</h3>
             <ul>
               {% for item in member.contents %}
-              <li>{{ item }}</li>
+              <p>{{ item }}</p>
               {% endfor %}
             </ul>
           </section>
@@ -47,12 +47,16 @@
         </div>
 
       </div>
-    </div> -->
+    </div>
 
     <div class="page-content">
 
       <div class="container">
-
+        <div class="row">
+          <div class="jumbotron">
+            {% include content-welcome.html %}
+          </div>
+        </div>
 
         {% include content.html %}
 
