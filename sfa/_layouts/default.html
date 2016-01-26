@@ -10,6 +10,25 @@
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
+
+
+        <div>
+        {% for member in site.data.team %}
+          <section>
+            <h1>{{ member.name }}</h1>
+            <h2>{{ member.position }}</h2>
+            <h3>{{ member.company  }}</h3>
+            <ul>
+              {% for item in member.contents %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </section>
+        {% endfor %}
+        </div>
+
+
+
       </div>
     </div>
 
