@@ -5,9 +5,20 @@
 
   <body>
 
+    <!-- <strong>Lorem ipsum title</strong>
+
+    <nav>
+      <ul>
+        <li><a href="">Nav button 1</a></li>
+        <li><a href="">Nav button 2</a></li>
+        <li><a href="">Nav button 3</a></li>
+        <li><a href="">Nav button 4</a></li>
+      </ul>
+    </nav> -->
+
     {% include header.html %}
 
-    <div class="page-content">
+    <!-- <div class="page-content">
       <div class="wrapper">
         {{ content }}
 
@@ -29,7 +40,34 @@
 
 
 
+
+        
+        <div class="jumbotron">
+          <p>LOOOOOREEEMEMEM IPISUSMMM</p>
+        </div>
+
       </div>
+    </div> -->
+
+    <div class="page-content">
+
+      <div class="container">
+
+
+        {% include content.html %}
+
+        {% include content.html %}
+
+        {% include carousel.html %}
+
+        {% include our_team.html %}
+
+        {% include content.html %}
+
+        {% include content.html %}
+
+      </div>
+
     </div>
 
     {% include footer.html %}
