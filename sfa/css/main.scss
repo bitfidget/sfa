@@ -2,8 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
+/*@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";*/
 @charset "utf-8";
 
 // Our variables
@@ -12,7 +11,7 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     0px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -23,10 +22,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    960px;
+$content-width:    1170px;
 
-$on-palm:          960px;
-$on-laptop:        960px;
+$on-palm:          1170px;
+$on-laptop:        1170px;
 
 
 
