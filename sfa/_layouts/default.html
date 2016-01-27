@@ -70,7 +70,7 @@
       </div>
     </div>
 
-      <div class="row" id="carousel">
+      <!-- <div class="row" id="carousel">
         {% include industries.html %}
       </div>
 
@@ -80,12 +80,12 @@
 
       <div class="row" id="links">
         {% include content-links.html %}
-      </div> -->
+      </div>
 
 
       <div class="row" >
         {% include industries.html %}
-      </div>
+      </div> -->
 
     </div>
 
@@ -95,7 +95,58 @@
       </div>
     </div>
 
-    {% include footer.html %}
+    <div class="wrapper pad20x">
+      <h2>Subscribe to our newsletter for industry updates</h2>
+
+      <p>We will send you a free copy of relevant thought leadership if you sign up to receive news, event updates and alerts about new content of interest to you.</p>
+
+
+      <section>
+        <form>
+
+          <input type="text" name="firstName" placeholder="First name">
+          <input type="text" name="lastName" placeholder="Last name">
+
+          <ul class="checkbox-list clearfix">
+            <li>
+              <input type="checkbox" />
+              <label>Business Services</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              <label>Information and Communications Technology</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              <label>Financial Services</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              <label>Cultural and Related Industries</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              <label>Education</label>
+            </li>
+            <li>
+              <input type="checkbox">
+              <label>Printing and Graphics</label>
+            </li>
+          </ul>
+
+          <input type="text" name="email" placeholder="Email address" />
+          <!-- <input type="submit" value="SUBSCRIBE"> -->
+          <div class="pad20x">
+            <a href="#" class="button">SUBSCRIBE</a>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="bg-footer clearfix">
+      {% include footer.html %}
+    </div>
+    
 
   </body>
 
