@@ -38,9 +38,17 @@
       </div>
     </div>
 
+    <div id="tagline">
+      <div class="wrapper">
+        <p>Skills for Australia - Putting employers at the heart of Australias qualification and training system</p>
+      </div>
+    </div>
+
     <div class="bg-image" id="welcome">
-      <h1 class="wrapper">Welcome to<br>
-      PwC’s Skills for Australia!</h1>
+      <div class="wrapper">
+        <h1>Welcome to<br>
+        PwC’s Skills for Australia!</h1>
+      </div>
       <div class="bg-dark-trans">
         <div class="wrapper clearfix">
           <p>Our mission is to put employers at the heart of Australia’s qualifications and training system.  We will do this by working with industry and business across Australia and identify the skills our economy needs to thrive and grow in the future.</p>
@@ -51,21 +59,11 @@
 
     <div class="wrapper pad20x" id="industries">
       <h2>Skills for Australia is the Skills Service Organisation (SSO) for the following sectors:</h2>
-
-      <section>
-        <ul class="sector-gallery clearfix">
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-        </ul>
-      </section>
+      {% include industries.html %}  
     </div>
 
     <div class="bg-image" id="what-we-do">
-      <div class="wrapper pad20x">
+      <div class="wrapper clearfix">
           {% include content-what-we-do.html %}
       </div>
     </div>
@@ -95,7 +93,11 @@
       </div>
     </div>
 
-    <div class="wrapper pad20x">
+    <div class="wrapper clearfix" id="team">
+      {% include team.html %}
+    </div>
+
+    <div class="wrapper pad20x clearfix">
       <h2>Subscribe to our newsletter for industry updates</h2>
 
       <p>We will send you a free copy of relevant thought leadership if you sign up to receive news, event updates and alerts about new content of interest to you.</p>

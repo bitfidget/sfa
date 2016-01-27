@@ -6,8 +6,14 @@ window.onload = function() {
 		$('.' + event.target.dataset.modifies).toggleClass('active');
 	});
 
+	var $squares = $('.js-square');
+
+	$.each($squares, function(i,v) {
+		$(v).outerHeight($(v).outerWidth());
+	});
 
 	initCarousel();
+	initAccordion();
 
 };
 
@@ -21,6 +27,57 @@ var scrollTo = function(elem, space) {
 		$('.navigation-main').removeClass('active')
 	}
 };
+
+
+// accordion content
+var initAccordion = function() {
+
+	var $accordions = $('.js-a');
+
+	$accordions.on('click touch', function(i,v) {
+		
+		var target = ('mod-' + this.dataset.modifies);
+		var elem = $('.' + target);
+		if (elem.hasClass('open')) {
+			elem.removeClass('open').fadeOut();
+		} else {
+			$('.open').removeClass('open').fadeOut();
+			elem.fadeIn().addClass('open');
+		}
+	});
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// everything you see below you is sadly wasted codez :(
+
 
 // change any style property
 var updateStyle = function(selectorText, style, value) {

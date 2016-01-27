@@ -1,12 +1,16 @@
-<div class="js-carousel-container js-carousel-01" data-name="js-carousel-01">
+<ul class="js-a-group">
 	{% for industry in site.data.industries %}
-	<div class="js-carousel-section js-carousel-01">
-		<h1>{{ industry.name }}</h1>
-		<h2>{{ industry.chair }}</h2>
-		<h3>{{ industry.packages  }}</h3>
-			{% for item in industry.contents %}
+	<li data-modifies="{{ industry.icon }}" class="js-a">
+		<i class="fa {{ industry.icon }} industry"></i>
+		<i class="fa fa-chevron-right arrow"></i>
+		<h2>{{ industry.name }}</h2>
+	</li>
+	<li class="accordion-content mod-{{ industry.icon }}">
+		{{ industry.chair }}
+		{{ industry.packages }}
+		{% for item in industry.contents %}
 			<p>{{ item }}</p>
-			{% endfor %}
-	</div>
+		{% endfor %}
+	</li>
 	{% endfor %}
-</div>
+</ul>
