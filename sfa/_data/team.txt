@@ -1,0 +1,39 @@
+- name: Sara Caplan
+  position: CEO
+  company: Skills for Australia
+  contents: 
+  - 'Sara is CEO of PwC''s Skills for Australia Skills Service Organisation.'
+  - 'She has been with PwC Australia for a year, based in Sydney, having spent 6 years with PwC in the UK.  Sara leads PwC Consulting''s work on skills, vocational education and employment.'
+	- 'She has been a professional consulting leader since 2001 and prior to this spent 10 years in delivery and senior management roles in the Further Education and Skills sector, so has over 25 years'' experience in Vocational Education, training and skills.'
+	- 'Her recent work has focused on supporting government in delivering policy outcomes: designing and implementing innovative solutions to government priorities, including transforming skills systems, creating new vocational routes to professional careers and creating an environment for economic growth. She has worked with education departments, both Federal and state, and with a range of TAFEs and private RTOs in Australia.'
+	- 'In 2012 Sara was appointed by The Department for Business, Innovation and Skills (BIS) in the UK as an Employer Ambassador for Higher Apprenticeships. She was a member of the HE Commission and the Parliamentary Group on Skills. She chaired the Professional and Business Services Council''s Skills Taskforce, working with BIS and other employers on delivering the Industrial Strategy, and was a member of the London First Skills and Employment Board.  In 2013, Sara and her team won the UK Management Consultancies Association People Award for their work on Apprenticeships.'
+
+- name: Tim Rawlings
+  position: Head of Training Product Development
+  company: Skills for Australia
+  contents: 
+  - 'Tim is the Head of Training Product Development for Skills for Australia and is a Senior Manager in PwC''s Education team. Tim re-joined the organisation 18 months ago after two years in the Queensland Government as Senior Policy Adviser to the Minister for Education, Training and Employment. Prior to that Tim was with PwC''s Dubai and Melbourne offices. Tim PwC experience includes assisting Registered Training Organisations with quality, student experience and compliance matters.'
+	- 'Tim''s experience in Government included responsibility for the whole of sector review of Vocational Education and Training in Queensland (Skills and Training Taskforce) and the implementation of the Taskforce''s recommendations including the transition to full contestability of public training investment, the transition to an industry led advisory commission, the transition of TAFE to a statutory body and the separation of TAFE assets from the delivery of training. Tim has international experience on projects in Saudi Arabia and the United Arab Emirates including economic analysis, public policy and improving the efficiency and effectiveness of public sector entities.'
+
+- name: Philip le Feuvre
+  position: Head of Engagement
+  company: Skills for Australia
+  contents: 
+  - 'Philip is Head of Engagement in PwC''s Skills Reform Unit, responsible for interaction with the wide range of stakeholders who are needed to inform and shape training products. Philip specialises in education policy reform and stakeholder management, having worked on a number of high profile, large-scale initiatives for government, both in Australia and internationally.'
+	- 'In the UK he developed and implemented, over several years, a large-scale and innovative response to the issues of skills gaps in the professional sector and particularly small businesses. This required engagement with hundreds of training providers, employers and students. In Australia Philip has helped the Victorian Vocational Education and Training (VET) Funding Review to develop recommendations aimed at delivering a stable VET funding system that achieves better outcomes for students and employers. He has also worked with a wide range of training providers to better track and manage their performance.'
+	- 'Prior to working at PwC, Philip was Primary School teacher at two schools in the UK. After leaving teaching, he became a school Governor at two schools in London and he currently volunteers as a leadership coach for secondary school teacher.'
+
+- name: Kasia Piotrowski
+  position: Head of Operations
+  company: Skills for Australia
+  contents:
+  - 'As Head of Operations, Kasia will be responsible for  managing and coordinating the day-to-day operations, activities and deliverables of the SSO and the team. This includes controlling the governance, reporting, risk and issue management, schedule management and financial management processes and controls of the SSO.'
+	- 'Kasia has several years'' experience working across PwC''s Consulting and Assurance practices to deliver portfolio and program management, business continuity management and assurance engagements. Her work specialises in the areas of establishment of Corporate Program Management Offices, program management support and delivery and program assurance reviews.  Kasia has been involved in a number of large scale Federal and State Government transformation programs, and has a strong focus on maintaining excellence in program  delivery, making pragmatic recommendations to uplift program management capability and restore confidence in the ability of programs to deliver objectives on time and budget.'
+
+- name: Iain Bain
+  position: Head of Industry Intelligence
+  company: Skills for Australia
+  contents:
+  - 'Iain is passionate about supporting Australia''s continued prosperity through economic development and reform. He works extensively to develop and communicate the economic and demographic principles that underpin economic analysis and strategy. Iain is an experienced economist, leading PwC''s Tax Reform Analysis Team and CGE modelling and has worked heavily in developing analysis for clients, internal thought leadership and communications around the case for comprehensive tax reform.'
+	- 'Iain is experienced in bringing these economic principles into developing labour market assessments, workforce strategy and skills needs, including for: VET reform; education and productivity policies; skills gaps; and workforce strategies.'
+	- 'He is intimately familiar with financial and economic analysis, having developed projections for clients including: NSW Premier and Cabinet, National Australia Bank, Mitsubishi, Crown, Qantas, Amalgamated Holdings, Actew, Origin Energy, Defence, Parliamentary Budget Office, Department of Infrastructure and the Abu Dhabi Department Economic Development.'
