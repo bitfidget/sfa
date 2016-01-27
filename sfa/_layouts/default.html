@@ -18,7 +18,7 @@
 
     {% include header.html %}
 
-    <div class="page-content">
+    <!-- <div class="page-content">
       <div class="wrapper">
         {{ content }}
 
@@ -37,38 +37,31 @@
           </section>
         {% endfor %}
         </div>
-
-
-
-
-        
-        <div class="jumbotron">
-          <p>LOOOOOREEEMEMEM IPISUSMMM</p>
-        </div>
-
       </div>
-    </div>
+    </div> -->
 
     <div class="page-content">
 
       <div class="container">
         <div class="row">
-          <div class="jumbotron">
-            {% include content-welcome.html %}
-          </div>
+          {% include content-welcome.html %}
         </div>
 
-        {% include content.html %}
+        <div class="row">
+          {% include content-what-we-do.html %}
+        </div>
 
-        {% include content.html %}
+        <div class="row">
+          {% include carousel.html %}
+        </div>
 
-        {% include carousel.html %}
+        <div class="row margin20xxx">
+          {% include team.html %}
+        </div>
 
-        {% include our_team.html %}
-
-        {% include content.html %}
-
-        {% include content.html %}
+        <div class="row">
+          {% include content-welcome.html %}
+        </div>
 
       </div>
 
