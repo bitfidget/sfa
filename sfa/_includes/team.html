@@ -1,82 +1,14 @@
-<div class="row">
-<div class="col-md-10 col-md-offset-1">
-
-	<!-- Speaker 1 -->
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<a href="#" class="member-profile">
-			<div class="unhover_img">
-			<img src="img/speaker-1.png" alt="" />
-			</div>
-			<div class="hover_img">
-			<img src="img/speaker-1-hover.png" alt="" />
-			</div>
-			<span>Creative Director</span>
-			<h4><span>Patrick </span> Simpson</h4>
-		</a>	
+<div>
+	{% for member in site.data.team %}
+	<section>
+		<h1>{{ member.name }}</h1>
+		<h2>{{ member.position }}</h2>
+		<h3>{{ member.company  }}</h3>
 		<ul>
-			<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fa fa-foursquare"></i></a></li>						
+			{% for item in member.contents %}
+			<p>{{ item }}</p>
+			{% endfor %}
 		</ul>
-	</div>
-	
-	<!-- Speaker 2 -->
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<a href="#" class="member-profile">
-			<div class="unhover_img">
-			<img src="img/speaker-2.png" alt="" />
-			</div>
-			<div class="hover_img">
-			<img src="img/speaker-2-hover.png" alt="" />
-			</div>
-			<span>Web Designer</span>
-			<h4><span>Teresa</span> Crawford</h4>
-		</a>	
-		<ul>
-			<li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
-		</ul>
-	</div>
-	
-	<!-- Speaker 3 -->
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<a href="#" class="member-profile">
-			<div class="unhover_img">
-			<img src="img/speaker-3.png" alt="" />
-			</div>
-			<div class="hover_img">
-			<img src="img/speaker-3-hover.png" alt="" />
-			</div>
-			<span>Photographer</span>
-			<h4><span>Joseph</span> Reynolds</h4>
-		</a>					
-		<ul>
-			<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>						
-			<li><a href="#" target="_blank"><i class="fa fa-pinterest"></i></a></li>						
-		</ul>					
-	</div>
-	
-	<!-- Speaker 4 -->
-	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-		<a href="#" class="member-profile">
-			<div class="unhover_img">
-			<img src="img/speaker-4.png" alt="" />
-			</div>
-			<div class="hover_img">
-			<img src="img/speaker-4-hover.png" alt="" />
-			</div>
-			<span>SEO Expert</span>
-			<h4><span>Kathy</span> Watkins</h4>
-		</a>					
-		<ul>
-			<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
-			<li><a href="#"  target="_blank"><i class="fa fa-linkedin"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fa fa-foursquare"></i></a></li>
-			<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-		</ul>						
-	</div>
+	</section>
+	{% endfor %}
 </div>
-</div> <!-- End First Row -->
-<div class="clear"></div>
