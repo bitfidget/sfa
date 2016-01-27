@@ -1,19 +1,23 @@
 <h2>Our team</h2>
 
-{% for member in site.data.team %}
-<section class="team-head">
-	<div class="team-img js-square">
-		<div class="team-img-arrow"></div>
-	</div>
-	<h1>{{ member.name }}</h1>
-	<h2>{{ member.position }}</h2>
-</section>
-{% endfor %}
-
-{% for member in site.data.team %}
-<section class="team-details">
-	{% for item in member.contents %}
-	<p>{{ item }}</p>
+<div class="js-a-group">
+	{% for member in site.data.team %}
+	<section data-modifies="{{ member.name }}" class="team-head js-a">
+		<div class="team-img js-square">
+			<div class="team-img-arrow"></div>
+		</div>
+		<h1>{{ member.name }}</h1>
+		<p>{{ count }}</p>
+		<h2>{{ member.position }}</h2>
+	</section>
 	{% endfor %}
-</section>
-{% endfor %}
+
+	{% for member in site.data.team %}
+	<section class="team-details mod-{{ member.name }}">
+		{% for item in member.contents %}
+		<p>{{ item }}</p>
+		{% endfor %}
+	</section>
+
+	{% endfor %}
+</div>
