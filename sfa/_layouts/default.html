@@ -5,64 +5,67 @@
 
   <body>
 
-    <!-- <strong>Lorem ipsum title</strong>
 
-    <nav>
-      <ul>
-        <li><a href="">Nav button 1</a></li>
-        <li><a href="">Nav button 2</a></li>
-        <li><a href="">Nav button 3</a></li>
-        <li><a href="">Nav button 4</a></li>
-      </ul>
-    </nav> -->
-
-    {% include header.html %}
-
-    <!-- <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-
-
-        <div>
-        {% for member in site.data.team %}
-          <section>
-            <h1>{{ member.name }}</h1>
-            <h2>{{ member.position }}</h2>
-            <h3>{{ member.company  }}</h3>
+    <div id="navigation-main">
+      <div class="js-btn-toggle pull-right">
+        <i class="fa fa-bars" data-modifies="navigation-main"></i>
+      </div>
+      <a href="#" >
+        <img src="" class="pad20">
+      </a>
+      <div class="js-hide-slide navigation-main">
+        <div class="col-main">
+          <nav role="navigation">
             <ul>
-              {% for item in member.contents %}
-              <p>{{ item }}</p>
-              {% endfor %}
+              <li><a href="#welcome" onClick="scrollTo('#welcome', 0); return false;">
+                Overview</a></li>
+              <li><a href="#what-we-do" onClick="scrollTo('#what-we-do', 0); return false;">
+                What we do</a></li>
+              <li><a href="#carousel" onClick="scrollTo('#carousel', 0); return false;">
+                Our industries</a></li>
+              <li><a href="#team" onClick="scrollTo('#team', 0); return false;">
+                Our team</a></li>
+              <li><a href="#links" onClick="scrollTo('#links', 0); return false;">
+                Links</a></li>
             </ul>
-          </section>
-        {% endfor %}
+          </nav>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <div class="page-content">
+    <div class="space"></div>
 
-      <div class="container">
-        <div class="row">
-          {% include content-welcome.html %}
+    <div class="container">
+
+      <div class="js-full-screen bg-blue">
+        <div class="col-main">
+          <div class="pad20">
+            <h1>Welcome to PwC’s Skills for Australia!</h1>
+          </div>
         </div>
+      </div>
 
-        <div class="row">
-          {% include content-what-we-do.html %}
-        </div>
+      
 
-        <div class="row">
-          {% include carousel.html %}
-        </div>
 
-        <div class="row margin20xxx">
-          {% include team.html %}
-        </div>
+      <div class="row" id="welcome">
+        {% include content-welcome.html %}
+      </div>
 
-        <div class="row">
-          {% include content-welcome.html %}
-        </div>
+      <div class="row" id="what-we-do">
+        {% include content-what-we-do.html %}
+      </div>
 
+      <div class="row" id="carousel">
+        {% include carousel.html %}
+      </div>
+
+      <div class="row" id="team">
+        {% include team.html %}
+      </div>
+
+      <div class="row" id="links">
+        {% include content-links.html %}
       </div>
 
     </div>
