@@ -4,12 +4,12 @@
 	width: 100%;
 	background: #000;
 	color: #FFF;
-	text-align: right;
-	text-transform: uppercase;
+	font-style: italic;
 	p{
 		padding: 26px 0;
-		font-size: 14px;
+		font-size: 18px;
 		margin: 0;
+		font-family: $pwc-font; 
 	}
 }
 
@@ -27,11 +27,17 @@
 	background: rgba(0,0,0,0.4);
 	width: 100%;
 	padding: 30px 0;
+	h1{
+		font-size: 28px;
+		padding: 0 20px;
+	}
 	p{
 		width: 100%;
 		padding: 0 20px;
 	}
 }
+
+
 
 #welcome 	.bg-dark-trans{
 	p:first-child{
@@ -46,9 +52,10 @@
 
 #industries{
 	h2{
-		padding: 30px 0;
+		padding: 60px 0;
 	}
-	ul {
+	/*all followiing styles refer to the accordion setup we were using until friday*/
+	/*ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -86,26 +93,14 @@
   }
   .accordion-content{
   	display: none;
-  }
+  }*/
 }
-
-@media (max-width: 660px) {
-  .sector-gallery li {
-      width: 45%;
-      margin: 2.5%;
-  }
-
-
-
-}
-
 
 /*what-we-do section*/
 
 #what-we-do{
 	h2{
 		padding: 30px 0;
-		max-width: 40%;
 	}
 }
 
@@ -121,13 +116,13 @@
 		h1{
 			padding: 30px 20px 0;
 			font-size: 24px;
-			font-family: Arial, sans-serif;
+			font-family: $base-font-family;
 			font-weight: 500;
 		}
 		h2{
 			padding: 0 20px 10px;
 			font-size: 18px;
-			font-family: Arial, sans-serif;
+			font-family: $base-font-family;
 			font-weight: 200;
 		}
 		.team-img{
@@ -172,6 +167,12 @@
 			float: left;
 		}
 	}
+	#industries {
+		.bg-dark-trans{
+			width: 50%;
+			float: right;
+		}
+	}
 	#what-we-do {
 		padding: 60px 0;
 		.bg-dark-trans{
@@ -180,6 +181,7 @@
 		}
 		h2{
 			float: left;
+			max-width: 40%;
 		}
 	}
 	#team{

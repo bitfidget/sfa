@@ -1,19 +1,23 @@
 .js-carousel-container{
-	background: green;
 	position: relative;
 	overflow: hidden;
+	background: red;
+	margin: 0 -20px;
+	color: #FFF;
 }
 
 .js-carousel-section{
-	background: #E0E0E0;
 	position: absolute;
 	top: 0;
 	left: 0;
-	transition: left ease .3s;
+	transition: all ease .5s;
+	padding: 20px;
+	opacity: 0;
 }
 
 .js-carousel-section.active{
 	left: 0;
+	opacity: 1;
 }
 
 .js-carousel-section.left{
@@ -22,4 +26,38 @@
 
 .js-carousel-section.right{
 	left: 100%;
+}
+
+.js-carousel-control{
+	position: absolute;
+	max-width: 40%;
+	top: 50px;
+	z-index: 999;
+	.control{
+		h1{
+			font-size: 24px;
+			padding: 15px 20px;
+			background: rgba(0,0,0,0.4);
+			color: #FFF;
+			cursor: pointer;
+			transition: background ease .2s;
+			font-family: $base-font-family;
+		}
+		i {
+			color: rgba(255,255,255,0.3);
+			float: right;
+			line-height: 58px;
+			font-size: 24px;
+			padding-right: 10px;
+			transition: color ease .2s;
+		}
+	}
+	.control.active{
+		h1{
+			background: rgba(0,0,0,0.8);
+		}
+		i {
+			color: rgba(255,255,255,1);
+		}
+	}
 }
