@@ -156,6 +156,18 @@
 
 #team section.team-details{
 	display: none;
+
+
+}
+
+.active {
+		display: block !important;
+
+	}
+
+
+.team-head .active {
+	color: red;
 }
 
 

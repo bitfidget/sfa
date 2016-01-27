@@ -2,7 +2,7 @@
 
 <div class="js-a-group">
 	{% for member in site.data.team %}
-	<section data-modifies="{{ member.name }}" class="team-head js-a">
+	<section data-modifies="" class="team-head js-team-member">
 		<div class="team-img js-square">
 			<div class="team-img-arrow"></div>
 		</div>
@@ -13,7 +13,7 @@
 	{% endfor %}
 
 	{% for member in site.data.team %}
-	<section class="team-details mod-{{ member.name }}">
+	<section class="team-details js-team-section">
 		{% for item in member.contents %}
 		<p>{{ item }}</p>
 		{% endfor %}
