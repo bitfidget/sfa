@@ -1,3 +1,7 @@
+/*h1, h2 {
+	font-family: Georgia, serif;
+}*/
+
 /*tagline*/
 
 #tagline{
@@ -126,13 +130,21 @@
 			font-weight: 200;
 		}
 		.team-img{
-			background: #333;
+			/*background: #333;*/
 			border-radius: 50%;
 			display: block;
 			width: 80%;
 			max-width: 180px;
 			margin: 0 auto;
+
+
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
+
+		/*.team-img#sara-caplan {
+			background-image: url(/img/about-us-sara.png);
+		}*/
 
 		.team-img-arrow {
 			background-color: #939598;
@@ -152,73 +164,67 @@
 		}
 	}
 
+	section.team-head.active {
+		h1 {
+			color: #a32020;
+		}
+
+		.team-img-arrow {
+			background-color: #a32020;
+		}
+
+		/*$('.active h1').css('color', '#a32020');
+		$('.active .team-img-arrow').css('background-color', '#a32020');*/
+	}
+
+	.team-img {
+		background-color: #fff;
+	}
+
+	.slide-0 .team-img {
+		background-image: url(/img/about-us-sara.png);
+	}
+	.slide-1 .team-img {
+		background-image: url(/img/about-us-kasia.png);
+		background-position: 10px 10px;
+	}
+	.slide-2 .team-img {
+		background-image: url(/img/about-us-philip.png);
+	}
+	.slide-3 .team-img {
+		background-image: url(/img/about-us-tim.png);
+		background-position: 0px -15px;
+	}
+	.slide-4 .team-img {
+		background-image: url(/img/about-us-iain.png);
+		background-position: 10px 10px;
+	}
+
 }
+
+
 
 #team section.team-details{
 	display: none;
 
-
-}
-
-.active {
-		display: block !important;
-
-	}
-
-
-.team-head .active {
-	color: red;
-}
-
-
-@media (min-width: 800px) {
-	#welcome .bg-dark-trans{
-		background: rgba(0,0,0,0.4);
-		p{
-			width: 50%;
-			float: left;
-		}
-	}
-	#industries {
-		.bg-dark-trans{
-			width: 50%;
-			float: right;
-		}
-	}
-	#what-we-do {
-		padding: 60px 0;
-		.bg-dark-trans{
-			width: 50%;
-			float: right;
-		}
-		h2{
-			float: left;
-			max-width: 40%;
-		}
-	}
-	#team{
-		padding-top: 60px;
-		padding-bottom: 60px;
-		section.team-head{
-			width: 20%;
-			float: left;
-		}
-	}
-
-
-	.checkbox-list li {
-
-		float: left;
-		width: 40%;
-		margin: 0;
-		
-	}
-
-	input[type=text] {
-		width: 40%;
+	h1 {
+		color: #a32020;
 	}
 
 }
+
+#team section.team-details-mob {
+	display: none;
+}
+
+/* Subscribe */
+
+#subscribe {
+	h2 {
+		padding: 30px 0;
+	}
+}
+
 
 /* Footer */
 
@@ -241,9 +247,9 @@
 			padding: 0;
 		}*/
 
-		&:last-child {
+		/*&:last-child {
 			float: right;
-		}
+		}*/
 	}
 
 	a {
@@ -253,9 +259,9 @@
 }
 
 #logo img {
-	height: 120px;
+	height: 100px;
 	width: auto;
-	margin: 20px 0 100px 0;
+	margin: 30px 30px 20% 0;
 }
 
 /* Form */
@@ -293,11 +299,159 @@ input[type=text] {
 
 a.button {
 	color: white;
-	background-color: #e0301e;
+	background-color: #A32020;
 	padding: 10px 20px;
 	border-radius: 5px;
 
 	&:hover {
 		text-decoration:none;
 	}
+}
+
+
+
+/* Columns */
+
+
+
+#team-col-left {
+	display: none;
+	float: left;
+	width: 25%;
+
+	h1, h2 {
+		font-family: Georgia;
+		padding: 0;
+		margin: 0;
+		font-size: 30px;
+	}
+
+}
+
+#team-col-right {
+		width: 100%;
+		padding: 0;
+		margin: 0 !important;
+	}
+
+.bg-color {
+	    background-color: #e7e7e8;
+	    height: auto;
+	    width: 100%;
+	    display: block;
+	}
+
+@media (min-width: 800px) {
+	#team-col-left {
+		display: block;
+	}
+
+	#team-col-right {
+		float: right;
+		width: 75%;
+		padding: 0;
+		margin: 0 !important;
+	}
+
+	
+}
+
+
+
+/*.bg-color#team {
+	background-color: #e7e7e8;
+}*/
+
+
+/* IMAGES */
+
+.bg-image#welcome {
+	background-image: url(/img/bg-image-welcome-overlay.png), url(/img/bg-image-welcome.png);
+
+}
+
+.bg-image#what-we-do {
+	background-image: url(/img/bg-image-welcome-overlay.png), url(/img/bg-image-sso.png);
+}
+
+
+/*.bg-image#industries {
+	background-image: url(/img/industry-business.png);
+}*/
+
+
+/*.bg-image#industries {
+	background-color: gray;
+}*/
+
+/*.bg-image .business-services {
+	background-image: url(/img/industry-business.png);
+}*/
+
+
+
+
+
+
+
+@media (min-width: 800px) {
+	#welcome .bg-dark-trans{
+		background: rgba(0,0,0,0.4);
+		p{
+			width: 50%;
+			float: left;
+		}
+	}
+	#industries {
+
+		.bg-dark-trans{
+			width: 50%;
+			float: right;
+		}
+	}
+	#what-we-do {
+		padding: 60px 0;
+		.bg-dark-trans{
+			width: 75%;
+			float: left;
+		}
+		h2{
+			float: left;
+			max-width: 40%;
+		}
+	}
+	#team{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		section.team-head{
+			width: 20%;
+			float: left;
+		}
+	}
+	#subscribe{
+		padding: 60px 0;
+	}
+
+
+	.checkbox-list li {
+
+		float: left;
+		width: 50%;
+		margin: 0;
+		
+	}
+
+	input[type=text] {
+		width: 40%;
+	}
+
+	.bg-footer {
+		li {
+			&:last-child {
+				color: #fff;
+				float: right;
+			}
+		}
+	}
+
 }

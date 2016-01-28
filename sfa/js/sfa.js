@@ -56,13 +56,24 @@ var initAccordion = function() {
 
 		accordion.members.on('click touch', function(i,v) {
 
+			// $(window).resize(function(){
+			// 	if ($(window).width() >= 800) {}
+			// });
+
 			$(accordion).find('.active').removeClass('active');
 			
 			var target = this.dataset.modifies;
 
 			$(accordion).find('.slide-' + target).addClass('active');
+			$('.js-team-section').hide();
 
 			
+			$('.active').fadeIn();
+
+			// if class is already active
+			// if ($(this).hasClass('.active')) {
+			//  	$('.js-team-section').hide();
+			//  }
 		});
 	});
 
@@ -209,6 +220,8 @@ var initCarousel = function() {
 			carouselClick(carousel);
 		});
 
+		// Commented out height because messing with images
+
 		// iterate again to add the same height to all elements
 		$.each(carousel.slides, function(ii,slide) {
 			$(slide).innerHeight(carousel.height);
@@ -223,7 +236,7 @@ var initCarousel = function() {
 		});
 
 		carouselClick(carousel);
-		setInterval(function() { carouselDelay(carousel) }, 2000);
+		// setInterval(function() { carouselDelay(carousel) }, 2000);
 
 	});
 };

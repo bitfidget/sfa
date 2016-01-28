@@ -1,18 +1,62 @@
+
+
 .js-carousel-container{
 	position: relative;
-	overflow: hidden;
-	background: red;
-	margin: 0 -20px;
+	/*overflow: auto;*/
+	/*background: red;*/
+	/*margin: 0 -20px;*/
 	color: #FFF;
+	max-width: 100%;
+	display: block;
+	/*min-height: 100%;*/
+
+
+	/* IMAGES */
+
+	.bg-industry {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: auto;
+		width: 100%;
+		display: block;
+	}
+
+	.bg-industry.slide-0 {
+		background-image: url(/img/industry-business.png);
+	}
+	.bg-industry.slide-1 {
+		background-image: url(/img/industry-financial.png);
+	}
+	.bg-industry.slide-2 {
+		background-image: url(/img/industry-ICT.png);
+	}
+	.bg-industry.slide-3 {
+		background-image: url(/img/industry-education.png);
+	}
+	.bg-industry.slide-4 {
+		background-image: url(/img/industry-culture.png);
+	}
+	.bg-industry.slide-5 {
+		background-image: url(/img/industry-print.png);
+	}
+
+
 }
 
 .js-carousel-section{
+	display: inline-block;
 	position: absolute;
 	top: 0;
 	left: 0;
 	transition: all ease .5s;
-	padding: 20px;
 	opacity: 0;
+	padding: 10px 0;
+
+	.bg-dark-trans {
+		width: 60%;
+		float: right;
+	}
 }
 
 .js-carousel-section.active{
@@ -29,10 +73,13 @@
 }
 
 .js-carousel-control{
-	position: absolute;
-	max-width: 40%;
-	top: 50px;
+	position: relative;
+	width: 35%;
 	z-index: 999;
+	display: inline-block;
+	float: left;
+	padding: 10px 0;
+
 	.control{
 		h1{
 			font-size: 24px;
@@ -59,5 +106,16 @@
 		i {
 			color: rgba(255,255,255,1);
 		}
+	}
+}
+
+@media (min-width: 800px) {
+
+	.js-carousel-section{
+		padding: 30px 0;
+	}
+
+	.js-carousel-control{
+		padding: 50px 0;
 	}
 }

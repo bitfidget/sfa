@@ -1,23 +1,27 @@
-<div class="js-carousel-container js-carousel-01" data-name="js-carousel-01">
+<div class="js-carousel-container js-carousel-01 clearfix" data-name="js-carousel-01">
 	<!-- controls -->
-	<div class="js-carousel-control">
-		{% for industry in site.data.industries %}
-			<div class="control">
-				<i class="fa fa-chevron-right arrow"></i>
-				<h1>{{ industry.name }}</h1>
-			</div>
-		{% endfor %}
+	<div class="wrapper">
+		<div class="js-carousel-control">
+			{% for industry in site.data.industries %}
+				<div class="control">
+					<i class="fa fa-chevron-right arrow"></i>
+					<h1>{{ industry.name }}</h1>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 	<!-- content -->
 	{% for industry in site.data.industries %}
-	<div class="js-carousel-section js-carousel-01">
-		<div class="bg-dark-trans">
-			<h1>{{ industry.name }}</h1>
-			<p><strong>Chair:</strong> {{ industry.chair }}</p>
-			<p><strong>Packages:</strong> {{ industry.packages  }}</p>
-			{% for item in industry.contents %}
-				<p>{{ item }}</p>
-			{% endfor %}
+	<div class="js-carousel-section js-carousel-01 bg-industry">
+		<div class="wrapper">
+			<div class="bg-dark-trans">
+				<h1>{{ industry.name }}</h1>
+				<p><strong>Chair:</strong> {{ industry.chair }}</p>
+				<p><strong>Packages:</strong> {{ industry.packages  }}</p>
+				{% for item in industry.contents %}
+					<p>{{ item }}</p>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 	{% endfor %}

@@ -14,7 +14,7 @@
   - 'The Financial Services Sector covers workers in Australia with skills in banking, insurances, superannuation, accounting, financial planning and trustees. Australia has a mature and sophisticated financial services sector and is a leader in the Asia-Pacific region across a range of disciplines within this industry. This sector is likely to have a strong growth in skills demand over the medium to long term driven significantly by Australia’s mandatory superannuation framework.'
   - 'Qualifications in this industry relate to a range of skills including: accounting, credit management, mortgage broking, insurance, superannuation and financial services.'
 
-- name: 'Information and communications technology'
+- name: 'Information Technology'
   chair: Ross Eason
   packages: 'Information and Communications Technology Training Package; Integrated Telecommunications Training Package'
   icon: fa-terminal
@@ -22,13 +22,13 @@
   - 'The Information and Communications Technology (ICT) Sector includes workers in Australia with skills in telecommunications, information systems, interactive game development and other technology related roles including technology support. The digitization of the global economy means that demand for skills in ICT routinely dominate the top of skills demand forecast lists. Australia’s geography, market sophistication and focus on innovation all contribute to a strong growth outlook for this industry. '
   - 'Qualifications in this industry relate to a range of skills including: digital and interactive games, digital media, information technology, technology support and telecommunications.'
 
-- name: 'Printing and graphic arts'
-  chair: Bill Healey
-  packages: 'Printing and Graphic Arts Training Package'
-  icon: fa-paint-brush
+- name: 'Education'
+  chair: Jodi Schmidt
+  packages: 'Training and Education Package (TAE); Training and Education (TAE 10); Foundation Skills'
+  icon: fa-graduation-cap
   contents: 
-  - 'The Printing and Graphic Arts Sector includes workers in Australia with skills that assist organisations to communicate messages effectively through a range of media as well as in parts assisting creative industries deliver their products. Technological disruption and global industry trends have created a rapidly changing skills environment that requires changes to the industry skills profile.'
-  - 'Qualifications in this industry related to a range of skills including: publishing, graphic design and multimedia.'
+  - 'The Education Sector currently includes skills required for post-schooling education, including qualifications required to teach students in Vocational Education and Training courses. Australia’s future economic prosperity will rely upon a well-educated skilled workforce, the vast majority of which will be educated by those with skills in this sector today. The growing recognition of the need for formally trained staff to assist the tradition teacher in the classroom means there are more opportunities than ever to be skilled in this sector and for qualifications and competencies to grow in the medium term.'
+  - 'Qualifications in this industry related to a range of skills including: training and assessment, digital education, international education services and adult language literacy and numeracy skills.'
 
 - name: 'Culture and related industries'
   chair: Yvonne Webb
@@ -38,10 +38,11 @@
   - 'The Culture and Related Industries Sector includes workers in Australia with skills in the creative economy such as visual and performing arts, music and screen production. Australia has a proud history of creative and artistic achievement that has contributed strongly to economic and cultural diversification. Technology changes and cyclical economic conditions present varied opportunities and challenges for the sector meaning skills demand can change rapidly. '
   - 'Qualifications in this industry relate to a range of skills including: screen and media, make-up services, set construction, dance, theatre, music and indigenous art.'
 
-- name: 'Education'
-  chair: Jodi Schmidt
-  packages: 'Training and Education Package (TAE); Training and Education (TAE 10); Foundation Skills'
-  icon: fa-graduation-cap
+- name: 'Printing and Graphics'
+  chair: Bill Healey
+  packages: 'Printing and Graphic Arts Training Package'
+  icon: fa-paint-brush
   contents: 
-  - 'The Education Sector currently includes skills required for post-schooling education, including qualifications required to teach students in Vocational Education and Training courses. Australia’s future economic prosperity will rely upon a well-educated skilled workforce, the vast majority of which will be educated by those with skills in this sector today. The growing recognition of the need for formally trained staff to assist the tradition teacher in the classroom means there are more opportunities than ever to be skilled in this sector and for qualifications and competencies to grow in the medium term.'
-  - 'Qualifications in this industry related to a range of skills including: training and assessment, digital education, international education services and adult language literacy and numeracy skills.'
+  - 'The Printing and Graphic Arts Sector includes workers in Australia with skills that assist organisations to communicate messages effectively through a range of media as well as in parts assisting creative industries deliver their products. Technological disruption and global industry trends have created a rapidly changing skills environment that requires changes to the industry skills profile.'
+  - 'Qualifications in this industry related to a range of skills including: publishing, graphic design and multimedia.'
+
