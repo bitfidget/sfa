@@ -1,4 +1,4 @@
-.slide1, .slide2, .slide3 {
+/*.slide1, .slide2, .slide3 {
   background-image: url('http://placehold.it/800x1000');
   height: 300px;
   background-repeat: no-repeat;
@@ -9,24 +9,105 @@
 .centerBlock {
     margin: 0 auto;
     text-align: center;
-}
+}*/
 
 .space {
     width: 100%;
-    height: 80px;
+    height: 50px;
+}
+
+.container {
+}
+
+.bg-image {
+    /*background-image: url('http://placehold.it/800x1000');*/
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    display: block;
+
+    p {
+        float: right;
+        max-width: 40%;
+        display: block;
+
+    }
+
 }
 
 
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.row {
+    display: block;
+}
+
+#sector-gallery {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+
+    li {
+        float: left;
+        width: 31%;
+        margin: 0.66%;
+        padding: 20px;
+        border: 1px solid #dc6900;
+        border-radius: 5px;
+        color: #dc6900;
+        transition: all .1s ease-in;
+
+        h2 {
+            padding: 10px 0 0 0;
+            line-height: 1em;
+        }
+    }
+
+    li:hover {
+        background-color: #dc6900;
+        color: #fff;
+    }
+}
+
+@media (max-width: 660px) {
+    #sector-gallery li {
+        width: 45%;
+        margin: 2.5%;
+    }
+
+    .bg-image {
+        p {
+            width: 100%;
+        }
+    }
+}
+
+body{
+    margin-top: 10px;
+    font-family: 'Helvetica Neue Light', sans-serif;
+    background-color: #FFF;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
 
 /*
  *************************************************
 */
 
 /* basics */
-
+/*
 body{
     margin-top: 10px;
-    font-family: 'Helvetica Neue Medium', sans-serif;
+    /*font-family: 'Helvetica Neue Medium', sans-serif;
     background-color: #FFF;
     font-size: 12px;
     line-height: 18px;
@@ -422,6 +503,15 @@ li{
     padding-right: 20px;
 }
 
+.pad20x {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pad20xxx{
+    padding-top: 20px;
+}
+
 .padxx20x{
     padding-bottom: 20px;
 }
@@ -467,347 +557,6 @@ li{
 .big{
     font-size: 18px;
     line-height: 22px;
-}
-
-
-/* ----- monash specific ----- */
-
-.text-white p,
-.text-white li,
-.text-white h1,
-.text-white h2,
-.text-white h3{
-    color: #FFF;
-}
-
-
-.bg-blue,
-.tab-working{
-    background: #006cab;
-    color: #FFF;
-}
-
-.tab-not-working{
-    background-color: #333;
-}
-
-.tab-working em,
-.tab-not-working em{
-    color: #FFF;
-}
-
-.bg-blue p,
-.bg-blue li{
-    color: #FFF !important;
-}
-
-.bg-white{
-    background: #FFF;
-}
-
-.bg-none{
-    background: transparent;
-    color: #FFF;
-}
-
-.bg-grey-1{
-    background: #eef1f2;
-}
-
-.bg-grey-2{
-    background: #333;
-}
-
-.black{
-    color: #423f40 !important;
-}
-
-.white{
-    color: #FFF !important;
-}
-
-.slide-blue{
-    background: #006cab url(../img/nick-white.svg) no-repeat 20px -20px;
-    background-size: 35px;
-    color: #FFF;
-    z-index: 5;
-    em{
-        color: #FFF;
-    }
-    h3,
-    p,{
-        color: #FFF;
-        margin: 0;
-    }
-    li{
-        color: #FFF;
-    }
-}
-
-.slide-grey{
-    background: #eef1f2 url(../img/nick-white.svg) no-repeat 20px -20px;
-    background-size: 35px;
-    z-index: 5;
-    em{
-        color: #006cab;
-    }
-}
-
-/*.slide{
-    padding: 70px 20px 20px;
-}*/
-
-.slide-numbers{
-    position: absolute;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100%;
-    height: 30px;
-    z-index: 9;
-}
-
-.btn-round{
-    background: #e0e0e0;
-    border-radius: 50%;
-    display: block;
-    width: 30px;
-    height: 30px;
-    color: #006cab;
-    font-family: $base-font-family;
-    font-weight: 400;
-    font-style: italic;
-    text-align: center;
-    line-height: 30px;
-    margin: 0 3px;
-    transition: all ease .2s;
-    box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    z-index: 10;
-}
-
-.btn-round.active{
-    color: #eef1f2;
-    background: #009fd8;
-}
-
-.btn-next,
-.btn-prev {
-    position: relative;
-    background: #e0e0e0;
-    border-radius: 50%;
-    display: block;
-    width: 30px;
-    height: 30px;
-    color: #006cab;
-    text-align: center;
-    line-height: 30px;
-    margin: 0 3px;
-    transition: all ease .2s;
-    box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    z-index: 10;
-}
-
-.btn-next:before,
-.btn-prev:before{
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    color: #000;
-    font-size: 40px;
-    padding-right: 0.5em;
-    position: absolute;
-    left: 0;
-}
- 
-.btn-next:before {
-    content: "\f138";
-}
-
-.btn-prev:before {
-    content: "\f137";
-}
-
-.btn-next.inactive:before{
-    content: "\f021";
-}
-
-.btn-prev.inactive{
-    display: none;
-}
-
-.img-round{
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background: #009fd8;
-    padding: 10px;
-}
-
-.slide-images{
-    padding-top: 10px;
-    color: #faa41a;
-}
-
-.slide-images p{
-    color: #faa41a;
-    margin: 10px;
-}
-
-.slide-images li{
-    color: #faa41a;
-    margin: 0;
-}
-
-.slide-images h1{
-    color: #faa41a;
-    font-weight: bold;
-    margin: 20px 0 0 0 !important;
-    font-size: 96px;
-    line-height: 120px;
-}
-
-.no-staff,
-.no-student{
-    width: 160px;
-    height: 180px;
-    background-size: cover; 
-    display: block;
-    padding-top: 70px;
-    color: #FFF;
-    margin: 0 auto;
-    font-size: 96px;
-    line-height: 120px;
-    font-weight: bold;
-}
-
-.no-staff{
-    background: url(../img/staff-02.svg) no-repeat top;
-}
-
-.no-student{
-    background: url(../img/Student.svg) no-repeat top;
-}
-
-.breakout{
-    padding: 10px;
-    margin: 10px;
-    border-radius: 4px;
-    box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    background: rgba(66, 63, 64, 0.2);
-}
-
-.grid{
-    width: 100%;
-    padding: 5px;
-}
-
-.js-flipcard{
-    float: left;
-    width: 50%;
-    padding: 15px 5px; 
-    position: relative;
-    border-bottom: dotted 1px #FFF;
-    border-right: dotted 1px #FFF;
-    + .double {
-        width: 100%;
-    }
-}
-
-.js-flipcard:nth-child(2n) {
-    border-right: none;
-}  
-
-.img-card{
-    .img-holder{
-        text-align: center;
-        max-width: 180px;
-        height: 80px;
-        margin: 0 auto;
-        padding: 5px 20px;
-        display: block;
-    }
-
-    h1{
-        font-size: 64px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        font-weight: bold;
-    }
-
-    p{
-        text-align: center;
-        width: 100%;
-        margin: 0;
-    }
-}
-
-.text-card{
-    h1{
-        font-size: 64px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        margin-top: 25%;
-        font-weight: bold;
-    }
-
-    p{
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        margin-top: 20px;
-    }
-}
-
-.list-card{
-    h1{
-        font-size: 28px;
-        text-align: center;
-        width: 100%;
-        margin: 0;
-        font-weight: bold; 
-        padding: 0;
-        line-height: 36px;
-        margin: 0 0 20px;
-    }
-    ul{
-        margin: 6px 0;
-        li{
-            font-size: 10px;
-            line-height: 12px;
-            text-align: center;
-            width: 100%;
-            color: #FFF;
-            padding: 0;
-            margin: 1px 0;
-        }
-    }
-}
-
-.list-card.special{
-    h1{
-        font-size: 28px;
-        line-height: 28px;
-    }
-    ul{
-        margin: 10px 0;
-        li{
-            margin: 4px 0;
-        }
-    }
-}
-
-
-.bg-lines{
-    background: #FFF url(../img/bg-orange-diagonal.svg) no-repeat top left;
-    background-size: 180px;
-}
-
-.bg-arrows{
-    background: #FFF url(../img/bg-element-02.svg) no-repeat 0 20px;
-    background-size: 130px;
 }
 
 
@@ -918,7 +667,7 @@ li{
     }
 
     .col-main{
-        max-width: 960px;
+        max-width: 1170px;
         margin: 0 auto;
     }
 
@@ -986,40 +735,6 @@ li{
     .big{
         font-size: 1.6em;
         line-height: 2.6em;
-    }
-
-
-    /* ----- monash specific ----- */
-
-    
-    .img-round{
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin: 0 auto;
-        background: #009fd8;
-        padding: 10px;
-    }
-
-    .slide-images h1{
-        font-size: 172px;
-    }
-
-    /** personsas **/
-
-    .personas .js-btn-accordion{
-        height: 110px;
-    }
-
-    .personas h2{
-        margin: 30px 0 0 20px;
-    }
-
-    .persona-face{
-        height: 90px;
-        width: 90px;
-        margin: 4px;
-        float: right;
     }
 
 }
