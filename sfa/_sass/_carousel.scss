@@ -1,7 +1,25 @@
 .js-carousel-container{
 	background: green;
+	position: relative;
+	overflow: hidden;
 }
 
 .js-carousel-section{
 	background: #E0E0E0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: left ease .3s;
+}
+
+.js-carousel-section.active{
+	left: 0;
+}
+
+.js-carousel-section.left{
+	left: -100%;
+}
+
+.js-carousel-section.right{
+	left: 100%;
 }

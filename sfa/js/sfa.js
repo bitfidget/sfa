@@ -23,7 +23,7 @@ var scrollTo = function(elem, space) {
 };
 
 // change any style property
-var changeStyle = function(selectorText, style, value) {
+var updateStyle = function(selectorText, style, value) {
   var theRules = new Array();
   if (document.styleSheets[0].cssRules) {
       theRules = document.styleSheets[0].cssRules;
@@ -37,10 +37,45 @@ var changeStyle = function(selectorText, style, value) {
         theRules[n].style[style] = value;
     }
   }
+};
+
+var carouselClick = function(carousel) {
+
+	var currentS = $(carousel).find(('.slide-' + carousel.current));
+	currentS.removeClass('left right').addClass('active');
+
+	// if current = 0
+	if (carousel.current === 0) {
+		console.log('first slide');
+		for (var i = 1; i < carousel.slides.length; i++) {
+			$(carousel).find('.slide-' + i ).removeClass('left active').addClass('right');
+		}
+	} else if (carousel.current === (carousel.slides.length - 1)) {
+		console.log('last slide');
+		for (var i = 0; i < (carousel.slides.length - 1); i++) {
+			$(carousel).find('.slide-' + i ).removeClass('right active').addClass('left');
+		}
+	} else {
+		console.log('slide ' + carousel.current);
+		for (var i = 0; i < carousel.current; i++) {
+			$(carousel).find('.slide-' + i ).removeClass('right active').addClass('left');
+		}
+		for (var i = (carousel.current + 1); i < carousel.slides.length; i++) {
+			$(carousel).find('.slide-' + i ).removeClass('left active').addClass('right');
+		}
+	}
+};
+
+var carouselDelay = function(carousel) {
+
+	console.log('tick ' + carousel.current);
+	if (carousel.current < carousel.slides.length - 1) {
+		carousel.current++;
+	} else {
+		carousel.current = 0
+	}
+	carouselClick(carousel);
 }
-
-debugger
-
 
 var initCarousel = function() {
 
@@ -53,42 +88,38 @@ var initCarousel = function() {
 		// set up the carousel instance
 
 		// get the width of the container for later use
-		var width = $(carousel).innerWidth();
+		carousel.width = $(carousel).innerWidth();
 		// set the height of the container but we'll mess with it later
-		var height = 0
+		carousel.height = 0
 		// counter for position of the carousel
-		var current = 0;
+		carousel.current = 0;
 		// find all the slides int he carousel
-		var $slides = $(carousel).find('.js-carousel-section');
-
-
-		// functions are cool
-		var isActive = function(i) {
-			if (i === current) {
-				return('active');
-			} else {
-				return('');
-			}
-		};
+		carousel.slides = $(carousel).find('.js-carousel-section');
 
 		// iterate over each slide in carousel and assign it a number, initial state and correct width
-		$.each($slides, function(ii,slide) {
-			$(slide).addClass(isActive(ii) + ' slide-' + ii);
-			$(slide).innerWidth(width);
-			if ( $(slide).innerHeight() > height ) {
-				height = $(slide).innerHeight();
-			} else {
-				$(slide).innerHeight(height);
+		$.each(carousel.slides, function(ii,slide) {
+			$(slide).addClass('slide-' + ii);
+			$(slide).innerWidth(carousel.width);
+			if ( $(slide).innerHeight() > carousel.height ) {
+				carousel.height = $(slide).innerHeight();
 			}
 		});
 
+		// iterate again to add the same height to all elements
+		$.each(carousel.slides, function(ii,slide) {
+			$(slide).innerHeight(carousel.height);
+			$(carousel).innerHeight(carousel.height);
+		});
+
+		carouselClick(carousel);
+		setInterval(function() { carouselDelay(carousel) }, 2000);
 		// $(slider).on('click touch', function(event) {
 			
 		// 	if ($(event.target).hasClass('btn-next')) {
-		// 		if ((current + 1) < $slides.length) {
+		// 		if ((current + 1) < carousel.slides.length) {
 		// 			current ++;
 		// 			$(slider).find('.btn-prev').removeClass('inactive');
-		// 			if (current === ($slides.length -1)) {
+		// 			if (current === (carousel.slides.length -1)) {
 		// 				$(slider).find('.btn-next').addClass('inactive');
 		// 			}
 		// 			$(slider).find('.slide.active').removeClass('active').addClass('slide-left');
