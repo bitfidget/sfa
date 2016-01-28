@@ -1,0 +1,90 @@
+/* ----- oocss styles ----- */
+
+.pull-right{
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.pad10{
+    padding: 10px;
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.padx20{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.pad20x {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pad20xxx{
+    padding-top: 20px;
+}
+
+.padxx20x{
+    padding-bottom: 20px;
+}
+
+.margin0{
+    margin: 0;
+}
+
+.marginxx0x{
+    margin-bottom: 0;
+}
+
+.margin10xxx{
+    margin-top: 10px !important;
+}
+
+.margin20xxx{
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.margin-20xxx{
+    margin-top: -20px;
+}
+
+.margin-10x{
+    margin-top: 0;
+    margin-bottom: -10px;
+}
+
+.marginxx-20x{
+    margin-bottom: -20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.inline{
+    display: inline-block !important;
+}
+
+.big{
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.round5{
+    border-radius: 5px;
+}

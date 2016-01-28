@@ -6,12 +6,12 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: Georgia, serif;
+$base-font-family: Arial, serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.8;
 
-$spacing-unit:     0px;
+$spacing-unit:     20px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -48,7 +48,9 @@ $on-laptop:        1170px;
 @import
         "base",
         "layout",
+        "navigation",
         "grid",
-        "syntax-highlighting",
-        "carousel"
+        "carousel",
+        "oocss",
+        "pwc"
 ;

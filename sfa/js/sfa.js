@@ -13,7 +13,7 @@ window.onload = function() {
 
 // our scrolly navigation
 var scrollTo = function(elem, space) {
-	console.log(space)
+	console.log(elem)
 	$('html,body').animate({
     scrollTop: $(elem).offset().top - (60 + space)},
     'slow');

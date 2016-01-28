@@ -1,0 +1,60 @@
+/***** navigation styles *****/
+
+#navigation-main{
+    width: 100%;
+    z-index: 300;
+    display: block;
+    border-bottom: 1px solid rgba(66, 63, 64, 0.14);
+    background-color: #FFF;
+    box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    img{
+        width: 110px;
+    }
+}
+
+.navigation-main {
+  background-color: rgba(255,255,255,0.9);
+}
+
+.navigation-main a {
+  display: block;
+  width: 100%;
+  -webkit-transition: font-size 500ms ease;
+  transition: font-size 500ms ease;
+  font-family: $base-font-family;
+  font-size: 22px;
+  line-height: 28px;
+  text-decoration: none;
+  margin: 20px auto;
+}
+
+.navigation-main a:hover {
+  font-family: $base-font-family;
+  font-size: 22px;
+}
+
+.navigation-main .active  a{
+}
+
+.navigation-main ul{
+    list-style: none;
+}
+
+#navigation-main i{
+    padding: 24px;
+}
+
+.js-hide-slide{
+    position: absolute;
+    width: 100%;
+    top: -500px;
+    left: 0;
+    transition: top ease .2s;
+}
+
+.js-hide-slide.active{
+    top: 130px;
+}

@@ -23,8 +23,6 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
-
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -35,8 +33,6 @@ ul, ol, dl, figure,
     margin-bottom: $spacing-unit / 2;
 }
 
-
-
 /**
  * Images
  */
@@ -44,8 +40,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
 
 /**
  * Figures
@@ -57,8 +51,6 @@ figure > img {
 figcaption {
     font-size: $small-font-size;
 }
-
-
 
 /**
  * Lists
@@ -74,16 +66,12 @@ li {
     }
 }
 
-
-
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
-
-
 
 /**
  * Links
@@ -101,8 +89,6 @@ a {
         text-decoration: underline;
     }
 }
-
-
 
 /**
  * Blockquotes
@@ -160,7 +146,6 @@ pre {
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
-    @extend %clearfix;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -175,22 +160,16 @@ pre {
 /**
  * Clearfix
  */
-%clearfix {
-
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+.clearfix:after {    
+    content: "";
+    display: table;
+    clear: both;
 }
-
-
 
 /**
  * Icons
  */
 .icon {
-
     > svg {
         display: inline-block;
         width: 16px;
@@ -203,12 +182,80 @@ pre {
     }
 }
 
-
-
 /* take THAT box model */
 html {
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+/*
+ ************************************************* basics 
+*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 72px;
+    font-weight: 500;
+    margin: 0 0 .6em 0;
+    line-height: 1.2em;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 .6em 0;
+    line-height: 1.2em;
+}
+
+h3{
+    font-weight: 200;
+    font-size: 24px;
+    margin: 1em 0 .6em 0;
+}
+
+h4{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: Georgia, georgia, arial, verdana, sans-serif;    
+}
+
+p{
+    margin: 1em 0 1.6em 0;
+    padding: 0;
+    font-family: arial, verdana, sans-serif;
+}
+
+ul, ol{
+    margin: 1em 0 .6em 16px;
+    padding: 0;
+}
+
+li{
+    margin: .2em 0 .4em 5px;
+}
+
+
+
+
+@media (min-width: 800px) {
+
+    
+
 }

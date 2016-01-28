@@ -5,77 +5,70 @@
 
   <body>
 
+    <!-- <div class="js-hide-slide navigation-main">
+      <div class="wrapper">
+        <nav role="navigation">
+          <ul>
+            <li><a href="#welcome" onClick="scrollTo('#welcome', 0); return false;">
+              Overview</a></li>
+            <li><a href="#what-we-do" onClick="scrollTo('#what-we-do', 0); return false;">
+              What we do</a></li>
+            <li><a href="#carousel" onClick="scrollTo('#industries', 0); return false;">
+              Our industries</a></li>
+            <li><a href="#team" onClick="scrollTo('#team', 0); return false;">
+              Our team</a></li>
+            <li><a href="#links" onClick="scrollTo('#links', 0); return false;">
+              Links</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div> -->
+
 
     <div id="navigation-main">
       <div class="wrapper">
-        <div class="js-btn-toggle pull-right">
+        <!-- <div class="js-btn-toggle pull-right">
           <i class="fa fa-bars" data-modifies="navigation-main"></i>
-        </div>
+        </div> -->
         <div class="pad20xxx">
           <a href="#" >
-            Logo
-            <img src="">
+            <img src="img/logo-pwc.png" alt="PwC logo">
           </a>
         </div>
       </div>
-      
-      
-      <div class="js-hide-slide navigation-main">
-        <div class="wrapper">
-          <nav role="navigation">
-            <ul>
-              <li><a href="#welcome" onClick="scrollTo('#welcome', 0); return false;">
-                Overview</a></li>
-              <li><a href="#what-we-do" onClick="scrollTo('#what-we-do', 0); return false;">
-                What we do</a></li>
-              <li><a href="#carousel" onClick="scrollTo('#carousel', 0); return false;">
-                Our industries</a></li>
-              <li><a href="#team" onClick="scrollTo('#team', 0); return false;">
-                Our team</a></li>
-              <li><a href="#links" onClick="scrollTo('#links', 0); return false;">
-                Links</a></li>
-            </ul>
-          </nav>
+    </div>
+
+    <div class="bg-image" id="welcome">
+      <h1 class="wrapper">Welcome to<br>
+      PwC’s Skills for Australia!</h1>
+      <div class="bg-dark-trans">
+        <div class="wrapper clearfix">
+          <p>Our mission is to put employers at the heart of Australia’s qualifications and training system.  We will do this by working with industry and business across Australia and identify the skills our economy needs to thrive and grow in the future.</p>
+          <p>We are passionate about creating a future for Australia that gives our people the best opportunities to get fulfilling jobs, and helps our country to succeed in a globally competitive business environment.</p>
         </div>
       </div>
     </div>
 
-    <div class="space"></div>
+    <div class="wrapper pad20x" id="industries">
+      <h2>Skills for Australia is the Skills Service Organisation (SSO) for the following sectors:</h2>
 
-    <div class="bg-image">
-      <div class="wrapper pad20x">
-        <h1>Welcome to <br/>PwC's Skills for Australia</h1>
-
-        <p>Our mission is to put employers at the heart of Australia’s qualifications and training system. We will do this by working with industry and business across Australia and identify the skills our economy needs to thrive and grow in the future. We are passionate about creating a future for Australia that gives our people the best opportunities to get fulfilling jobs, and helps our country to succeed in a globally competitive business environment.</p>
-      </div>
+      <section>
+        <ul class="sector-gallery clearfix">
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+          <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
+        </ul>
+      </section>
     </div>
 
-    <div class="wrapper pad20x">
-      <div>
-        <h2>Skills for Australia is the Skills Service Organisation (SSO) for the following sectors:</h2>
+    <div class="bg-image" id="what-we-do">
+      <div class="wrapper pad20x">
+          {% include content-what-we-do.html %}
       </div>
-
-      <div>
-        <section>
-          <ul id="sector-gallery">
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-            <li><i class="fa fa-chevron-right"></i><h2>Business services</h2></li>
-          </ul>
-        </section>
-      </div>
-
-
-      <!-- <div class="row" id="welcome">
-        {% include content-welcome.html %}
-      </div>
-
-      <div class="row" id="what-we-do">
-        {% include content-what-we-do.html %}
-      </div>
+    </div>
 
       <div class="row" id="carousel">
         {% include industries.html %}
@@ -88,6 +81,11 @@
       <div class="row" id="links">
         {% include content-links.html %}
       </div> -->
+
+
+      <div class="row" >
+        {% include industries.html %}
+      </div>
 
     </div>
 
