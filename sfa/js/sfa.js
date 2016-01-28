@@ -6,6 +6,12 @@ window.onload = function() {
 		$('.' + event.target.dataset.modifies).toggleClass('active');
 	});
 
+	var $squares = $('.js-square');
+
+	$.each($squares, function(i,v) {
+		$(v).outerHeight($(v).outerWidth());
+	});
+
 
 	initCarousel();
 

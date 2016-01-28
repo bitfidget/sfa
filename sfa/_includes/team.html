@@ -1,14 +1,21 @@
-<div>
-	{% for member in site.data.team %}
-	<section>
-		<h1>{{ member.name }}</h1>
-		<h2>{{ member.position }}</h2>
-		<h3>{{ member.company  }}</h3>
-		<ul>
-			{% for item in member.contents %}
-			<p>{{ item }}</p>
-			{% endfor %}
-		</ul>
-	</section>
-	{% endfor %}
-</div>
+<h2>Our team</h2>
+
+{% for member in site.data.team %}
+<section class="team-head">
+	<div class="team-img js-square">
+		<div class="team-img-arrow"></div>
+	</div>
+	<h1>{{ member.name }}</h1>
+	<h2>{{ member.position }}</h2>
+</section>
+{% endfor %}
+
+{% for member in site.data.team %}
+<section class="team-details">
+	<ul>
+		{% for item in member.contents %}
+		<p>{{ item }}</p>
+		{% endfor %}
+	</ul>
+</section>
+{% endfor %}
