@@ -22,7 +22,7 @@
 
 #welcome{
 	h1{
-		padding: 60px 0 140px;
+		padding: 60px 0 180px;
 	}
 }
 
@@ -30,7 +30,8 @@
 .bg-dark-trans{
 	background: rgba(0,0,0,0.4);
 	width: 100%;
-	padding: 30px 0;
+	padding: 20px 0;
+
 	h1{
 		font-size: 28px;
 		padding: 0 20px;
@@ -153,12 +154,17 @@
 			border-radius: 50%;
 			display: table-cell;
 			vertical-align: middle;
+			transition: all .2s ease;
 
 			&:before {
 				font-family: FontAwesome;
 				content: "\F054";
 				color: white;
 				font-size: 1.2em;
+			}
+
+			&:hover {
+				background-color: #a32020;
 			}
 			
 		}
@@ -247,9 +253,9 @@
 			padding: 0;
 		}*/
 
-		/*&:last-child {
-			float: right;
-		}*/
+		&:last-child {
+			color: #fff;
+		}
 	}
 
 	a {
@@ -296,6 +302,10 @@ input[type=text] {
 
 }
 
+/*input[type="checkbox"] {
+	display: none;
+}*/
+
 
 a.button {
 	color: white;
@@ -320,7 +330,7 @@ a.button {
 	width: 25%;
 
 	h1, h2 {
-		font-family: Georgia;
+		font-family: $pwc-font;
 		padding: 0;
 		margin: 0;
 		font-size: 30px;
@@ -330,8 +340,12 @@ a.button {
 
 #team-col-right {
 		width: 100%;
-		padding: 0;
+		padding: 10px 0;
 		margin: 0 !important;
+
+		p {
+			font-family: $pwc-font;
+		}
 	}
 
 .bg-color {
@@ -353,6 +367,18 @@ a.button {
 		margin: 0 !important;
 	}
 
+	.team-details-mob {
+		display: none;
+	}
+
+	
+		#team-col-left, #team-col-right {
+			padding: 60px 0 0 0;
+		}
+	
+
+
+
 	
 }
 
@@ -371,7 +397,7 @@ a.button {
 }
 
 .bg-image#what-we-do {
-	background-image: url(/img/bg-image-welcome-overlay.png), url(/img/bg-image-sso.png);
+	background-image: url(/img/bg-image-sso.png);
 }
 
 
@@ -395,6 +421,10 @@ a.button {
 
 
 @media (min-width: 800px) {
+	.bg-dark-trans {
+		padding: 30px 0;
+	}
+
 	#welcome .bg-dark-trans{
 		background: rgba(0,0,0,0.4);
 		p{
@@ -432,6 +462,10 @@ a.button {
 		padding: 60px 0;
 	}
 
+	#links {
+		padding: 60px 0;
+	}
+
 
 	.checkbox-list li {
 
@@ -443,12 +477,12 @@ a.button {
 
 	input[type=text] {
 		width: 40%;
+		margin: 20px 0;
 	}
 
 	.bg-footer {
 		li {
 			&:last-child {
-				color: #fff;
 				float: right;
 			}
 		}

@@ -35,10 +35,13 @@
     }*/
 
     .nav-subscribe {
-      display: inline !important;
       float: right;
       vertical-align: middle;
       text-align: right;
+
+      p {
+        margin: 0;
+      }
     }
 }
 

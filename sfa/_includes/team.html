@@ -12,11 +12,11 @@
 		<h2>{{ member.position }}</h2>
 
 		<!-- Mobile content -->
-		{% for item in member.contents %}
-		<div class="hidden">
+		<!-- {% for item in member.contents %}
+		<div class="team-details-mob">
 			<p>{{ item }}</p>
 		</div>
-		{% endfor %}
+		{% endfor %} -->
 
 	</section>
 	{% endfor %}
@@ -47,12 +47,13 @@
 			<h2>{{ member.position }}</h2>
 		</div>
 		
-
-		{% for item in member.contents %}
 		<div id="team-col-right">
+		{% for item in member.contents %}
+		
 			<p>{{ item }}</p>
-		</div>
+		
 		{% endfor %}
+		</div>
 	</section>
 
 	{% endfor %}

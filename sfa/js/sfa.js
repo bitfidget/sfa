@@ -12,6 +12,7 @@ window.onload = function() {
 		$(v).outerHeight($(v).outerWidth());
 	});
 
+	postContactToGoogle();
 	initCarousel();
 	initAccordion();
 
@@ -95,12 +96,41 @@ var initAccordion = function() {
 };
 
 
-	
+/* Sending data to Google Docs spreadsheets through ajax request */
+
+function postContactToGoogle() {
+    var first = $('#firstName').val();
+    var last = $('#lastName').val();
+
+    // var interest = $('interests').val();
+
+    // attempt at getting checkboxes to work
+    var interest = $('input:checkbox:checked').serialize();
 
 
+    var email = $('#email').val();
 
+        $.ajax({
+            url: "https://docs.google.com/a/pwc.com/forms/d/127C47i_BAUxGG7TMUW43CyN89dmmmjJl8kmLi73Khgs/formResponse",
+            data: { "entry.578566935": first, 
+            "entry.1652291931": last,
+            "entry.732368356" : interest,
+            "entry.891975652": email },
+            type: "POST",
+            dataType: "xml",
+            statusCode: {
+                0: function () {
+                    // alert("Success");
+                    console.log("success");
 
-
+                    // will still get a CORS message for some reason
+                },
+                200: function () {
+                    // console.log("error");
+                }
+            }
+        });
+}
 
 
 

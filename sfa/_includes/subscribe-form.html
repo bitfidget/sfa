@@ -1,6 +1,6 @@
-<section class="google-form">
+<!-- <section class="google-form">
   <iframe src="https://docs.google.com/forms/d/11mbXFu-eVByJnAYIACDl4JzfZCn3tGIXxY4BOuuXfNc/viewform?embedded=true" width="900" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-</section>
+</section> -->
 
 <h2>Subscribe to our newsletter for industry updates</h2>
 
@@ -10,8 +10,8 @@
 <section>
   <form>
 
-    <input type="text" name="firstName" placeholder="First name">
-    <input type="text" name="lastName" placeholder="Last name">
+    <input type="text" id="firstName" name="firstName" placeholder="First name">
+    <input type="text" id="lastName" name="lastName" placeholder="Last name">
 
     <ul class="checkbox-list clearfix">
       <li>
@@ -40,10 +40,10 @@
       </li>
     </ul>
 
-    <input type="text" name="email" placeholder="Email address" />
+    <input type="text" id="email" name="email" placeholder="Email address" />
     <!-- <input type="submit" value="SUBSCRIBE"> -->
     <div class="pad20x">
-      <a href="#" class="button">SUBSCRIBE</a>
+      <a href="#" class="button" onclick="postContactToGoogle()">SUBSCRIBE</a>
     </div>
   </form>
 </section>
