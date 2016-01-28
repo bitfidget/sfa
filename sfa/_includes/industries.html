@@ -1,11 +1,11 @@
-<ul>
+<ul class="js-a-group">
 	{% for industry in site.data.industries %}
-	<li data-modifies="{{ industry.icon }}">
+	<li data-modifies="{{ industry.icon }}" class="js-a">
 		<i class="fa {{ industry.icon }} industry"></i>
 		<i class="fa fa-chevron-right arrow"></i>
 		<h2>{{ industry.name }}</h2>
 	</li>
-	<li class="accordion-content">
+	<li class="accordion-content mod-{{ industry.icon }}">
 		{{ industry.chair }}
 		{{ industry.packages }}
 		{% for item in industry.contents %}
