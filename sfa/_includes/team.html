@@ -12,10 +12,8 @@
 
 {% for member in site.data.team %}
 <section class="team-details">
-	<ul>
-		{% for item in member.contents %}
-		<p>{{ item }}</p>
-		{% endfor %}
-	</ul>
+	{% for item in member.contents %}
+	<p>{{ item }}</p>
+	{% endfor %}
 </section>
 {% endfor %}

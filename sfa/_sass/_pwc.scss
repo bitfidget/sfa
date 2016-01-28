@@ -48,6 +48,50 @@
 	h2{
 		padding: 30px 0;
 	}
+	ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      border: 2px solid #dc6900;
+      border-radius: 8px;
+      color: #dc6900;
+      transition: all .2s ease;
+      h2 {
+        padding: 0;
+        line-height: 60px;
+        margin: 0 0 0 80px;
+        font-family: Arial, sans-serif;
+      }
+      i.arrow{
+	    	float: right;
+	    	line-height: 60px;
+	    	font-size: 32px;
+	    }
+	    i.industry{
+	    	float: left;
+	    	line-height: 60px;
+	    	font-size: 32px;
+	    }
+    }
+    li:hover {
+        background-color: #dc6900;
+        color: #fff;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .sector-gallery li {
+      width: 45%;
+      margin: 2.5%;
+  }
+
+
+
 }
 
 
