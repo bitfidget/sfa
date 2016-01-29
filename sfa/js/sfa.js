@@ -80,59 +80,55 @@ var initAccordion = function() {
 
 
 // change any style property
-var updateStyle = function(selectorText, style, value) {
-  var theRules = new Array();
-  if (document.styleSheets[0].cssRules) {
-      theRules = document.styleSheets[0].cssRules;
-  } 
-  else if (document.styleSheets[0].rules) {
-      theRules = document.styleSheets[0].rules;
-  }
-  for (n in theRules)
-  {
-    if (theRules[n].selectorText == selectorText) {
-        theRules[n].style[style] = value;
-    }
-  }
-};
+// var updateStyle = function(selectorText, style, value) {
+//   var theRules = new Array();
+//   if (document.styleSheets[0].cssRules) {
+//       theRules = document.styleSheets[0].cssRules;
+//   } 
+//   else if (document.styleSheets[0].rules) {
+//       theRules = document.styleSheets[0].rules;
+//   }
+//   for (n in theRules)
+//   {
+//     if (theRules[n].selectorText == selectorText) {
+//         theRules[n].style[style] = value;
+//     }
+//   }
+// };
 
 var carouselClick = function(carousel) {
+	$.each(carousel.slides, function(ii,slide) {
+		if (slide.dataset.modifier > carousel.current) {
+			$(slide).removeClass('left active').addClass('right');
+		} else if (slide.dataset.modifier < carousel.current) {
+			$(slide).removeClass('active right').addClass('left');
+		} else {
+			$(slide).removeClass('left right').addClass('active');
+		}
+	});
 
-	var currentS = $(carousel).find(('.slide-' + carousel.current));
-	currentS.removeClass('left right').addClass('active');
-
-	// if current = 0
-	if (carousel.current === 0) {
-		console.log('first slide');
-		for (var i = 1; i < carousel.slides.length; i++) {
-			$(carousel).find('.slide-' + i ).removeClass('left active').addClass('right');
+	$.each(carousel.controls, function(ii,control) {
+		if (control.dataset.modifies != carousel.current) {
+			$(control).removeClass('active');
+		} else {
+			$(control).addClass('active');
 		}
-	} else if (carousel.current === (carousel.slides.length - 1)) {
-		console.log('last slide');
-		for (var i = 0; i < (carousel.slides.length - 1); i++) {
-			$(carousel).find('.slide-' + i ).removeClass('right active').addClass('left');
-		}
-	} else {
-		console.log('slide ' + carousel.current);
-		for (var i = 0; i < carousel.current; i++) {
-			$(carousel).find('.slide-' + i ).removeClass('right active').addClass('left');
-		}
-		for (var i = (carousel.current + 1); i < carousel.slides.length; i++) {
-			$(carousel).find('.slide-' + i ).removeClass('left active').addClass('right');
-		}
-	}
+	});
 };
 
 var carouselDelay = function(carousel) {
 
-	console.log('tick ' + carousel.current);
-	if (carousel.current < carousel.slides.length - 1) {
-		carousel.current++;
-	} else {
-		carousel.current = 0
+	if (carousel.hover === false) {
+
+		console.log('tick ' + carousel.current);
+		if (carousel.current < carousel.slides.length - 1) {
+			carousel.current++;
+		} else {
+			carousel.current = 0
+		}
+		carouselClick(carousel);
 	}
-	carouselClick(carousel);
-}
+};
 
 var initCarousel = function() {
 
@@ -152,14 +148,30 @@ var initCarousel = function() {
 		carousel.current = 0;
 		// find all the slides int he carousel
 		carousel.slides = $(carousel).find('.js-carousel-section');
+		// find all the controls 
+		carousel.controls = $(carousel).find('.js-carousel-control .control');
+		// monitor the hover state on the carousel
+		carousel.hover = false;
 
 		// iterate over each slide in carousel and assign it a number, initial state and correct width
 		$.each(carousel.slides, function(ii,slide) {
 			$(slide).addClass('slide-' + ii);
+			slide.dataset.modifier = (ii);
 			$(slide).innerWidth(carousel.width);
 			if ( $(slide).innerHeight() > carousel.height ) {
 				carousel.height = $(slide).innerHeight();
 			}
+		});
+
+		// iterate over the controels and assign them a class also
+		$.each(carousel.controls, function(ii,control) {
+			$(control).addClass('slide-' + ii);
+			control.dataset.modifies = (ii);
+		});
+
+		$(carousel.controls).on('click hover', function(event) {
+			carousel.current = this.dataset.modifies;
+			carouselClick(carousel);
 		});
 
 		// iterate again to add the same height to all elements
@@ -168,38 +180,15 @@ var initCarousel = function() {
 			$(carousel).innerHeight(carousel.height);
 		});
 
+		// monitor the hovering of the carousel - stop the animation if hovered
+		$(carousel).hover(function() {
+		  carousel.hover = true;
+		}, function() {
+		  carousel.hover = false;
+		});
+
 		carouselClick(carousel);
 		setInterval(function() { carouselDelay(carousel) }, 2000);
-		// $(slider).on('click touch', function(event) {
-			
-		// 	if ($(event.target).hasClass('btn-next')) {
-		// 		if ((current + 1) < carousel.slides.length) {
-		// 			current ++;
-		// 			$(slider).find('.btn-prev').removeClass('inactive');
-		// 			if (current === (carousel.slides.length -1)) {
-		// 				$(slider).find('.btn-next').addClass('inactive');
-		// 			}
-		// 			$(slider).find('.slide.active').removeClass('active').addClass('slide-left');
-		// 		} else {
-		// 			current = 0;
-		// 			$(slider).find('.btn-prev').addClass('inactive');
-		// 			$(slider).find('.btn-next').removeClass('inactive');
-		// 			$(slider).find('.slide').removeClass('active slide-left').addClass('slide-right');
-		// 		}
-		// 	} else if ($(event.target).hasClass('btn-prev')) {
-		// 		if (current > 0) {
-		// 			current --;
-		// 			if (current === 0) {
-		// 				$(slider).find('.btn-prev').addClass('inactive');
-		// 			}
-		// 			$(slider).find('.slide.active').removeClass('active').addClass('slide-right');
-		// 		} else {
-		// 			return;
-		// 		}
-		// 	};
 
-		// 	$(slider).find('.slide-' + current).removeClass('slide-left slide-right').addClass('active');
-
-		// });
 	});
 };
