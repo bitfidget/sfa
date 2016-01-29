@@ -7,11 +7,23 @@
     border-bottom: 1px solid rgba(66, 63, 64, 0.14);
     background-color: #FFF;
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    height: 130px;
+    padding: 20px 0;
     overflow: hidden;
     position: relative;
-    img{
-        width: 110px;
+    a.logo{
+        display: inline-block;
+        padding: 10px 0;
+        img{
+          width: 76px;
+          margin-top: -10px;
+        }
+    }
+    h1{
+      font-size: 32px;
+      display: inline-block;
+      padding: 10px 30px;
+      line-height: 64px;
+      margin: 0;
     }
 }
 

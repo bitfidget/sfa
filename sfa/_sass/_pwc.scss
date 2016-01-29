@@ -4,12 +4,12 @@
 	width: 100%;
 	background: #000;
 	color: #FFF;
-	text-align: right;
-	text-transform: uppercase;
+	font-style: italic;
 	p{
 		padding: 26px 0;
-		font-size: 14px;
+		font-size: 18px;
 		margin: 0;
+		font-family: $pwc-font; 
 	}
 }
 
@@ -115,13 +115,13 @@
 		h1{
 			padding: 30px 20px 0;
 			font-size: 24px;
-			font-family: Arial, sans-serif;
+			font-family: $base-font-family;
 			font-weight: 500;
 		}
 		h2{
 			padding: 0 20px 10px;
 			font-size: 18px;
-			font-family: Arial, sans-serif;
+			font-family: $base-font-family;
 			font-weight: 200;
 		}
 		.team-img{
