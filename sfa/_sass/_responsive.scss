@@ -1,0 +1,178 @@
+@media (min-width: 800px) {
+	.bg-dark-trans {
+		padding: 30px 0;
+	}
+
+	#tagline{
+		p {
+			padding: 20px 0;
+		}
+	}
+
+	#welcome .bg-dark-trans{
+		background: rgba(0,0,0,0.4);
+		p{
+			width: 50%;
+			float: left;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	}
+	
+	#welcome {
+		h1{
+			padding: 180px 0px 60px;
+		}
+	}
+
+	#industries {
+
+		padding: 0;
+
+		.bg-dark-trans{
+			width: 50%;
+			float: right;
+		}
+	}
+	#what-we-do {
+		padding: 60px 0;
+		.bg-dark-trans{
+			width: 75%;
+			float: left;
+		}
+		h2{
+			float: left;
+			max-width: 40%;
+		}
+	}
+
+	#how-we-work {
+		padding: 60px 0;
+
+		h2:first-child {
+
+			
+				padding-top: 0px;
+			
+		}
+	}
+
+	#team{
+		/*padding-top: 60px;
+		padding-bottom: 60px;
+		*/padding: 60px 0;
+
+		section.team-head{
+			width: 20%;
+			float: left;
+
+
+		}
+
+		.team-details-mob {
+			/*display: none !important;*/
+			width: 100%;
+			/*padding: 10px 0;*/
+			margin: 0 !important;
+
+			p {
+				font-family: $pwc-font;
+			}
+				
+		}
+	}
+
+	/*#team-col-left {
+		display: block;
+	}
+
+	#team-col-right {
+		float: right;
+		width: 75%;
+		padding: 0;
+		margin: 0 !important;
+	}*/
+
+	#team-col-left {
+		display: block;
+		float: left;
+		width: 25%;
+
+		h1, h2 {
+			font-family: $pwc-font;
+			padding: 0;
+			margin: 0;
+			font-size: 30px;
+		}
+
+	}
+
+	/*#team-col-right {
+		width: 100%;
+		padding: 10px 0;
+		margin: 0 !important;
+
+		p {
+			font-family: $pwc-font;
+		}
+	}*/
+
+	#team-col-left, #team-col-right {
+		padding: 60px 0 0 0;
+	}
+
+	#subscribe{
+		padding: 30px 0;
+	}
+
+	#links {
+		padding: 30px 0;
+	}
+
+
+	.checkbox-list li {
+
+		float: left;
+		width: 50%;
+		margin: 0;
+		
+	}
+
+	input[type=text] {
+		width: 40%;
+		margin: 20px 0;
+
+		&:last-of-type {
+			margin-bottom: 50px;
+		}
+	}
+
+	.bg-footer {
+		li {
+
+			float: left;
+
+			&:last-child {
+				float: right;
+			}
+		}
+
+		#logo {
+			text-align: left;
+			img {
+				margin: 5% 5% 25% 0;
+
+				&:last-of-type {
+					margin-bottom: 25%;
+				}
+			}
+		}
+	}
+
+}

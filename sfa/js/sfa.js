@@ -349,7 +349,11 @@ var initCarousel = function() {
 		  carousel.hover = false;
 		});
 
-		carouselClick(carousel);
+
+		if ($(window).width() >= 800) {
+			carouselClick(carousel);
+		}
+		
 		// setInterval(function() { carouselDelay(carousel) }, 2000);
 
 	});
