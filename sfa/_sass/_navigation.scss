@@ -7,12 +7,12 @@
     border-bottom: 1px solid rgba(66, 63, 64, 0.14);
     background-color: #FFF;
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    padding: 20px 0;
+    padding: 10px 0;
     overflow: hidden;
     position: relative;
     a.logo{
         display: inline-block;
-        padding: 10px 0;
+        padding: 10px 20px;
         img{
           width: 76px;
           margin-top: -10px;
@@ -21,28 +21,24 @@
     h1{
       font-size: 32px;
       display: inline-block;
-      padding: 10px 30px;
+      padding: 0px 20px;
       line-height: 64px;
       margin: 0;
     }
-    /*p{
+    p{
       display: inline-block;
-      padding: 10px 30px;
+      padding: 10px 20px 0;
+      margin: 0;
+
+      right: 0;
     }
     a.button{
       display: inline-block;
       right: 0;
-    }*/
-
-    .nav-subscribe {
-      float: right;
-      vertical-align: middle;
-      text-align: right;
-
-      p {
-        margin: 0;
-      }
+      margin: 10px 20px;
     }
+
+    
 }
 
 .navigation-main {
@@ -87,4 +83,32 @@
 
 .js-hide-slide.active{
     top: 130px;
+}
+
+#down-arrow {
+  cursor: pointer;
+}
+
+@media (min-width: 800px) {
+  #navigation-main{
+    a.logo{
+      padding: 10px 0;
+    }
+
+    .nav-subscribe {
+      float: right;
+      vertical-align: middle;
+      text-align: right;
+
+      p {
+        margin: 0;
+      }
+
+      a.button {
+        margin: 10px 0;
+      }
+    }
+  }
+
+
 }

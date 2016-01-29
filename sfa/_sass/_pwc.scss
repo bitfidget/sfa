@@ -10,7 +10,7 @@
 	color: #FFF;
 	font-style: italic;
 	p{
-		padding: 26px 0;
+		padding: 20px;
 		font-size: 18px;
 		margin: 0;
 		font-family: $pwc-font; 
@@ -21,8 +21,14 @@
 /*welcome section*/
 
 #welcome{
+	
+
 	h1{
-		padding: 60px 0 180px;
+		padding: 60px 20px 60px;
+	}
+
+	p {
+		padding: 0;
 	}
 }
 
@@ -44,18 +50,25 @@
 
 
 
-#welcome 	.bg-dark-trans{
-	p:first-child{
+#welcome .bg-dark-trans{
+	/*p:first-child{
 		padding-left: 0;
 	}
 	p:last-child{
 		padding-right: 0;
+	}*/
+
+	p {
+		padding: 0 20px;
 	}
+
+
 }
 
 /*industries section*/
 
 #industries{
+	padding: 0 20px;
 	h2{
 		padding: 60px 0;
 	}
@@ -104,20 +117,51 @@
 /*what-we-do section*/
 
 #what-we-do{
+	padding: 20px;
+
 	h2{
+		padding: 0 0 30px 0;
+	}
+
+	ul {
+		padding-left: 20px;
+	}
+}
+
+/*how we work section*/
+
+#how-we-work {
+
+
+	padding: 20px;
+	h2 {
 		padding: 30px 0;
+	}
+
+	ol {
+		padding-left: 20px;
 	}
 }
 
 /*team section*/
 
 #team {
+	padding: 20px;
 	h2{
-		padding: 30px 0;
+		padding: 0 0 60px 0;
 	}
 
 	section.team-head{
 		text-align: center;
+
+		&:hover {
+			.team-img-arrow {
+				background-color: #a32020;
+			}
+			h1 {
+				color: #a32020;
+			}
+		}
 		h1{
 			padding: 30px 20px 0;
 			font-size: 24px;
@@ -138,29 +182,30 @@
 			max-width: 180px;
 			margin: 0 auto;
 
+			position: relative;
 
 			background-repeat: no-repeat;
 			background-size: cover;
 		}
 
-		/*.team-img#sara-caplan {
-			background-image: url(/img/about-us-sara.png);
-		}*/
-
 		.team-img-arrow {
 			background-color: #939598;
-			height: 50px;
-			width: 50px;
+			height: 40px;
+			width: 40px;
 			border-radius: 50%;
 			display: table-cell;
 			vertical-align: middle;
 			transition: all .2s ease;
+			position: absolute;
+			bottom: 0;
+			right: 0;
 
 			&:before {
 				font-family: FontAwesome;
 				content: "\F054";
 				color: white;
-				font-size: 1.2em;
+				font-size: 1em;
+				line-height: 40px;
 			}
 
 			&:hover {
@@ -177,6 +222,10 @@
 
 		.team-img-arrow {
 			background-color: #a32020;
+
+			&:before{
+				content: "\F078";
+			}
 		}
 
 		/*$('.active h1').css('color', '#a32020');
@@ -188,22 +237,24 @@
 	}
 
 	.slide-0 .team-img {
-		background-image: url(/img/about-us-sara.png);
+		background-image: url(/img/about-us-sara-crop.png);
+		background-position: 0px -10px;
 	}
 	.slide-1 .team-img {
-		background-image: url(/img/about-us-kasia.png);
-		background-position: 10px 10px;
+		background-image: url(/img/about-us-kasia-crop.png);
+		background-position: 0px 10px;
 	}
 	.slide-2 .team-img {
-		background-image: url(/img/about-us-philip.png);
+		background-image: url(/img/about-us-philip-crop.png);
+		background-position: 0px -10px;
 	}
 	.slide-3 .team-img {
-		background-image: url(/img/about-us-tim.png);
-		background-position: 0px -15px;
+		background-image: url(/img/about-us-tim-crop.png);
+		background-position: 0px -5px;
 	}
 	.slide-4 .team-img {
-		background-image: url(/img/about-us-iain.png);
-		background-position: 10px 10px;
+		background-image: url(/img/about-us-iain-crop.png);
+		background-position: 5px 10px;
 	}
 
 }
@@ -226,8 +277,35 @@
 /* Subscribe */
 
 #subscribe {
+
+	padding: 0 20px;
+
 	h2 {
 		padding: 30px 0;
+	}
+
+	section {
+		padding-bottom: 30px;
+	}
+}
+
+
+/* Links */
+
+#links {
+	padding: 0 20px;
+
+	h2 {
+		padding: 30px 0;
+	}
+
+	ul {
+		margin: 0 0 0 16px;
+		padding: 0 0 30px 0;
+	}
+
+	a {
+		color: #A32020
 	}
 }
 
@@ -239,6 +317,7 @@
 	height: auto;
 	display: block;
 	width: 100%;
+	padding: 0 20px;
 
 	ul {
 		margin: 0;
@@ -254,21 +333,28 @@
 		}*/
 
 		&:last-child {
-			color: #fff;
+			color: #e7e7e8;;
 		}
 	}
 
 	a {
-		text-decoration: none;
 		color: #e7e7e8;
+	}
+
+	#logo {
+
+		text-align: center;
+
+		img {
+			height: 100px;
+			width: auto;
+			/*margin: 30px 30px 20% 0;*/
+			margin: 20px auto;
+		}
 	}
 }
 
-#logo img {
-	height: 100px;
-	width: auto;
-	margin: 30px 30px 20% 0;
-}
+
 
 /* Form */
 
@@ -355,33 +441,6 @@ a.button {
 	    display: block;
 	}
 
-@media (min-width: 800px) {
-	#team-col-left {
-		display: block;
-	}
-
-	#team-col-right {
-		float: right;
-		width: 75%;
-		padding: 0;
-		margin: 0 !important;
-	}
-
-	.team-details-mob {
-		display: none;
-	}
-
-	
-		#team-col-left, #team-col-right {
-			padding: 60px 0 0 0;
-		}
-	
-
-
-
-	
-}
-
 
 
 /*.bg-color#team {
@@ -425,14 +484,37 @@ a.button {
 		padding: 30px 0;
 	}
 
+	#tagline{
+		p {
+			padding: 20px 0;
+		}
+	}
+
 	#welcome .bg-dark-trans{
 		background: rgba(0,0,0,0.4);
 		p{
 			width: 50%;
 			float: left;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
 		}
 	}
+	
+	#welcome {
+		h1{
+			padding: 180px 0px 60px;
+		}
+	}
+
 	#industries {
+
+		padding: 0;
 
 		.bg-dark-trans{
 			width: 50%;
@@ -450,20 +532,49 @@ a.button {
 			max-width: 40%;
 		}
 	}
+
+	#how-we-work {
+		padding: 60px 0;
+
+		h2:first-child {
+
+			
+				padding-top: 0px;
+			
+		}
+	}
+
 	#team{
-		padding-top: 60px;
+		/*padding-top: 60px;
 		padding-bottom: 60px;
+		*/padding: 60px 0;
 		section.team-head{
 			width: 20%;
 			float: left;
 		}
 	}
+
+	#team-col-left {
+		display: block;
+	}
+
+	#team-col-right {
+		float: right;
+		width: 75%;
+		padding: 0;
+		margin: 0 !important;
+	}
+
+	#team-col-left, #team-col-right {
+		padding: 60px 0 0 0;
+	}
+
 	#subscribe{
-		padding: 60px 0;
+		padding: 30px 0;
 	}
 
 	#links {
-		padding: 60px 0;
+		padding: 30px 0;
 	}
 
 
@@ -484,6 +595,13 @@ a.button {
 		li {
 			&:last-child {
 				float: right;
+			}
+		}
+
+		#logo {
+			text-align: left;
+			img {
+				margin: 5% 5% 25% 0;
 			}
 		}
 	}

@@ -2,6 +2,7 @@
 
 .js-carousel-container{
 	position: relative;
+	/*padding: 20px;*/
 	/*overflow: auto;*/
 	/*background: red;*/
 	/*margin: 0 -20px;*/
@@ -10,6 +11,8 @@
 	display: block;
 	/*min-height: 100%;*/
 
+	height: 0px;
+
 
 	/* IMAGES */
 
@@ -17,7 +20,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
-		height: auto;
+		/*height: auto;*/
 		width: 100%;
 		display: block;
 	}
@@ -45,17 +48,16 @@
 }
 
 .js-carousel-section{
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: all ease .5s;
-	opacity: 0;
-	padding: 10px 0;
+	display: block;
+
+	height: 0px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	
+	/*padding: 20px;*/
 
 	.bg-dark-trans {
-		width: 60%;
-		float: right;
+		width: 100%;
 
 		h1 {
 			font-family: $base-font-family;
@@ -69,8 +71,10 @@
 }
 
 .js-carousel-section.active{
-	left: 0;
 	opacity: 1;
+
+	height: auto;
+	overflow: visible;
 }
 
 /* Commented out because sliding effect causes there to be overflow on the sides (on mobile)*/
@@ -84,14 +88,16 @@
 }
 */
 .js-carousel-control{
-	position: relative;
-	width: 35%;
+	/*position: relative;*/
+	width: 100%;
 	z-index: 999;
 	display: inline-block;
 	float: left;
-	padding: 10px 0;
+	/*padding: 10px 0;*/
 
 	.control{
+
+		
 
 		h1{
 			/*font-size: 24px;*/
@@ -108,10 +114,18 @@
 			float: right;
 			/*line-height: 58px;
 			font-size: 24px;*/
-			font-size: 12px;
+			font-size: 12px;/*
+			padding-top: 24px;*/
 			padding-right: 10px;
+			/*line-height: 48px;*/
 			transition: color ease .2s;
 		}
+
+		/*&:nth-child(5) {
+			i {
+			line-height: 72px;
+			}
+		}*/
 	}
 	.control.active{
 		h1{
@@ -121,12 +135,30 @@
 			color: rgba(255,255,255,1);
 		}
 	}
+
+	&:first-child {
+
+	}
 }
 
 @media (min-width: 800px) {
 
+	.js-carousel-container{
+		height: auto;
+	}
+
 	.js-carousel-section{
-		padding: 30px 0;
+		padding: 60px 0;
+		z-index: -1;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all ease .5s;
+		opacity: 0;
+		height: auto;
+
+
 
 		.bg-dark-trans {
 		width: 60%;
@@ -139,11 +171,18 @@
 		p {
 			font-size: 18px;
 		}
+		.wrapper{
+
+			min-height: 600px;
+			float:  none;
+
+		}
 	}
 	}
 
 	.js-carousel-control{
-		padding: 50px 0;
+		padding: 100px 0;
+		width: 35%;
 
 		.control{
 			padding: 5px 0;
@@ -155,6 +194,7 @@
 			i {
 				line-height: 58px;
 				font-size: 24px;
+				padding-top: 0;
 			}
 		}
 	}

@@ -14,6 +14,9 @@ window.onload = function() {
 
 	postContactToGoogle();
 	initCarousel();
+
+	// window.onresize = initCarousel();
+
 	initAccordion();
 
 };
@@ -55,6 +58,8 @@ var initAccordion = function() {
 
 		});
 
+		// var currentAccordion = dataset.modifies;
+
 		accordion.members.on('click touch', function(i,v) {
 
 			// $(window).resize(function(){
@@ -62,20 +67,40 @@ var initAccordion = function() {
 			// });
 
 			$(accordion).find('.active').removeClass('active');
-			
+			// $(accordion).find('.js-team-section.slide-' + currentAccordion).hide();
+
+			// $('.js-team-section.active').hide();
+
+
 			var target = this.dataset.modifies;
 
-			$(accordion).find('.slide-' + target).addClass('active');
-			$('.js-team-section').hide();
+			$('.js-team-section.active').hide();
 
 			
-			$('.active').fadeIn();
+
+			if ( $('.js-team-section.slide-' + target).is(':visible') ) {
+				$(accordion).find('.active').removeClass('active');
+				$('.js-team-section').hide();
+				
+			}
+
+			else {
+				$('.js-team-section').hide();
+				$(accordion).find('.slide-' + target).addClass('active');
+				$('.active').fadeIn();
+			}
+
+			
+
+
 
 			// if class is already active
 			// if ($(this).hasClass('.active')) {
 			//  	$('.js-team-section').hide();
 			//  }
 		});
+
+
 	});
 
 
@@ -132,18 +157,38 @@ function postContactToGoogle() {
         });
 }
 
+$('#down-arrow').click(function() {
+	$('html,body').animate({
+		scrollTop: $('#industries').offset().top
+	}, 800);
+});
 
 
+$('#subscribe-button').click(function() {
+	$('html,body').animate({
+		scrollTop: $('#subscribe').offset().top
+	}, 800);
+});
 
 
+// window.onresize = function() {
+// 	//debugger
+// 	console.log("test");
+// 	initCarousel();
+// }
+
+window.onresize = initCarousel;
 
 
+// $(window).resize(function() {
+// 	if (width <= 800) {
+// 		$('.js-carousel-section .bg-dark-trans').appendTo('.js-carousel-control .control');
+// 	}
+// })
 
-
-
-
-
-
+// if (mobile == true) {
+// 	$('js-carousel-section').insertAfter($('js-carousel-control'));
+// }
 
 
 
@@ -234,8 +279,12 @@ var initCarousel = function() {
 			$(slide).addClass('slide-' + ii);
 			slide.dataset.modifier = (ii);
 			$(slide).innerWidth(carousel.width);
+			console.log(carousel.height)
+			console.log(slide)
+
 			if ( $(slide).innerHeight() > carousel.height ) {
 				carousel.height = $(slide).innerHeight();
+
 			}
 		});
 
@@ -253,11 +302,15 @@ var initCarousel = function() {
 		// Commented out height because messing with images
 
 		// iterate again to add the same height to all elements
-		$.each(carousel.slides, function(ii,slide) {
-			$(slide).innerHeight(carousel.height);
-			$(carousel).innerHeight(carousel.height);
-		});
+		
+		if ($(window).width() >= 800) {
+			$.each(carousel.slides, function(ii,slide) {
+				$(slide).innerHeight(carousel.height);
+				$(carousel).innerHeight(carousel.height);
+			});
 
+		}
+		
 		// monitor the hovering of the carousel - stop the animation if hovered
 		$(carousel).hover(function() {
 		  carousel.hover = true;
