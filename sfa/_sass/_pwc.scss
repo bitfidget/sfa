@@ -140,9 +140,6 @@
 }
 
 
-
-
-
 @media (min-width: 800px) {
 	#welcome .bg-dark-trans{
 		background: rgba(0,0,0,0.4);
@@ -175,5 +172,97 @@
 			width: 20%;
 			float: left;
 		}
+	}
+
+
+	.checkbox-list li {
+
+		float: left;
+		width: 40%;
+		margin: 0;
+		
+	}
+
+	input[type=text] {
+		width: 40%;
+	}
+
+}
+
+/* Footer */
+
+.bg-footer {
+	background-color: #404041;
+	height: auto;
+	display: block;
+	width: 100%;
+
+	li {
+		list-style: none;
+		float: left;
+		padding: 0 2% 0 0;
+
+		/*&:first-child {
+			padding: 0;
+		}*/
+
+		&:last-child {
+			float: right;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: #e7e7e8;
+	}
+}
+
+#logo img {
+	height: 120px;
+	width: auto;
+	margin: 20px 0 100px 0;
+}
+
+/* Form */
+
+.checkbox-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+
+	li {
+		width: 100%;
+	}
+}
+
+
+input {
+	font-family: inherit;
+}
+
+/*input:focus {
+	outline: none;
+}*/
+
+input[type=text] {
+	display: block;
+	margin: 10px 0;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #c7c8ca;
+	border-radius: 5px;
+
+}
+
+
+a.button {
+	color: white;
+	background-color: #e0301e;
+	padding: 10px 20px;
+	border-radius: 5px;
+
+	&:hover {
+		text-decoration:none;
 	}
 }
