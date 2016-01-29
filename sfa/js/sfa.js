@@ -66,6 +66,8 @@ var initAccordion = function() {
 			// 	if ($(window).width() >= 800) {}
 			// });
 
+
+
 			$(accordion).find('.active').removeClass('active');
 			// $(accordion).find('.js-team-section.slide-' + currentAccordion).hide();
 
@@ -74,30 +76,38 @@ var initAccordion = function() {
 
 			var target = this.dataset.modifies;
 
-			$('.js-team-section-mob.active').hide();
+			$('.js-team-section-mob.active').slideUp();
 
 			
 
 			if ( $('.js-team-section-mob.slide-' + target).is(':visible') ) {
 				$(accordion).find('.active').removeClass('active');
-				$('.js-team-section-mob').hide();
+				$('.js-team-section-mob').slideUp();
 				
 			}
 
 			else {
-				$('.js-team-section-mob').hide();
+				$('.js-team-section-mob').slideUp();
+
+				if ($(window).width() >= 800) {
+					$('.js-team-section-mob').appendTo('.team-details-div');
+					$('.js-team-section-mob').hide();
+				}
+
+				else {
+					$('html,body').animate({
+						scrollTop: $('.js-team-member.slide-' + target).offset().top
+					}, 500);
+				}
+
 				$(accordion).find('.slide-' + target).addClass('active');
-				$('.active').fadeIn();
+
+				$('.active').slideDown();
+
+				
+
+				
 			}
-
-			
-
-
-
-			// if class is already active
-			// if ($(this).hasClass('.active')) {
-			//  	$('.js-team-section').hide();
-			//  }
 		});
 
 
@@ -130,7 +140,15 @@ function postContactToGoogle() {
     // var interest = $('interests').val();
 
     // attempt at getting checkboxes to work
-    var interest = $('input:checkbox:checked').serialize();
+    // var interest = $('input:checked').serialize();
+    // var interestChecked = $('input:checkbox').is(':checked');
+    // var interest = $('.interests:checked').serialize();
+
+    var interests = $('.interests:checked').map(function() {
+    	return this.value;
+    }).get().join(", ");
+
+    console.log(interests);
 
 
     var email = $('#email').val();
@@ -139,16 +157,21 @@ function postContactToGoogle() {
             url: "https://docs.google.com/a/pwc.com/forms/d/127C47i_BAUxGG7TMUW43CyN89dmmmjJl8kmLi73Khgs/formResponse",
             data: { "entry.578566935": first, 
             "entry.1652291931": last,
-            "entry.732368356" : interest,
+            "entry_732368356": interests,
             "entry.891975652": email },
             type: "POST",
             dataType: "xml",
+            traditional: true,
             statusCode: {
                 0: function () {
-                    // alert("Success");
                     console.log("success");
+                    alert("Your form has been submitted.");
 
                     // will still get a CORS message for some reason
+
+                    $('form').find('input:text').val('');
+                    $('input:checkbox').removeAttr('checked');
+
                 },
                 200: function () {
                     // console.log("error");
@@ -171,6 +194,8 @@ $('#subscribe-button').click(function() {
 });
 
 
+
+
 // window.onresize = function() {
 // 	//debugger
 // 	console.log("test");
@@ -190,24 +215,6 @@ $(window).bind('resize', function() {
    // $("#carouselDiv").load(location.href + " #carouselDiv");
    initCarousel();
 });
-
-
-// $(window).resize(function() {
-// 	if (width <= 800) {
-// 		$('.js-carousel-section .bg-dark-trans').appendTo('.js-carousel-control .control');
-// 	}
-// })
-
-// if (mobile == true) {
-// 	$('js-carousel-section').insertAfter($('js-carousel-control'));
-// }
-
-
-
-
-
-
-
 
 // everything you see below you is sadly wasted codez :(
 
@@ -245,6 +252,18 @@ var carouselClick = function(carousel) {
 			$(control).removeClass('active');
 		} else {
 			$(control).addClass('active');
+
+			if ($(window).width() >= 800) {
+
+			}
+
+			else {
+				$('html,body').animate({
+					scrollTop: $('.control.slide-' + ii).offset().top
+				}, 500);
+			}
+
+			
 		}
 	});
 };
@@ -303,7 +322,7 @@ var initCarousel = function() {
 		// iterate over the controels and assign them a class also
 		$.each(carousel.controls, function(ii,control) {
 			$(control).addClass('slide-' + ii);
-			control.dataset.modifies = (ii);
+			control.dataset.modifies = (ii);	
 		});
 
 		$(carousel.controls).on('click hover', function(event) {

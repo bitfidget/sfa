@@ -396,7 +396,10 @@ input[type=text] {
 	padding: 8px;
 	border: 1px solid #c7c8ca;
 	border-radius: 5px;
-
+	
+	&:last-of-type {
+		margin-bottom: 30px;
+	}
 }
 
 /*input[type="checkbox"] {
@@ -420,30 +423,10 @@ a.button {
 /* Columns */
 
 
-
 #team-col-left {
 	display: none;
-	float: left;
-	width: 25%;
-
-	h1, h2 {
-		font-family: $pwc-font;
-		padding: 0;
-		margin: 0;
-		font-size: 30px;
-	}
-
 }
 
-#team-col-right {
-		width: 100%;
-		padding: 10px 0;
-		margin: 0 !important;
-
-		p {
-			font-family: $pwc-font;
-		}
-	}
 
 .bg-color {
 	    background-color: #e7e7e8;
@@ -554,10 +537,18 @@ a.button {
 
 		.team-details-mob {
 			/*display: none !important;*/
+			width: 100%;
+			/*padding: 10px 0;*/
+			margin: 0 !important;
+
+			p {
+				font-family: $pwc-font;
+			}
+				
 		}
 	}
 
-	#team-col-left {
+	/*#team-col-left {
 		display: block;
 	}
 
@@ -566,7 +557,31 @@ a.button {
 		width: 75%;
 		padding: 0;
 		margin: 0 !important;
+	}*/
+
+	#team-col-left {
+		display: block;
+		float: left;
+		width: 25%;
+
+		h1, h2 {
+			font-family: $pwc-font;
+			padding: 0;
+			margin: 0;
+			font-size: 30px;
+		}
+
 	}
+
+	/*#team-col-right {
+		width: 100%;
+		padding: 10px 0;
+		margin: 0 !important;
+
+		p {
+			font-family: $pwc-font;
+		}
+	}*/
 
 	#team-col-left, #team-col-right {
 		padding: 60px 0 0 0;
@@ -592,6 +607,10 @@ a.button {
 	input[type=text] {
 		width: 40%;
 		margin: 20px 0;
+
+		&:last-of-type {
+			margin-bottom: 50px;
+		}
 	}
 
 	.bg-footer {
