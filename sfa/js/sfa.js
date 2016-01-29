@@ -12,7 +12,7 @@ window.onload = function() {
 		$(v).outerHeight($(v).outerWidth());
 	});
 
-	postContactToGoogle();
+	
 	initCarousel();
 
 	// window.onresize = initCarousel();
@@ -177,7 +177,12 @@ $('#subscribe-button').click(function() {
 // 	initCarousel();
 // }
 
-window.onresize = initCarousel;
+// window.onresize = initCarousel;
+
+$(window).resize(function() {
+	console.log("hello");
+	initCarousel();
+});
 
 
 // $(window).resize(function() {
@@ -279,8 +284,8 @@ var initCarousel = function() {
 			$(slide).addClass('slide-' + ii);
 			slide.dataset.modifier = (ii);
 			$(slide).innerWidth(carousel.width);
-			console.log(carousel.height)
-			console.log(slide)
+			// console.log(carousel.height)
+			// console.log(slide)
 
 			if ( $(slide).innerHeight() > carousel.height ) {
 				carousel.height = $(slide).innerHeight();

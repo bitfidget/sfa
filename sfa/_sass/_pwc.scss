@@ -213,6 +213,11 @@
 			}
 			
 		}
+
+		.team-details-mob {
+			text-align: left;
+			display: none;
+		}
 	}
 
 	section.team-head.active {
@@ -237,23 +242,23 @@
 	}
 
 	.slide-0 .team-img {
-		background-image: url(/img/about-us-sara-crop.png);
+		background-image: url(/img/about-us-sara-crop.jpg);
 		background-position: 0px -10px;
 	}
 	.slide-1 .team-img {
-		background-image: url(/img/about-us-kasia-crop.png);
+		background-image: url(/img/about-us-kasia-crop.jpg);
 		background-position: 0px 10px;
 	}
 	.slide-2 .team-img {
-		background-image: url(/img/about-us-philip-crop.png);
+		background-image: url(/img/about-us-philip-crop.jpg);
 		background-position: 0px -10px;
 	}
 	.slide-3 .team-img {
-		background-image: url(/img/about-us-tim-crop.png);
+		background-image: url(/img/about-us-tim-crop.jpg);
 		background-position: 0px -5px;
 	}
 	.slide-4 .team-img {
-		background-image: url(/img/about-us-iain-crop.png);
+		background-image: url(/img/about-us-iain-crop.jpg);
 		background-position: 5px 10px;
 	}
 
@@ -270,9 +275,7 @@
 
 }
 
-#team section.team-details-mob {
-	display: none;
-}
+
 
 /* Subscribe */
 
@@ -354,6 +357,11 @@
 	}
 }
 
+.footer-list {
+	li {
+		font-size: 0.8em;
+	}
+}
 
 
 /* Form */
@@ -451,28 +459,13 @@ a.button {
 /* IMAGES */
 
 .bg-image#welcome {
-	background-image: url(/img/bg-image-welcome-overlay.png), url(/img/bg-image-welcome.png);
+	background-image: url(/img/bg-image-welcome-overlay.png), url(/img/bg-image-welcome.jpg);
 
 }
 
 .bg-image#what-we-do {
-	background-image: url(/img/bg-image-sso.png);
+	background-image: url(/img/bg-image-sso.jpg);
 }
-
-
-/*.bg-image#industries {
-	background-image: url(/img/industry-business.png);
-}*/
-
-
-/*.bg-image#industries {
-	background-color: gray;
-}*/
-
-/*.bg-image .business-services {
-	background-image: url(/img/industry-business.png);
-}*/
-
 
 
 
@@ -548,9 +541,16 @@ a.button {
 		/*padding-top: 60px;
 		padding-bottom: 60px;
 		*/padding: 60px 0;
+
 		section.team-head{
 			width: 20%;
 			float: left;
+
+
+		}
+
+		.team-details-mob {
+			/*display: none !important;*/
 		}
 	}
 

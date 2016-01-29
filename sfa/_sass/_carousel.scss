@@ -26,22 +26,22 @@
 	}
 
 	.bg-industry.slide-0 {
-		background-image: url(/img/industry-business.png);
+		background-image: url(/img/industry-business.jpg);
 	}
 	.bg-industry.slide-1 {
-		background-image: url(/img/industry-financial.png);
+		background-image: url(/img/industry-financial.jpg);
 	}
 	.bg-industry.slide-2 {
-		background-image: url(/img/industry-ICT.png);
+		background-image: url(/img/industry-ICT.jpg);
 	}
 	.bg-industry.slide-3 {
-		background-image: url(/img/industry-education.png);
+		background-image: url(/img/industry-education.jpg);
 	}
 	.bg-industry.slide-4 {
-		background-image: url(/img/industry-culture.png);
+		background-image: url(/img/industry-culture.jpg);
 	}
 	.bg-industry.slide-5 {
-		background-image: url(/img/industry-print.png);
+		background-image: url(/img/industry-print.jpg);
 	}
 
 
@@ -61,11 +61,11 @@
 
 		h1 {
 			font-family: $base-font-family;
-			font-size: 18px;
+			font-size: 24px;
 		}
 
 		p {
-			font-size: 14px;
+			font-size: 18px;
 		}
 	}
 }
@@ -75,6 +75,8 @@
 
 	height: auto;
 	overflow: visible;
+
+	
 }
 
 /* Commented out because sliding effect causes there to be overflow on the sides (on mobile)*/
@@ -93,15 +95,16 @@
 	z-index: 999;
 	display: inline-block;
 	float: left;
+	padding-bottom: 60px;
 	/*padding: 10px 0;*/
 
 	.control{
 
-		
+		background-color: black;		
 
 		h1{
 			/*font-size: 24px;*/
-			font-size: 12px;
+			font-size: 24px;
 			padding: 15px 20px;
 			background: rgba(0,0,0,0.4);
 			color: #FFF;
@@ -114,10 +117,10 @@
 			float: right;
 			/*line-height: 58px;
 			font-size: 24px;*/
-			font-size: 12px;/*
+			font-size: 24px;/*
 			padding-top: 24px;*/
 			padding-right: 10px;
-			/*line-height: 48px;*/
+			line-height: 58px;
 			transition: color ease .2s;
 		}
 
@@ -186,6 +189,7 @@
 
 		.control{
 			padding: 5px 0;
+			background-color: transparent;
 
 			h1 {
 				font-size: 24px;

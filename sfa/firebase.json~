@@ -1,0 +1,9 @@
+{
+  "firebase": "mobile-responsive-bg",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

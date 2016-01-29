@@ -11,32 +11,19 @@
 		<p>{{ count }}</p>
 		<h2>{{ member.position }}</h2>
 
-		<!-- Mobile content -->
-		<!-- {% for item in member.contents %}
-		<div class="team-details-mob">
+		<div class="team-details-mob js-team-section-mob">
+			{% for item in member.contents %}
+			
 			<p>{{ item }}</p>
+			
+			{% endfor %}
 		</div>
-		{% endfor %} -->
+
+		<!-- Mobile content -->
+		
 
 	</section>
 	{% endfor %}
-
-
-	<!-- Mobile content -->
-	<!-- {% for member in site.data.team %}
-	<section class="team-details-mob">
-
-		<h1>{{ member.name }}</h1>
-		<h2>{{ member.position }}</h2>
-		
-		{% for item in member.contents %}
-		<div id="">
-			<p>{{ item }}</p>
-		</div>
-		{% endfor %}
-	</section>
-
-	{% endfor %} -->
 
 	<!-- Big content for website - expands below -->
 	{% for member in site.data.team %}
