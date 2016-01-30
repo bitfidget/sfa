@@ -67,7 +67,7 @@
 	padding: 0px;
 
 	h2{
-		padding: 0 20px 30px 20px;
+		padding: 30px 20px;
 	}
 }
 
@@ -99,10 +99,10 @@
 
 		&:hover {
 			.team-img-arrow {
-				background-color: #a32020;
+				background-color: $pwc-color;
 			}
 			h1 {
-				color: #a32020;
+				color: $pwc-color;
 			}
 		}
 		h1{
@@ -154,7 +154,7 @@
 			}
 
 			&:hover {
-				background-color: #a32020;
+				background-color: $pwc-color;
 			}
 			
 		}
@@ -167,19 +167,19 @@
 
 	section.team-head.active {
 		h1 {
-			color: #a32020;
+			color: $pwc-color;
 		}
 
 		.team-img-arrow {
-			background-color: #a32020;
+			background-color: $pwc-color;
 
 			&:before{
 				content: "\F078";
 			}
 		}
 
-		/*$('.active h1').css('color', '#a32020');
-		$('.active .team-img-arrow').css('background-color', '#a32020');*/
+		/*$('.active h1').css('color', '$pwc-color');
+		$('.active .team-img-arrow').css('background-color', '$pwc-color');*/
 	}
 
 	.team-img {
@@ -215,7 +215,7 @@
 	display: none;
 
 	h1 {
-		color: #a32020;
+		color: $pwc-color;
 	}
 
 }
@@ -253,7 +253,7 @@
 	}
 
 	a {
-		color: #A32020
+		color: $pwc-color
 	}
 }
 
@@ -268,12 +268,14 @@
 	padding: 0 20px;
 
 	ul {
-		margin: 0;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	li {
 		list-style: none;
 		padding: 0 2% 0 0;
+		display: inline-block;
 
 		&:last-child {
 			color: #e7e7e8;;
@@ -305,8 +307,14 @@
 
 .footer-list {
 
+
 	li {
 		font-size: 0.8em;
+		/*float: left;*/
+
+		&:last-of-type {
+			/*float: right;*/
+		}
 	}
 }
 
@@ -315,6 +323,7 @@
 
 .checkbox-list {
 	margin: 0;
+	margin-bottom: 20px;
 	padding: 0;
 	list-style: none;
 	
@@ -338,17 +347,25 @@ input[type=email] {
 	padding: 8px;
 	border: 1px solid #c7c8ca;
 	border-radius: 5px;
-	
-	&:last-of-type {
-		margin-bottom: 30px;
+}
+
+input[type=submit] {
+	font-family: $base-font-family;
+	font-size: 1em;
+	color: white;
+	background-color: $pwc-color;
+	padding: 15px 30px;
+	border-radius: 5px;
+	border: none;
+
+	&:disabled {
+		background-color: lighten($pwc-color, 40%);
 	}
 }
 
-
-
 a.button {
 	color: white;
-	background-color: #A32020;
+	background-color: $pwc-color;
 	padding: 10px 20px;
 	border-radius: 5px;
 
@@ -357,6 +374,10 @@ a.button {
 	}
 }
 
+form a.disableClick {
+	pointer-events: none;
+	background-color: lighten($pwc-color, 40%);
+}
 
 
 /* Columns */
