@@ -1,5 +1,5 @@
 - name: 'Business services'
-  chair: 'Chair: Angelina Pillai'
+  chair: 'Angelina Pillai'
   packages: 'Business Services Training Package'
   icon: fa-suitcase
   contents:
@@ -15,7 +15,7 @@
   - 'Qualifications in this industry relate to a range of skills including: accounting, credit management, mortgage broking, insurance, superannuation and financial services.'
 
 - name: 'Information and communications technology'
-  chair: Ross Eason
+  chair: Ros Eason
   packages: 'Information and Communications Technology Training Package; Integrated Telecommunications Training Package'
   icon: fa-terminal
   contents: 
