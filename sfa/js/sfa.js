@@ -32,7 +32,40 @@ var scrollTo = function(elem, space) {
 // accordion content
 var initAccordion = function() {
 
-	var $accordions = $('.js-a');
+	var $accordions = $('.js-a-group');
+
+	// 
+	$.each($accordions, function(i,accordion) {
+
+		// counter for position of the carousel
+		accordion.current = 0;
+		accordion.sections = $(accordion).find('.js-team-section');
+		accordion.members = $(accordion).find('.js-team-member');
+
+		$.each(accordion.sections, function(ii, section) {
+			$(section).addClass('slide-' + ii);
+			section.dataset.modifier = (ii);
+
+		});
+
+		$.each(accordion.members, function(ii, member) {
+			$(member).addClass('slide-' + ii);
+			member.dataset.modifies = (ii);
+
+		});
+
+		accordion.members.on('click touch', function(i,v) {
+
+			$(accordion).find('.active').removeClass('active');
+			
+			var target = this.dataset.modifies;
+
+			$(accordion).find('.slide-' + target).addClass('active');
+
+			
+		});
+	});
+
 
 	$accordions.on('click touch', function(i,v) {
 		
@@ -44,12 +77,14 @@ var initAccordion = function() {
 			$('.open').removeClass('open').fadeOut();
 			elem.fadeIn().addClass('open');
 		}
+
+
 	});
 
 };
 
 
-
+	
 
 
 

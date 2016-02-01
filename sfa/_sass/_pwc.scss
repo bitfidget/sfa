@@ -110,6 +110,7 @@
 	h2{
 		padding: 30px 0;
 	}
+
 	section.team-head{
 		text-align: center;
 		h1{
@@ -132,11 +133,41 @@
 			max-width: 180px;
 			margin: 0 auto;
 		}
+
+		.team-img-arrow {
+			background-color: #939598;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			display: table-cell;
+			vertical-align: middle;
+
+			&:before {
+				font-family: FontAwesome;
+				content: "\F054";
+				color: white;
+				font-size: 1.2em;
+			}
+			
+		}
 	}
+
 }
 
 #team section.team-details{
 	display: none;
+
+
+}
+
+.active {
+		display: block !important;
+
+	}
+
+
+.team-head .active {
+	color: red;
 }
 
 
@@ -196,6 +227,10 @@
 	height: auto;
 	display: block;
 	width: 100%;
+
+	ul {
+		margin: 0;
+	}
 
 	li {
 		list-style: none;
