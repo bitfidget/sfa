@@ -43,7 +43,7 @@ var initAccordion = function() {
 
 		// counter for position of the carousel
 		accordion.current = 0;
-		accordion.sections = $(accordion).find('.js-team-section');
+		accordion.sections = $(accordion).find('.js-team-section-mob');
 		accordion.members = $(accordion).find('.js-team-member');
 
 		$.each(accordion.sections, function(ii, section) {
@@ -74,18 +74,18 @@ var initAccordion = function() {
 
 			var target = this.dataset.modifies;
 
-			$('.js-team-section.active').hide();
+			$('.js-team-section-mob.active').hide();
 
 			
 
-			if ( $('.js-team-section.slide-' + target).is(':visible') ) {
+			if ( $('.js-team-section-mob.slide-' + target).is(':visible') ) {
 				$(accordion).find('.active').removeClass('active');
-				$('.js-team-section').hide();
+				$('.js-team-section-mob').hide();
 				
 			}
 
 			else {
-				$('.js-team-section').hide();
+				$('.js-team-section-mob').hide();
 				$(accordion).find('.slide-' + target).addClass('active');
 				$('.active').fadeIn();
 			}
@@ -179,9 +179,16 @@ $('#subscribe-button').click(function() {
 
 // window.onresize = initCarousel;
 
-$(window).resize(function() {
-	console.log("hello");
-	initCarousel();
+// $(window).resize(function() {
+// 	// console.log("hello");
+// 	// initCarousel();
+
+// 	$('#carouselDiv').load(location.href + ' #carouselDiv');
+// });
+
+$(window).bind('resize', function() {
+   // $("#carouselDiv").load(location.href + " #carouselDiv");
+   initCarousel();
 });
 
 
