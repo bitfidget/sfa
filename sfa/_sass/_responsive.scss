@@ -88,7 +88,7 @@
 		}
 	}
 
-	/*#team-col-left {
+	#team-col-left {
 		display: block;
 	}
 
@@ -97,18 +97,21 @@
 		width: 75%;
 		padding: 0;
 		margin: 0 !important;
-	}*/
+	}
 
 	#team-col-left {
 		display: block;
 		float: left;
-		width: 25%;
+		width: 20%;
 
 		h1, h2 {
 			font-family: $pwc-font;
 			padding: 0;
-			margin: 0;
+			margin: 0 0 0.6em 0;
 			font-size: 30px;
+		}
+		h2{
+			font-size: 18px;
 		}
 
 	}

@@ -13,20 +13,19 @@
 
 		<div class="team-details-mob js-team-section-mob">
 
-			<!-- <div class="team-details-web">
-				{% for member in site.data.team %}
-				<div id="team-col-left">
-					<h1>{{ member.name }}</h1>
-					<h2>{{ member.position }}</h2>
-				</div>
-				{% endfor %}
-			</div> -->
 
+			<div id="team-col-left">
+				<h1>{{ member.name }}</h1>
+				<h2>{{ member.position }}</h2>
+			</div>
+			
+			<div id="team-col-right">
 			{% for item in member.contents %}
 			
 			<p>{{ item }}</p>
 			
 			{% endfor %}
+			</div>
 		</div>
 
 		<!-- Mobile content -->
