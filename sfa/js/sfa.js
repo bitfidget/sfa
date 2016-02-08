@@ -103,9 +103,6 @@ var initAccordion = function() {
 				$(accordion).find('.slide-' + target).addClass('active');
 
 				$('.active').slideDown();
-
-				
-
 				
 			}
 		});
