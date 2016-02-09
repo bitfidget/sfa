@@ -12,33 +12,20 @@
     position: relative;
     a.logo{
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 0 10px 20px;
         img{
-          width: 76px;
-          margin-top: -10px;
+          max-width: 56px;
+          margin-top: 0;
         }
     }
     h1{
-      font-size: 32px;
+      font-size: 22px;
       display: inline-block;
-      padding: 0px 20px;
+      padding: 12px 20px 0;
       line-height: 64px;
       margin: 0;
+      float: right;
     }
-    p{
-      display: inline-block;
-      padding: 10px 20px 0;
-      margin: 0;
-
-      right: 0;
-    }
-    a.button{
-      display: inline-block;
-      right: 0;
-      margin: 10px 20px;
-    }
-
-    
 }
 
 .navigation-main {
@@ -91,24 +78,50 @@
 
 @media (min-width: 800px) {
   #navigation-main{
+    width: 100%;
+    z-index: 300;
+    display: block;
+    border-bottom: 1px solid rgba(66, 63, 64, 0.14);
+    background-color: #FFF;
+    box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
     a.logo{
-      padding: 10px 0;
+        display: inline-block;
+        padding: 10px 0;
+        img{
+          max-width: 76px;
+          margin-top: -10px;
+        }
     }
-
+    h1{
+      font-size: 32px;
+      display: inline-block;
+      padding: 0px 20px;
+      line-height: 64px;
+      margin: 0;
+      float: none;
+    }
     .nav-subscribe {
       float: right;
       vertical-align: middle;
       text-align: right;
-
       p {
         margin: 0;
+        display: inline-block;
+        padding: 10px 20px 0;
+        right: 0;
       }
-
       a.button {
+        margin: 10px 0;
+        display: inline-block;
+        right: 0;
         margin: 10px 0;
       }
     }
   }
+
 
 
 }

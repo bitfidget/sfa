@@ -1,12 +1,7 @@
 @media (min-width: 800px) {
-	.bg-dark-trans {
-		padding: 30px 0;
-	}
 
-	#tagline{
-		p {
-			padding: 20px 0;
-		}
+	.sm-hidden{
+		display: block;
 	}
 
 	#welcome .bg-dark-trans{
@@ -14,6 +9,7 @@
 		p{
 			width: 50%;
 			float: left;
+			padding: 0 20px;
 
 			&:first-child {
 				padding-left: 0;
@@ -41,7 +37,7 @@
 		}
 	}
 	#what-we-do {
-		padding: 60px 0;
+		padding: 60px 20px;
 		.bg-dark-trans{
 			width: 75%;
 			float: left;

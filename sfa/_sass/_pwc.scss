@@ -4,14 +4,18 @@
 
 /*tagline*/
 
+.sm-hidden{
+	display: none;
+}
+
 #tagline{
 	width: 100%;
 	background: #000;
 	color: #FFF;
 	font-style: italic;
+	padding: 20px;
 	p{
-		padding: 20px;
-		font-size: 18px;
+		font-size: 16px;
 		margin: 0;
 		font-family: $pwc-font; 
 	}
@@ -21,12 +25,9 @@
 /*welcome section*/
 
 #welcome{
-	
-
 	h1{
 		padding: 60px 20px 60px;
 	}
-
 	p {
 		padding: 0;
 	}
@@ -36,34 +37,20 @@
 .bg-dark-trans{
 	background: rgba(0,0,0,0.4);
 	width: 100%;
-	padding: 20px 0;
+	padding: 20px;
 
 	h1{
 		font-size: 28px;
-		padding: 0 20px;
+		padding: 0;
 	}
 	p{
 		width: 100%;
-		padding: 0 20px;
+		padding: 0;
 	}
 }
 
 
 
-#welcome .bg-dark-trans{
-	/*p:first-child{
-		padding-left: 0;
-	}
-	p:last-child{
-		padding-right: 0;
-	}*/
-
-	p {
-		padding: 0 20px;
-	}
-
-
-}
 
 /*industries section*/
 
@@ -72,68 +59,23 @@
 	h2{
 		padding: 60px 0;
 	}
-	/*all followiing styles refer to the accordion setup we were using until friday*/
-	/*ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    li {
-      display: block;
-      width: 100%;
-      padding: 20px;
-      border: 2px solid #dc6900;
-      border-radius: 8px;
-      color: #dc6900;
-      transition: all .2s ease;
-      margin: 40px 0;
-      h2 {
-        padding: 0;
-        line-height: 60px;
-        margin: 0 0 0 80px;
-        font-family: Arial, sans-serif;
-      }
-      i.arrow{
-	    	float: right;
-	    	line-height: 60px;
-	    	font-size: 32px;
-	    }
-	    i.industry{
-	    	float: left;
-	    	line-height: 60px;
-	    	font-size: 32px;
-	    	margin-left: 15px;
-	    }
-    }
-    li:hover {
-        background-color: #dc6900;
-        color: #fff;
-    }
-  }
-  .accordion-content{
-  	display: none;
-  }*/
 }
 
 /*what-we-do section*/
 
 #what-we-do{
-	padding: 20px;
+	padding: 0px;
 
 	h2{
-		padding: 0 0 30px 0;
-	}
-
-	ul {
-		padding-left: 20px;
+		padding: 0 20px 30px 20px;
 	}
 }
 
 /*how we work section*/
 
 #how-we-work {
-
-
 	padding: 20px;
+
 	h2 {
 		padding: 30px 0;
 	}

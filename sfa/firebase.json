@@ -1,5 +1,5 @@
 {
-  "firebase": "mobile-responsive-bg",
+  "firebase": "another-version",
   "public": "_site",
   "ignore": [
     "firebase.json",

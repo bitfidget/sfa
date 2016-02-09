@@ -14,11 +14,12 @@ window.onload = function() {
 
 	
 	initCarousel();
-
-	// window.onresize = initCarousel();
-
 	initAccordion();
 
+	$(window).bind('resize', function() {
+		initCarousel();
+		initAccordion();
+	});
 };
 
 // our scrolly navigation
@@ -38,7 +39,6 @@ var initAccordion = function() {
 
 	var $accordions = $('.js-a-group');
 
-	// 
 	$.each($accordions, function(i,accordion) {
 
 		// counter for position of the carousel
@@ -58,32 +58,17 @@ var initAccordion = function() {
 
 		});
 
-		// var currentAccordion = dataset.modifies;
-
 		accordion.members.on('click touch', function(i,v) {
 
-			// $(window).resize(function(){
-			// 	if ($(window).width() >= 800) {}
-			// });
-
-
-
 			$(accordion).find('.active').removeClass('active');
-			// $(accordion).find('.js-team-section.slide-' + currentAccordion).hide();
-
-			// $('.js-team-section.active').hide();
-
 
 			var target = this.dataset.modifies;
 
 			$('.js-team-section-mob.active').slideUp();
 
-			
-
 			if ( $('.js-team-section-mob.slide-' + target).is(':visible') ) {
 				$(accordion).find('.active').removeClass('active');
 				$('.js-team-section-mob').slideUp();
-				
 			}
 
 			else {
@@ -103,11 +88,8 @@ var initAccordion = function() {
 				$(accordion).find('.slide-' + target).addClass('active');
 
 				$('.active').slideDown();
-				
 			}
 		});
-
-
 	});
 
 
@@ -121,61 +103,56 @@ var initAccordion = function() {
 			$('.open').removeClass('open').fadeOut();
 			elem.fadeIn().addClass('open');
 		}
-
-
 	});
-
 };
 
 
 /* Sending data to Google Docs spreadsheets through ajax request */
 
 function postContactToGoogle() {
-    var first = $('#firstName').val();
-    var last = $('#lastName').val();
 
-    // var interest = $('interests').val();
+  var first = $('#firstName').val();
+  var last = $('#lastName').val();
+  var email = $('#email').val();
 
-    // attempt at getting checkboxes to work
-    // var interest = $('input:checked').serialize();
-    // var interestChecked = $('input:checkbox').is(':checked');
-    // var interest = $('.interests:checked').serialize();
+  var interests = $('.interests:checked').map(function() {
+  	return this.value;
+  }).get().join(", ");
 
-    var interests = $('.interests:checked').map(function() {
-    	return this.value;
-    }).get().join(", ");
+  // FIRST check to see if fields have a valid value. IF valid:
 
-    console.log(interests);
+  $.ajax({
+    url: "https://docs.google.com/a/pwc.com/forms/d/127C47i_BAUxGG7TMUW43CyN89dmmmjJl8kmLi73Khgs/formResponse",
+    data: { "entry.578566935": first, 
+    "entry.1652291931": last,
+    "entry_732368356": interests,
+    "entry.891975652": email },
+    type: "POST",
+    dataType: "xml",
+    traditional: true,
+    statusCode: {
+      0: function () {
+        
+        // CAN we make this a neater, in page message
+        alert("Your form has been submitted.");
 
+        // will still get a CORS message for some reason
 
-    var email = $('#email').val();
+        $('form').find('input:text').val('');
+        $('input:checkbox').removeAttr('checked');
 
-        $.ajax({
-            url: "https://docs.google.com/a/pwc.com/forms/d/127C47i_BAUxGG7TMUW43CyN89dmmmjJl8kmLi73Khgs/formResponse",
-            data: { "entry.578566935": first, 
-            "entry.1652291931": last,
-            "entry_732368356": interests,
-            "entry.891975652": email },
-            type: "POST",
-            dataType: "xml",
-            traditional: true,
-            statusCode: {
-                0: function () {
-                    console.log("success");
-                    alert("Your form has been submitted.");
+      },
+      200: function () {
+        // console.log("error");
+      }
+    }
+  });
 
-                    // will still get a CORS message for some reason
+  // IF NOT VALID
 
-                    $('form').find('input:text').val('');
-                    $('input:checkbox').removeAttr('checked');
-
-                },
-                200: function () {
-                    // console.log("error");
-                }
-            }
-        });
-}
+  // show message with form validation errors
+  
+};
 
 $('#down-arrow').click(function() {
 	$('html,body').animate({
@@ -183,55 +160,11 @@ $('#down-arrow').click(function() {
 	}, 800);
 });
 
-
 $('#subscribe-button').click(function() {
 	$('html,body').animate({
 		scrollTop: $('#subscribe').offset().top
 	}, 800);
 });
-
-
-
-
-// window.onresize = function() {
-// 	//debugger
-// 	console.log("test");
-// 	initCarousel();
-// }
-
-// window.onresize = initCarousel;
-
-// $(window).resize(function() {
-// 	// console.log("hello");
-// 	// initCarousel();
-
-// 	$('#carouselDiv').load(location.href + ' #carouselDiv');
-// });
-
-$(window).bind('resize', function() {
-   // $("#carouselDiv").load(location.href + " #carouselDiv");
-   initCarousel();
-});
-
-// everything you see below you is sadly wasted codez :(
-
-
-// change any style property
-// var updateStyle = function(selectorText, style, value) {
-//   var theRules = new Array();
-//   if (document.styleSheets[0].cssRules) {
-//       theRules = document.styleSheets[0].cssRules;
-//   } 
-//   else if (document.styleSheets[0].rules) {
-//       theRules = document.styleSheets[0].rules;
-//   }
-//   for (n in theRules)
-//   {
-//     if (theRules[n].selectorText == selectorText) {
-//         theRules[n].style[style] = value;
-//     }
-//   }
-// };
 
 var carouselClick = function(carousel) {
 	$.each(carousel.slides, function(ii,slide) {
@@ -251,16 +184,13 @@ var carouselClick = function(carousel) {
 			$(control).addClass('active');
 
 			if ($(window).width() >= 800) {
-
+				// do nothing
 			}
-
 			else {
 				$('html,body').animate({
 					scrollTop: $('.control.slide-' + ii).offset().top
 				}, 500);
 			}
-
-			
 		}
 	});
 };
@@ -336,22 +266,18 @@ var initCarousel = function() {
 				$(slide).innerHeight(carousel.height);
 				$(carousel).innerHeight(carousel.height);
 			});
-
 		}
 		
 		// monitor the hovering of the carousel - stop the animation if hovered
-		$(carousel).hover(function() {
-		  carousel.hover = true;
-		}, function() {
-		  carousel.hover = false;
-		});
-
+		// $(carousel).hover(function() {
+		//   carousel.hover = true;
+		// }, function() {
+		//   carousel.hover = false;
+		// });
 
 		if ($(window).width() >= 800) {
 			carouselClick(carousel);
 		}
-		
-		// setInterval(function() { carouselDelay(carousel) }, 2000);
-
+	
 	});
 };
