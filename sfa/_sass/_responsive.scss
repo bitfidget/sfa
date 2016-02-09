@@ -153,10 +153,11 @@
 	}
 
 	.bg-footer {
+		ul{
+			margin-top: 50px;
+		}
 		li {
-
 			float: left;
-
 			&:last-child {
 				float: right;
 			}
@@ -165,10 +166,10 @@
 		#logo {
 			text-align: left;
 			img {
-				margin: 5% 5% 25% 0;
-
+				margin: 0;
+				display: inline-block;
 				&:last-of-type {
-					margin-bottom: 25%;
+					margin-top: 30px;
 				}
 			}
 		}

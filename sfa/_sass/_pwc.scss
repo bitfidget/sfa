@@ -291,11 +291,13 @@
 		img {
 			height: 100px;
 			width: auto;
-			/*margin: 30px 30px 20% 0;*/
-			margin: 20px auto;
+			padding: 20px;
+			margin: 0 auto;
+			display: block;
 
 			&:last-of-type {
-				margin-bottom: 40px;
+				padding-bottom: 40px;
+				height: 140px;
 			}
 		}
 	}
