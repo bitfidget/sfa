@@ -42,10 +42,6 @@
 			width: 75%;
 			float: left;
 		}
-		h2{
-			float: left;
-			max-width: 40%;
-		}
 	}
 
 	#how-we-work {
@@ -180,6 +176,10 @@
 			border-left: 1px solid darken($footer-color, 60%);
 			padding-left: 5%;
 			line-height: 1.5em;
+		}
+
+		.col-right > p {
+			padding-top: 30px;
 		}
 
 		.col-left {

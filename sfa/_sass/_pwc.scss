@@ -313,7 +313,7 @@
 		/*float: left;*/
 
 		&:last-of-type {
-			float: right;
+			/*float: right;*/
 		}
 	}
 }
@@ -321,6 +321,7 @@
 .col-right {
 	color: $footer-color;
 	text-align: left;
+	font-size: 0.8em;
 }
 
 
