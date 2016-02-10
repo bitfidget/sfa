@@ -9,7 +9,8 @@
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
     padding: 10px 0;
     overflow: hidden;
-    position: relative;
+    position: fixed;
+    height: auto;
     a.logo{
         display: inline-block;
         padding: 10px 0 10px 20px;
@@ -60,16 +61,16 @@
     padding: 24px;
 }
 
-.js-hide-slide{
+/*.js-hide-slide{
     position: absolute;
     width: 100%;
     top: -500px;
     left: 0;
     transition: top ease .2s;
-}
+}*/
 
 .js-hide-slide.active{
-    top: 130px;
+    /*top: 130px;*/
 }
 
 #down-arrow {
@@ -86,7 +87,6 @@
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
     padding: 10px 0;
     overflow: hidden;
-    position: relative;
     a.logo{
         display: inline-block;
         padding: 10px 0;

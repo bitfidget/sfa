@@ -18,9 +18,38 @@
 
           <div class="nav-subscribe sm-hidden">
             <p>Subscribe to receive industry updates</p>
-            <a href="#" class="button" id="subscribe-button">Subscribe</a>
+            <a href="#" class="button" onClick="scrollTo('#subscribe', 0); return false;">Subscribe</a>
+            <div class="js-btn-toggle pull-right">
+              <i class="fa fa-bars" data-modifies="navigation-main"></i>
+            </div>
           </div>
+
+          <div class="js-hide-slide navigation-main">
+            <div class="col-main">
+              <nav role="navigation">
+                <ul>
+                  <li><a href="#tagline" onClick="scrollTo('#tagline', 0); return false;">
+                    Return to top</a></li>
+                  <li><a href="#industries" onClick="scrollTo('#industries', 0); return false;">
+                    Industry Sectors</a></li>
+                  <li><a href="#what-we-do" onClick="scrollTo('#what-we-do', 0); return false;">
+                    What We Do</a></li>
+                  <li><a href="#how-we-work" onClick="scrollTo('#how-we-work', 0); return false;">
+                    How We Work</a></li>
+                  <li><a href="#subscribe" onClick="scrollTo('#subscribe', 0); return false;">
+                    Subscribe</a></li>
+                  <li><a href="#team" onClick="scrollTo('#team', 0); return false;">
+                    About Us</a></li>
+                  <li><a href="#links" onClick="scrollTo('#links', 0); return false;">
+                    Links</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
       </div>
+      
+
     </div>
 
     <div id="tagline">
@@ -64,7 +93,7 @@
       {% include content-how-we-work.html %}
     </div>
     </div>
-    
+
     <div class="wrapper clearfix" id="subscribe">
       {% include subscribe-form.html %}
     </div>

@@ -11,6 +11,12 @@ window.onload = function() {
 	$.each($squares, function(i,v) {
 		$(v).outerHeight($(v).outerWidth());
 	});
+
+	var scrollorama = $.scrollorama({
+        blocks:'.scrollblock'
+    });
+
+
 	
 	initCarousel();
 	initAccordion();
@@ -31,6 +37,8 @@ var scrollTo = function(elem, space) {
 		$('.navigation-main').removeClass('active')
 	}
 };
+
+// SCROLLORAMA
 
 
 // accordion content
@@ -159,12 +167,16 @@ function postContactToGoogle() {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   if (!re.test(email)) {
-  	alert("Please put in a valid email address");
+  	// alert("Please put in a valid email address");
+  	document.getElementById('email').style.borderColor='red';
+  	$('.errorText').show();
   	return false;
   }
 
   else if (interests == null || interests == "") {
-  	alert("Please tick at least one area of interest.")
+  	// alert("Please tick at least one area of interest.")
+  	$('.errorInterest').show();
+
   	return false;
   }
 
@@ -189,6 +201,8 @@ function postContactToGoogle() {
   	      $('form').find('input').val('');
   	      $('input:checkbox').removeAttr('checked');
   	      $('#submit').addClass('disableClick');
+  	      $('.errorText').hide();
+  	      document.getElementById('email').style.borderColor='';
 
   	  },
   	  200: function () {

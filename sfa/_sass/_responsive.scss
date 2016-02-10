@@ -140,7 +140,7 @@
 
 	input[type=text],input[type=email] {
 		width: 40%;
-		margin: 20px 0;
+		/*margin: 20px 0;*/
 
 	}
 
@@ -185,6 +185,29 @@
 		.col-left {
 			width: 50%;
 			float: left;
+		}
+	}
+
+	.col-main{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+	.timeline-bar {
+
+		li {
+			margin: 0;
+			display: inline-block;
+			width: 22%;
+			padding: 30px;
+			/*margin: 1%;*/
+			vertical-align: top;
+			display: table-cell;
+		}
+
+		.absolute-number {
+			margin-top: -40px;
+			margin-left: -40px;
 		}
 	}
 

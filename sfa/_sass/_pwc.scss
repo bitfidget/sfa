@@ -2,6 +2,26 @@
 	font-family: Georgia, serif;
 }*/
 
+
+.js-hide-slide{
+    position: relative;
+    width: 100%;
+    /*top: 100px;*/
+    /*left: 100%;*/
+    transition: all ease .8s;
+    opacity: 0;
+    height: 0;
+    
+}
+
+.js-hide-slide.active{
+	/*top: 100px;*/
+    left: 0;
+    height: 400px;
+    opacity: 1;
+    transition: all ease .8s;
+}
+
 /*tagline*/
 
 .sm-hidden{
@@ -18,6 +38,7 @@
 		font-size: 16px;
 		margin: 0;
 		font-family: $pwc-font; 
+		margin-top: 110px;
 	}
 }
 
@@ -35,7 +56,7 @@
 
 
 .bg-dark-trans{
-	background: rgba(0,0,0,0.4);
+	background: rgba(0,0,0,0.6);
 	width: 100%;
 	padding: 20px;
 
@@ -69,6 +90,9 @@
 	h2{
 		padding: 30px 20px;
 	}
+	/*.bg-dark-trans {
+		background: rgba(0, 0, 0, 0.7);
+	}*/
 }
 
 /*how we work section*/
@@ -324,6 +348,10 @@
 	font-size: 0.8em;
 }
 
+.col-right > p {
+	padding-top: 10px;
+}
+
 
 /* Form */
 
@@ -385,6 +413,11 @@ form a.disableClick {
 	background-color: lighten($pwc-color, 30%);
 }
 
+.errorText, .errorInterest {
+	color: red;
+	display: none;
+}
+
 
 /* Columns */
 
@@ -420,7 +453,62 @@ form a.disableClick {
 }
 
 
+/* TIMELINE */
 
+.timeline-bar {
+	list-style: none;
 
+	li {
+		padding: 20px;
+		width: 100%;
+		margin-bottom: 30px;
 
+		&:hover {
 
+		}
+	}
+
+	li:nth-child(1) {
+		background-color: #EB8C00;
+
+		&:hover {
+			margin-top: -10px;
+		}
+	}
+	li:nth-child(2) {
+		background-color: #DC6900;
+		&:hover {
+			margin-top: -10px;
+		}
+	}
+	li:nth-child(3) {
+		background-color: #E0301E;
+		&:hover {
+			margin-top: -10px;
+		}
+	}
+	li:nth-child(4) {
+		background-color: #DB536A;
+		/*margin-bottom: 10px;*/
+		&:hover {
+			margin-top: -10px;
+		}
+	}
+
+	.absolute-number {
+		position: relative;
+		background-color: $pwc-color;
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		line-height: 60px;
+
+		text-align: center;
+		margin-top: -35px;
+		margin-left: -35px;
+		/*font-family: $pwc-font;*/
+		font-size: 1.5em;
+		color: white;
+		font-weight: bold;
+	}
+}
