@@ -42,10 +42,6 @@
 			width: 75%;
 			float: left;
 		}
-		h2{
-			float: left;
-			max-width: 40%;
-		}
 	}
 
 	#how-we-work {
@@ -150,7 +146,8 @@
 
 	.bg-footer {
 		ul{
-			margin-top: 50px;
+			padding-top: 50px;
+			clear: both;
 		}
 		li {
 			float: left;
@@ -165,9 +162,29 @@
 				margin: 0;
 				display: inline-block;
 				&:last-of-type {
-					margin-top: 30px;
+					
+					/*float: right;*/
 				}
 			}
+		}
+
+		.col-right {
+			width: 50%;
+			float: right;
+			font-size: 0.8em;
+			color: #e7e7e8;
+			border-left: 1px solid darken($footer-color, 60%);
+			padding-left: 5%;
+			line-height: 1.5em;
+		}
+
+		.col-right > p {
+			padding-top: 30px;
+		}
+
+		.col-left {
+			width: 50%;
+			float: left;
 		}
 	}
 

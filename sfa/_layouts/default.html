@@ -17,15 +17,15 @@
           <a href="#" class="button">Sign up</a> -->
 
           <div class="nav-subscribe sm-hidden">
-            <p>Subscribe to our newsletter for industry updates</p>
-            <a href="#" class="button" id="subscribe-button">Sign up</a>
+            <p>Subscribe to receive industry updates</p>
+            <a href="#" class="button" id="subscribe-button">Subscribe</a>
           </div>
       </div>
     </div>
 
     <div id="tagline">
       <div class="wrapper">
-        <p>Skills for Australia - Putting employers at the heart of Australias qualification and training system</p>
+        <p>Skills for Australia - Putting employers at the heart of Australia’s qualification and training system</p>
       </div>
     </div>
 
@@ -36,8 +36,8 @@
       </div>
       <div class="bg-dark-trans">
         <div class="wrapper clearfix">
-          <p>Our mission is to put employers at the heart of Australia’s qualifications and training system.  We will do this by working with industry and business across Australia and identify the skills our economy needs to thrive and grow in the future.</p>
-          <p>We are passionate about creating a future for Australia that gives our people the best opportunities to get fulfilling jobs, and helps our country to succeed in a globally competitive business environment.</p>
+          <p>Our mission is to put employers at the heart of Australia’s qualifications and training system.  We will do this by working with industry and business across Australia to identify the skills our economy needs to thrive and grow in the future.</p>
+          <p>We are passionate about creating a future for Australia that gives our people the best opportunities to get fulfilling jobs, and helps our country to succeed in a globally competitive business environment. We will do this through targeted reform of the Vocational Education &amp; Training (VET) system.</p>
         </div>
         <div class="pull-center"><i class="fa fa-chevron-down" id="down-arrow"></i></div>
       </div>
@@ -45,7 +45,7 @@
 
     <div>
       <div class="wrapper" id="industries">
-        <h2>Skills for Australia is the Skills Service Organisation (SSO) for the following sectors:</h2>
+        <h2>Skills for Australia is the Skills Service Organisation for the following industry sectors:</h2>
       </div>
       {% include industries.html %}
       <!-- <div class="bg-image" id="industries">
@@ -59,8 +59,14 @@
       </div>
     </div>
 
+    <div class="bg-color">
     <div class="wrapper clearfix" id="how-we-work">
       {% include content-how-we-work.html %}
+    </div>
+    </div>
+    
+    <div class="wrapper clearfix" id="subscribe">
+      {% include subscribe-form.html %}
     </div>
 
     <div class="bg-color">
@@ -69,15 +75,10 @@
       </div>
     </div>
 
-    <div class="wrapper clearfix" id="subscribe">
-      {% include subscribe-form.html %}
-    </div>
-
-    <div class="bg-color">
       <div class="wrapper clearfix" id="links">
           {% include content-links.html %}
       </div>
-    </div>
+    
 
     <div class="bg-footer clearfix">
       {% include footer.html %}

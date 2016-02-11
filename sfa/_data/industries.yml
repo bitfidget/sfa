@@ -1,25 +1,25 @@
-- name: 'Business services'
+- name: 'Business Services'
   chair: 'Angelina Pillai'
   packages: 'Business Services Training Package'
   icon: fa-suitcase
   contents:
-  - 'The Business Services Sector is a broad term covering workers in Australia providing professional assistance to other businesses, such as strategic and technical advisory advice, human capital and administrative services. Business services are used by or inside organisations in a large number of industries across the Australian Economy. This sector includes organisations that specialise in a particular skill and offer that on an outsourced basis to other businesses as well as employees of generally larger organisations who provide these skills ‘in house’.'
+  - 'The Business Services sector is a broad term covering workers in Australia providing professional assistance to other businesses, such as strategic and technical advice, human capital and administrative services. Business Services are used in a large number of industries across the Australian economy. This sector includes organisations that specialise in a particular skill and offer that skill on an outsourced basis to other businesses as well as employees of generally larger organisations who provide these skills ‘in house’.'
   - 'Qualifications in this industry relate to a range of skills including: legal services, human capital, conveyancing and workplace health and safety.'
 
-- name: 'Financial services'
+- name: 'Financial Services'
   chair: Michael Eichler
   packages: 'Financial Services Training Package'
   icon: fa-bank
   contents: 
-  - 'The Financial Services Sector covers workers in Australia with skills in banking, insurances, superannuation, accounting, financial planning and trustees. Australia has a mature and sophisticated financial services sector and is a leader in the Asia-Pacific region across a range of disciplines within this industry. This sector is likely to have a strong growth in skills demand over the medium to long term driven significantly by Australia’s mandatory superannuation framework.'
+  - 'The Financial Services sector covers workers in Australia with skills in banking, insurances, superannuation, accounting, financial planning and trustees. Australia has a mature and sophisticated Financial Services sector and is a leader in the Asia-Pacific region across a range of disciplines within this industry. This sector is likely to have a strong growth in skills demand over the medium to long term, driven significantly by Australia’s mandatory superannuation framework.'
   - 'Qualifications in this industry relate to a range of skills including: accounting, credit management, mortgage broking, insurance, superannuation and financial services.'
 
-- name: 'Information Technology'
+- name: 'Information and Communications Technology'
   chair: Ros Eason
   packages: 'Information and Communications Technology Training Package; Integrated Telecommunications Training Package'
   icon: fa-terminal
   contents: 
-  - 'The Information and Communications Technology (ICT) Sector includes workers in Australia with skills in telecommunications, information systems, interactive game development and other technology related roles including technology support. The digitization of the global economy means that demand for skills in ICT routinely dominate the top of skills demand forecast lists. Australia’s geography, market sophistication and focus on innovation all contribute to a strong growth outlook for this industry. '
+  - 'The Information and Communications Technology (ICT) sector includes workers in Australia with skills in telecommunications, information systems, interactive game development and other technology related roles including technology support. The digitisation of the global economy means that demand for skills in ICT routinely dominate in skills demand forecast lists. Australia’s geography, market sophistication and focus on innovation all contribute to a strong growth outlook for this industry. '
   - 'Qualifications in this industry relate to a range of skills including: digital and interactive games, digital media, information technology, technology support and telecommunications.'
 
 - name: 'Education'
@@ -27,22 +27,22 @@
   packages: 'Training and Education Package (TAE); Training and Education (TAE 10); Foundation Skills'
   icon: fa-graduation-cap
   contents: 
-  - 'The Education Sector currently includes skills required for post-schooling education, including qualifications required to teach students in Vocational Education and Training courses. Australia’s future economic prosperity will rely upon a well-educated skilled workforce, the vast majority of which will be educated by those with skills in this sector today. The growing recognition of the need for formally trained staff to assist the tradition teacher in the classroom means there are more opportunities than ever to be skilled in this sector and for qualifications and competencies to grow in the medium term.'
-  - 'Qualifications in this industry related to a range of skills including: training and assessment, digital education, international education services and adult language literacy and numeracy skills.'
+  - 'The Education sector currently includes skills required for post-schooling education, including qualifications required to teach students in Vocational Education and Training courses. Australia’s future economic prosperity will rely upon a well-educated skilled workforce, the vast majority of which will be educated by those with skills in this sector today. The growing recognition of the need for formally trained staff to assist the traditional teacher in the classroom means there are more opportunities than ever to be skilled in this sector and for qualifications and competencies to grow in the medium term.'
+  - 'Qualifications in this industry relate to a range of skills including: training and assessment, digital education, international education services and adult language literacy and numeracy skills.'
 
-- name: 'Culture and related industries'
+- name: 'Culture and Related Industries'
   chair: Yvonne Webb
   packages: 'Live Performance and Entertainment Training Package; Screen and Media Training Package; Library, Information and Cultural Services Training Package; Music Training Package; Visual Arts, Crafts and Design Training Package'
   icon: fa-empire
   contents: 
-  - 'The Culture and Related Industries Sector includes workers in Australia with skills in the creative economy such as visual and performing arts, music and screen production. Australia has a proud history of creative and artistic achievement that has contributed strongly to economic and cultural diversification. Technology changes and cyclical economic conditions present varied opportunities and challenges for the sector meaning skills demand can change rapidly. '
-  - 'Qualifications in this industry relate to a range of skills including: screen and media, make-up services, set construction, dance, theatre, music and indigenous art.'
+  - 'The Culture and Related Industries sector includes workers in Australia with skills in the creative economy such as visual and performing arts, music and screen production. Australia has a proud history of creative and artistic achievement that has contributed strongly to economic and cultural diversification. Technology changes and cyclical economic conditions present varied opportunities and challenges for the sector meaning skills demand can change rapidly. '
+  - 'Qualifications in this industry relate to a range of skills including: screen and media, make-up services, set construction, dance, theatre, music and Indigenous art.'
 
-- name: 'Printing and graphics'
+- name: 'Printing and Graphic Arts'
   chair: Bill Healey
   packages: 'Printing and Graphic Arts Training Package'
   icon: fa-paint-brush
   contents: 
-  - 'The Printing and Graphic Arts Sector includes workers in Australia with skills that assist organisations to communicate messages effectively through a range of media as well as in parts assisting creative industries deliver their products. Technological disruption and global industry trends have created a rapidly changing skills environment that requires changes to the industry skills profile.'
-  - 'Qualifications in this industry related to a range of skills including: publishing, graphic design and multimedia.'
+  - 'The Printing and Graphic Arts Sector includes workers in Australia with skills that assist organisations to communicate messages effectively through a range of media as well as in parts assisting creative industries to deliver their products. Technological disruption and global industry trends have created a rapidly changing skills environment that requires changes to the industry skills profile.'
+  - 'Qualifications in this industry relate to a range of skills including: publishing, graphic design and multimedia.'
 
