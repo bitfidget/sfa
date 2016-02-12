@@ -35,7 +35,7 @@ window.onload = function() {
 var scrollTo = function(elem, space) {
     console.log(elem)
     $('html,body').animate({
-            scrollTop: $(elem).offset().top - (110 + space)
+            scrollTop: $(elem).offset().top - (60 + space)
         },
         'slow');
     if ($('.navigation-main').hasClass('active')) {
@@ -80,25 +80,40 @@ var initAccordion = function() {
 
             var target = this.dataset.modifies;
 
+            if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
+                $(accordion).find('.active').removeClass('active');
+                $('.js-team-section-mob').slideUp();
+            } else {
+                $('.js-team-section-mob').slideUp();
+
+                $(accordion).find('.slide-' + target).addClass('active');
+
+                $('.active').slideDown();
+              }
+
+
+
+
+
             // if ($(window).width() <= 800) {
 
-            	console.log('display staff in mobile version')
+            	// console.log('display staff in mobile version')
 
-	            $('.js-team-section-mob.active').slideUp();
+	            // $('.js-team-section-mob.active').slideUp();
 
-	            if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
-	                $(accordion).find('.active').removeClass('active');
-	                $('.js-team-section-mob').slideUp();
-	            } else {
-	                $('.js-team-section-mob').slideUp();
+	            // if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
+	            //     $(accordion).find('.active').removeClass('active');
+	            //     $('.js-team-section-mob').slideUp();
+	            // } else {
+	            //     $('.js-team-section-mob').slideUp();
 
 
-	                $('.active').slideDown(function() {
-	                	if ($(window).width() <= 800) {
-		                	scrollTo($('.js-team-member.slide-' + target), 0)
-			              }
-	                });
-	            }
+	            //     $('.active').slideDown(function() {
+	            //     	if ($(window).width() <= 800) {
+		           //      	scrollTo($('.js-team-member.slide-' + target), 0)
+			          //     }
+	            //     });
+	            // }
 	          // }
 
         });

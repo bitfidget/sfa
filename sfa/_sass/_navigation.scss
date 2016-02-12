@@ -23,9 +23,11 @@
       font-size: 22px;
       display: inline-block;
       padding: 12px 20px 0;
-      line-height: 64px;
+      margin-top: 20px;
+      /*line-height: 64px;*/
       margin: 0;
-      float: right;
+      /*float: right;*/
+      vertical-align: middle;
     }
 }
 
@@ -59,6 +61,7 @@
 
 #navigation-main i{
     padding: 24px;
+    margin-top: 6px;
 }
 
 /*.js-hide-slide{
@@ -73,9 +76,18 @@
     /*top: 130px;*/
 }
 
-#down-arrow {
-  cursor: pointer;
+
+.nav-subscribe {
+  display: inline-block;
+  float: right;
+
+  .js-btn-toggle.pull-right {
+    float: none;
+  }
 }
+
+
+
 
 @media (min-width: 800px) {
   #navigation-main{
@@ -119,6 +131,10 @@
         right: 0;
         margin: 10px 0;
       }
+    }
+
+    .nav-subscribe > .js-btn-toggle.pull-right {
+      float: right;
     }
   }
 
