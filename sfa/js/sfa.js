@@ -85,9 +85,7 @@ var initAccordion = function() {
                 $('.js-team-section-mob').slideUp();
             } else {
                 $('.js-team-section-mob').slideUp();
-
                 $(accordion).find('.slide-' + target).addClass('active');
-
                 $('.active').slideDown();
               }
 
@@ -321,8 +319,14 @@ var initCarousel = function() {
         });
 
         $(carousel.controls).on('click hover', function(event) {
-            carousel.current = this.dataset.modifies;
-            carouselClick(carousel);
+        		if ($(this).hasClass('active')) {
+        			$(this).removeClass('active');
+        			carousel.current = '';
+	            carouselClick(carousel);
+        		} else {
+	            carousel.current = this.dataset.modifies;
+	            carouselClick(carousel);
+	          }
         });
 
         // Commented out height because messing with images
