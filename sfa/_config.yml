@@ -3,7 +3,7 @@ title: Skills for Australia
 email: ""
 description: ""
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.skillsforaustralia.com.s3.amazonaws.com/www/" # the base hostname & protocol for your site
+url: "http://www.skillsforaustralia.com" # the base hostname & protocol for your site
 twitter_username: ""
 github_username:  ""
 
