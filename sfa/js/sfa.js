@@ -320,7 +320,7 @@ var initCarousel = function() {
         });
 
         $(carousel.controls).on('click hover', function(event) {
-        		if ($(this).hasClass('active')) {
+        		if ($(this).hasClass('active') && $(window).width() < 800) {
         			$(this).removeClass('active');
         			carousel.current = '';
 	            carouselClick(carousel);
