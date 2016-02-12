@@ -94,9 +94,11 @@ var initAccordion = function() {
 
 
                 if ($(window).width() <= 800) {
-                    $('html,body').animate({
-                        scrollTop: $('.js-team-member.slide-' + target).offset().top
-                    }, 500);
+                    // $('html,body').animate({
+                    //     scrollTop: $('.js-team-member.slide-' + target).offset().top
+                    // }, 500);
+
+        			scrollTo('.js-team-member.slide-' + target, 40);
                 }
 
                 $(accordion).find('.slide-' + target).addClass('active');
@@ -175,7 +177,7 @@ var reintinalizeAccordion = function() {
 // }
 
 $('input').keyup(function() {
-    if ($('#firstName').val() != "" && $('#email').val() != "") {
+    if ($('#firstName').val() != "" && $('#email').val() != "" && $('#position').val()) {
         // $('#submit').removeAttr('disabled');
         $('#submit').removeClass('disableClick');
     } else {
@@ -191,6 +193,7 @@ function postContactToGoogle() {
 	var first = $('#firstName').val();
 	var last = $('#lastName').val();
 	var email = $('#email').val();
+	var position = $('#position').val();
 
 	var interests = $('.interests:checked').map(function() {
 		return this.value;
@@ -203,6 +206,9 @@ function postContactToGoogle() {
 
   if (!re.test(email)) {
   	// alert("Please put in a valid email address");
+
+  	$('.errorInterest').hide();
+  	$('.errorPosition').hide();
   	document.getElementById('email').style.borderColor='red';
   	$('.errorText').show();
   	return false;
@@ -210,7 +216,18 @@ function postContactToGoogle() {
 
   else if (interests == null || interests == "") {
   	// alert("Please tick at least one area of interest.")
+  	$('.errorText').hide();
+  	$('.errorPosition').hide();
   	$('.errorInterest').show();
+
+  	return false;
+  }
+
+  else if (position == null || position == "") {
+  	$('.errorText').hide();
+  	$('.errorInterest').hide();
+  	document.getElementById('position').style.borderColor='red';
+  	$('.errorPosition').show()
 
   	return false;
   }
@@ -221,7 +238,8 @@ function postContactToGoogle() {
   		data: { "entry.578566935": first, 
   		"entry.1652291931": last,
   		"entry_732368356": interests,
-  		"entry.891975652": email },
+  		"entry.891975652": email,
+  		"entry.813013344": position },
   		type: "POST",
   		dataType: "xml",
   		traditional: true,
@@ -229,7 +247,7 @@ function postContactToGoogle() {
   			0: function () {
   				
   	      // CAN we make this a neater, in page message
-  	      alert("Your form has been submitted.");
+  	      // alert("Your form has been submitted.");
 
   	      // will still get a CORS message for some reason
 
@@ -237,7 +255,10 @@ function postContactToGoogle() {
   	      $('input:checkbox').removeAttr('checked');
   	      $('#submit').addClass('disableClick');
   	      $('.errorText').hide();
+  	      $('.errorInterest').hide();
   	      document.getElementById('email').style.borderColor='';
+
+          $('.success').slideDown();
 
 	  	  	},
 	  	  200: function () {
@@ -248,17 +269,17 @@ function postContactToGoogle() {
   }
 };
 
-$('#down-arrow').click(function() {
-    $('html,body').animate({
-        scrollTop: $('#industries').offset().top
-    }, 800);
-});
+// $('#down-arrow').click(function() {
+//     $('html,body').animate({
+//         scrollTop: $('#industries').offset().top
+//     }, 800);
+// });
 
-$('#subscribe-button').click(function() {
-    $('html,body').animate({
-        scrollTop: $('#subscribe').offset().top
-    }, 800);
-});
+// $('#subscribe-button').click(function() {
+//     $('html,body').animate({
+//         scrollTop: $('#subscribe').offset().top
+//     }, 800);
+// });
 
 var carouselClick = function(carousel) {
     $.each(carousel.slides, function(ii, slide) {
@@ -280,9 +301,11 @@ var carouselClick = function(carousel) {
             if ($(window).width() >= 800) {
                 // do nothing
             } else {
-                $('html,body').animate({
-                    scrollTop: $('.control.slide-' + ii).offset().top
-                }, 500);
+                // $('html,body').animate({
+                //     scrollTop: $('.control.slide-' + ii).offset().top
+                // }, 500);
+
+    			scrollTo('.control.slide-' + ii, 40);
             }
         }
     });

@@ -419,6 +419,30 @@ form a.disableClick {
 }
 
 
+/* FORM Success Bar */
+
+.success {
+    background-color: $pwc-color;
+    height: auto;
+    width: 100%;
+    display: none;
+
+    #success-bar {
+    	color: #fff;
+    	line-height: auto;
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+
+    	p {
+
+    	}
+
+    	a {
+    		color: #fff;
+    	}
+    }
+}
+
 /* Columns */
 
 
@@ -457,11 +481,14 @@ form a.disableClick {
 
 .timeline-bar {
 	list-style: none;
+	padding: 0;
 
 	li {
 		padding: 20px;
 		width: 100%;
 		margin-bottom: 30px;
+
+		background-color: #fff;
 
 		&:hover {
 
@@ -469,26 +496,28 @@ form a.disableClick {
 	}
 
 	li:nth-child(1) {
-		background-color: #EB8C00;
+
+		/*border: 5px solid $footer-color;*/
+		border-top: 50px solid #EB8C00;
 
 		&:hover {
 			margin-top: -10px;
 		}
 	}
 	li:nth-child(2) {
-		background-color: #DC6900;
+		border-top: 50px solid #DC6900;
 		&:hover {
 			margin-top: -10px;
 		}
 	}
 	li:nth-child(3) {
-		background-color: #E0301E;
+		border-top: 50px solid #E0301E;
 		&:hover {
 			margin-top: -10px;
 		}
 	}
 	li:nth-child(4) {
-		background-color: #DB536A;
+		border-top: 50px solid #DB536A;
 		/*margin-bottom: 10px;*/
 		&:hover {
 			margin-top: -10px;
@@ -504,7 +533,7 @@ form a.disableClick {
 		line-height: 60px;
 
 		text-align: center;
-		margin-top: -35px;
+		margin-top: -60px;
 		margin-left: -35px;
 		/*font-family: $pwc-font;*/
 		font-size: 1.5em;

@@ -191,9 +191,17 @@
 	.col-main{
         max-width: 1170px;
         margin: 0 auto;
+
+        ul {
+        	margin: 0;
+        	margin-top: 20px;
+        	border-top: 1px solid $footer-color;
+        }
     }
 
 	.timeline-bar {
+
+		margin: 0;
 
 		li {
 			margin: 0;
@@ -203,11 +211,16 @@
 			/*margin: 1%;*/
 			vertical-align: top;
 			display: table-cell;
+			border-right: 10px solid $footer-color;
 		}
 
 		.absolute-number {
-			margin-top: -40px;
+			margin-top: -70px;
 			margin-left: -40px;
+		}
+
+		li:last-child {
+			border-right: none;
 		}
 	}
 

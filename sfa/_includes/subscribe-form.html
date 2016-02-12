@@ -8,7 +8,9 @@
     <input type="text" id="firstName" name="firstName" placeholder="First name *" required>
     <input type="text" id="lastName" name="lastName" placeholder="Last name">
     <input type="email" id="email" name="email" placeholder="Email address *" required>
-    <p class="errorText">Please input a valid email address.</p>
+    <p class="errorText">* Please input a valid email address.</p>
+    <input type="text" id="position" name="position" placeholder="Position *" required>
+    <p class="errorPosition">* Please input your position.</p>
 
     <h3>Areas of Interest</h3>
 
@@ -16,14 +18,6 @@
       <li>
         <input type="checkbox" class="interests" name="interests" value="Business Services">
         <label>Business Services</label>
-      </li>
-      <li>
-        <input type="checkbox" class="interests" name="interests" value="Information and Communications Technology">
-        <label>Information and Communications Technology</label>
-      </li>
-      <li>
-        <input type="checkbox" class="interests" name="interests" value="Financial Services">
-        <label>Financial Services</label>
       </li>
       <li>
         <input type="checkbox" class="interests" name="interests" value="Cultural and Related Industries">
@@ -34,12 +28,21 @@
         <label>Education</label>
       </li>
       <li>
+        <input type="checkbox" class="interests" name="interests" value="Financial Services">
+        <label>Financial Services</label>
+      </li>
+      <li>
+        <input type="checkbox" class="interests" name="interests" value="Information and Communications Technology">
+        <label>Information and Communications Technology</label>
+      </li>
+      <li>
         <input type="checkbox" class="interests" name="interests" value="Printing and Graphic Arts">
         <label>Printing and Graphic Arts</label>
       </li>
     </ul>
-    <p class="errorInterest">Please tick at least one area of interest.</p>
+    <p class="errorInterest">* Please tick at least one area of interest.</p>
     <a href="#subscribe" id="submit" class="button disableClick" onclick="postContactToGoogle()">Subscribe</a>
+    <!-- <p class="errorInterest">Your form has been submitted.</p> -->
     <!-- <input type="submit" id="submit" name="submit" value="Subscribe" onsubmit="return postContactToGoogle();" disabled> -->
     
   </form>

@@ -61,14 +61,14 @@
     <div class="bg-image" id="welcome">
       <div class="wrapper">
         <h1>Welcome to<br>
-        PwC’s Skills for Australia!</h1>
+        PwC’s Skills for Australia</h1>
       </div>
       <div class="bg-dark-trans">
         <div class="wrapper clearfix">
           <p>Our mission is to put employers at the heart of Australia’s qualifications and training system.  We will do this by working with industry and business across Australia to identify the skills our economy needs to thrive and grow in the future.</p>
           <p>We are passionate about creating a future for Australia that gives our people the best opportunities to get fulfilling jobs, and helps our country to succeed in a globally competitive business environment. We will do this through targeted reform of the Vocational Education &amp; Training (VET) system.</p>
         </div>
-        <div class="pull-center"><i class="fa fa-chevron-down" id="down-arrow"></i></div>
+        <div class="pull-center"><i class="fa fa-chevron-down" onClick="scrollTo('#industries', 0); return false;"></i></div>
       </div>
     </div>
 
@@ -96,6 +96,14 @@
 
     <div class="wrapper clearfix" id="subscribe">
       {% include subscribe-form.html %}
+    </div>
+
+    <div class="success">
+      <div class="wrapper clearfix" id="success-bar">
+        <p>Thank you for subscribing to our mailing list. We will be in touch with industry updates related to your interest areas.</p>
+        <p>Please share your views on Australia's current and future skills needs, existing training packages, and what changes you would like to see to Australia's VET qualifications system. Alternatively, you can get in touch by emailing <strong><a href="mailto:info@skillsforaustralia.com">info@skillsforaustralia.com</a></strong> or calling us on <strong>1800 714 819</strong>.</p>
+      </div>
+      
     </div>
 
     <div class="bg-color">
