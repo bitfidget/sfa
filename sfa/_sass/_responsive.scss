@@ -216,5 +216,20 @@
 			border-right: none;
 		}
 	}
+	
+	/*full size bg images*/
+
+  .js-carousel-container .bg-industry.slide-0 {
+    background-image: url(/img/industry-business.jpg); }
+  .js-carousel-container .bg-industry.slide-1 {
+    background-image: url(/img/industry-financial.jpg); }
+  .js-carousel-container .bg-industry.slide-2 {
+    background-image: url(/img/industry-ICT.jpg); }
+  .js-carousel-container .bg-industry.slide-3 {
+    background-image: url(/img/industry-education.jpg); }
+  .js-carousel-container .bg-industry.slide-4 {
+    background-image: url(/img/industry-culture.jpg); }
+  .js-carousel-container .bg-industry.slide-5 {
+    background-image: url(/img/industry-print.jpg); }
 
 }
