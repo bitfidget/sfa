@@ -24,8 +24,6 @@ window.onload = function() {
         
 		clearTimeout(resizeTimer);
 	  	resizeTimer = setTimeout(function() {
-	    	// Run code here, resizing has "stopped"
-		    //console.log('resize the window');
 	        initCarousel();
 	        reintinalizeAccordion();        
 	  	}, 250);
@@ -224,7 +222,7 @@ var carouselClick = function(carousel) {
             if ($(window).width() >= 800) {
                 // do nothing
             } else {
-            	scrollTo($('.control.slide-' + ii), 0)
+            	//scrollTo($('.control.slide-' + ii), 0)
             }
         }
     });
@@ -257,8 +255,8 @@ var initCarousel = function() {
         // get the width of the container for later use
         carousel.width = $(carousel).innerWidth();
         // set the height of the container but we'll mess with it later
-        carousel.height = 0
-            // counter for position of the carousel
+        carousel.height = 0;
+        // counter for position of the carousel
         carousel.current = 0;
         // find all the slides int he carousel
         carousel.slides = $(carousel).find('.js-carousel-section');
@@ -272,13 +270,15 @@ var initCarousel = function() {
             $(slide).addClass('slide-' + ii);
             slide.dataset.modifier = (ii);
             $(slide).innerWidth(carousel.width);
-            // console.log(carousel.height)
-            // console.log(slide)
+            $(slide).innerHeight('');
 
-            if ($(slide).innerHeight() > carousel.height) {
-                carousel.height = $(slide).innerHeight();
+            if ($(window).width() >= 800) {
+	            if ($(slide).innerHeight() > carousel.height) {
+	                carousel.height = $(slide).innerHeight();
+	                console.log(carousel.height)
+	            }
+	          }
 
-            }
         });
 
         // iterate over the controels and assign them a class also
@@ -296,13 +296,13 @@ var initCarousel = function() {
 
         // iterate again to add the same height to all elements
 
-        if ($(window).width() >= 800) {
-            $.each(carousel.slides, function(ii, slide) {
-                $(slide).innerHeight(carousel.height);
-                $(carousel).innerHeight(carousel.height);
-            });
-        }
-        else {
+        // if ($(window).width() >= 800) {
+        $.each(carousel.slides, function(ii, slide) {
+            $(slide).innerHeight(carousel.height);
+            $(carousel).innerHeight(carousel.height);
+        });
+        // }
+        if ($(window).width() < 800) {
         	$.each(carousel.slides, function(ii, slide) {
                 $(slide).innerHeight('');
                 $(carousel).innerHeight('');
@@ -319,6 +319,6 @@ var initCarousel = function() {
         if ($(window).width() >= 800) {
             carouselClick(carousel);
         }
-		console.log('carousel reintinalized');
+			console.log('carousel reintinalized');
     });
 };

@@ -90,18 +90,14 @@
 }
 */
 .js-carousel-control{
-	/*position: relative;*/
 	width: 100%;
 	z-index: 999;
 	display: inline-block;
 	float: left;
-	/*padding-bottom: 60px;*/
-	/*padding: 10px 0;*/
+	margin-bottom: 3px;
+
 
 	.control{
-
-				
-
 		h1{
 			/*font-size: 24px;*/
 			font-size: 18px;
@@ -111,7 +107,6 @@
 			cursor: pointer;
 			transition: background ease .2s;
 			font-family: $base-font-family;
-			margin-bottom: 3px;
 		}
 		i {
 			color: rgba(255,255,255,0.3);
@@ -130,6 +125,9 @@
 			line-height: 72px;
 			}
 		}*/
+		.bg-dark-trans{
+			margin-bottom: 3px;
+		}
 	}
 	.control.active{
 		h1{
