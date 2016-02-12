@@ -183,6 +183,7 @@ function postContactToGoogle() {
   	// alert("Please tick at least one area of interest.")
   	$('.errorText').hide();
   	$('.errorPosition').hide();
+    document.getElementById('email').style.borderColor='';
   	$('.errorInterest').show();
 
   	return false;

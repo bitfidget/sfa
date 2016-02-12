@@ -23,13 +23,14 @@
 	
 	#welcome {
 		h1{
-			padding: 180px 0px 60px;
+			padding-top: 180px;
+			padding-bottom: 60px;
 		}
 	}
 
 	#industries {
 
-		padding: 0;
+		/*padding: 0;*/
 
 		.bg-dark-trans{
 			width: 50%;
@@ -45,7 +46,8 @@
 	}
 
 	#how-we-work {
-		padding: 60px 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
 
 		h2:first-child {
 
@@ -57,7 +59,9 @@
 
 	#team{
 
-		padding: 60px 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+
 
 		section.team-head{
 			width: 20%;

@@ -430,8 +430,7 @@ form a.disableClick {
     #success-bar {
     	color: #fff;
     	line-height: auto;
-    	padding-top: 30px;
-    	padding-bottom: 30px;
+    	padding: 30px 20px;
 
     	p {
 
@@ -499,29 +498,16 @@ form a.disableClick {
 
 		/*border: 5px solid $footer-color;*/
 		border-top: 50px solid #EB8C00;
-
-		&:hover {
-			margin-top: -10px;
-		}
 	}
 	li:nth-child(2) {
 		border-top: 50px solid #DC6900;
-		&:hover {
-			margin-top: -10px;
-		}
 	}
 	li:nth-child(3) {
 		border-top: 50px solid #E0301E;
-		&:hover {
-			margin-top: -10px;
-		}
 	}
 	li:nth-child(4) {
 		border-top: 50px solid #DB536A;
-		/*margin-bottom: 10px;*/
-		&:hover {
-			margin-top: -10px;
-		}
+		margin-bottom: 10px;
 	}
 
 	.absolute-number {
