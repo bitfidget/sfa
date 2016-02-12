@@ -24,8 +24,6 @@ window.onload = function() {
         
 		clearTimeout(resizeTimer);
 	  	resizeTimer = setTimeout(function() {
-	    	// Run code here, resizing has "stopped"
-		    //console.log('resize the window');
 	        initCarousel();
 	        reintinalizeAccordion();        
 	  	}, 250);
@@ -37,7 +35,7 @@ window.onload = function() {
 var scrollTo = function(elem, space) {
     console.log(elem)
     $('html,body').animate({
-            scrollTop: $(elem).offset().top - (60 + space)
+            scrollTop: $(elem).offset().top - (110 + space)
         },
         'slow');
     if ($('.navigation-main').hasClass('active')) {
@@ -78,103 +76,55 @@ var initAccordion = function() {
 
         accordion.members.on('click touch', function(i, v) {
 
-
             $(accordion).find('.active').removeClass('active');
 
             var target = this.dataset.modifies;
 
-            $('.js-team-section-mob.active').slideUp();
+            // if ($(window).width() <= 800) {
 
-            if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
-                $(accordion).find('.active').removeClass('active');
-                $('.js-team-section-mob').slideUp();
-            } else {
-                $('.js-team-section-mob').slideUp();
+            	console.log('display staff in mobile version')
+
+	            $('.js-team-section-mob.active').slideUp();
+
+	            if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
+	                $(accordion).find('.active').removeClass('active');
+	                $('.js-team-section-mob').slideUp();
+	            } else {
+	                $('.js-team-section-mob').slideUp();
 
 
+	                $('.active').slideDown(function() {
+	                	if ($(window).width() <= 800) {
+		                	scrollTo($('.js-team-member.slide-' + target), 0)
+			              }
+	                });
+	            }
+	          // }
 
-                if ($(window).width() <= 800) {
-                    // $('html,body').animate({
-                    //     scrollTop: $('.js-team-member.slide-' + target).offset().top
-                    // }, 500);
-
-        			scrollTo('.js-team-member.slide-' + target, 40);
-                }
-
-                $(accordion).find('.slide-' + target).addClass('active');
-
-                $('.active').slideDown();
-            }
         });
     });
-
-
-    $accordions.on('click touch', function(i, v) {
-
-        var target = ('mod-' + this.dataset.modifies);
-        var elem = $('.' + target);
-        if (elem.hasClass('open')) {
-            elem.removeClass('open').fadeOut();
-        } else {
-            $('.open').removeClass('open').fadeOut();
-            elem.fadeIn().addClass('open');
-        }
-    });
-    //console.log('accordion reintinalized');
-
-
-    $accordions.data('window-width', $(window).width());
 
 };
 
 
 var reintinalizeAccordion = function() {
-	var $accordions = $('.js-a-group'),
-	accordionWidth = $accordions.data('window-width');
+	var $accordions = $('.js-a-group')
+	// accordionWidth = $accordions.data('window-width');
 
-	if ($(window).width() >= 800 && accordionWidth < 800) {
+	if ($(window).width() >= 800) {
         //console.log('the with is greater than 800');
         $('.js-team-section-mob').appendTo('.team-details-div');
-
-            // Changing the dom causes a reflow
-         $('.js-team-section-mob').hide();
+        $('.js-team-section-mob').hide();
     }
     else {
-        //console.log('need to reset to appendTo a different area');
         $accordions.find('.js-team-section-mob').each(function(num){
-        	//console.log("%d: %o classes %o", num, $(this).data('slide'), 
-        	//	$(this).attr("class").split(' ') );
-        	//check to see if i need to move it if it isnt nested, need to move
-        	//console.log('find parent slide? %o len %o', $(this).parent('slide-'+$(this).data('slide')),
-        	//	$(this).parent('slide-'+$(this).data('slide')).length);
         	if($(this).parent('slide-'+$(this).data('slide')).length === 0 ){
         		$accordions.find('.js-team-member.slide-'+$(this).data('slide'))
         		.append($(this));
         	}
-        	//$accordions.find('.js-team-member.slide-'+$(this).data('slide')).
         });
     }
-    $accordions.data('window-width', $(window).width());
 };
-
-// var disableSubmit = function() {
-// 	$('form > input').keyup(function() {
-// 		var empty = false;
-
-// 		$('form > input').each(function() {
-// 			if ($(this).val() == '') {
-// 				empty = true;
-// 			}
-// 		});
-
-// 		if (empty) {
-// 			$('.button').attr('disabled', 'disabled');
-// 		}
-// 		else {
-// 			$('.button').removeAttr('disabled');
-// 		}
-// 	})
-// }
 
 $('input').keyup(function() {
     if ($('#firstName').val() != "" && $('#email').val() != "" && $('#position').val()) {
@@ -269,17 +219,6 @@ function postContactToGoogle() {
   }
 };
 
-// $('#down-arrow').click(function() {
-//     $('html,body').animate({
-//         scrollTop: $('#industries').offset().top
-//     }, 800);
-// });
-
-// $('#subscribe-button').click(function() {
-//     $('html,body').animate({
-//         scrollTop: $('#subscribe').offset().top
-//     }, 800);
-// });
 
 var carouselClick = function(carousel) {
     $.each(carousel.slides, function(ii, slide) {
@@ -301,11 +240,7 @@ var carouselClick = function(carousel) {
             if ($(window).width() >= 800) {
                 // do nothing
             } else {
-                // $('html,body').animate({
-                //     scrollTop: $('.control.slide-' + ii).offset().top
-                // }, 500);
-
-    			scrollTo('.control.slide-' + ii, 40);
+            	//scrollTo($('.control.slide-' + ii), 0)
             }
         }
     });
@@ -338,8 +273,8 @@ var initCarousel = function() {
         // get the width of the container for later use
         carousel.width = $(carousel).innerWidth();
         // set the height of the container but we'll mess with it later
-        carousel.height = 0
-            // counter for position of the carousel
+        carousel.height = 0;
+        // counter for position of the carousel
         carousel.current = 0;
         // find all the slides int he carousel
         carousel.slides = $(carousel).find('.js-carousel-section');
@@ -353,13 +288,15 @@ var initCarousel = function() {
             $(slide).addClass('slide-' + ii);
             slide.dataset.modifier = (ii);
             $(slide).innerWidth(carousel.width);
-            // console.log(carousel.height)
-            // console.log(slide)
+            $(slide).innerHeight('');
 
-            if ($(slide).innerHeight() > carousel.height) {
-                carousel.height = $(slide).innerHeight();
+            if ($(window).width() >= 800) {
+	            if ($(slide).innerHeight() > carousel.height) {
+	                carousel.height = $(slide).innerHeight();
+	                console.log(carousel.height)
+	            }
+	          }
 
-            }
         });
 
         // iterate over the controels and assign them a class also
@@ -377,13 +314,13 @@ var initCarousel = function() {
 
         // iterate again to add the same height to all elements
 
-        if ($(window).width() >= 800) {
-            $.each(carousel.slides, function(ii, slide) {
-                $(slide).innerHeight(carousel.height);
-                $(carousel).innerHeight(carousel.height);
-            });
-        }
-        else {
+        // if ($(window).width() >= 800) {
+        $.each(carousel.slides, function(ii, slide) {
+            $(slide).innerHeight(carousel.height);
+            $(carousel).innerHeight(carousel.height);
+        });
+        // }
+        if ($(window).width() < 800) {
         	$.each(carousel.slides, function(ii, slide) {
                 $(slide).innerHeight('');
                 $(carousel).innerHeight('');
@@ -400,6 +337,6 @@ var initCarousel = function() {
         if ($(window).width() >= 800) {
             carouselClick(carousel);
         }
-		console.log('carousel reintinalized');
+			console.log('carousel reintinalized');
     });
 };
