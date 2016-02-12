@@ -61,6 +61,11 @@
 
 #navigation-main i{
     padding: 24px;
+    margin-top: 4px;
+
+    &:hover {
+      color: $pwc-color;
+    }
 }
 
 /*.js-hide-slide{
@@ -79,6 +84,7 @@
 .nav-subscribe {
   display: inline-block;
   float: right;
+  margin-top: 6px;
 
   .js-btn-toggle.pull-right {
     float: none;
@@ -96,14 +102,14 @@
     border-bottom: 1px solid rgba(66, 63, 64, 0.14);
     background-color: #FFF;
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    padding: 10px 0 0 0;
+    /*padding: 10px 0 0 0;*/
     overflow: hidden;
     a.logo{
         display: inline-block;
         padding: 10px;
         img{
           max-width: 76px;
-          margin-top: -10px;
+          /*margin-top: -10px;*/
         }
     }
     h1{
@@ -118,6 +124,7 @@
       float: right;
       vertical-align: middle;
       text-align: right;
+      margin-top: 0px;
       p {
         margin: 0;
         display: inline-block;

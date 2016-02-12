@@ -23,7 +23,7 @@
 
 /*tagline*/
 
-.sm-hidden{
+#navigation-main .nav-subscribe a.button.sm-hidden, #navigation-main .nav-subscribe p.sm-hidden{
 	display: none;
 }
 
@@ -46,7 +46,7 @@
 
 #welcome{
 	h1{
-		padding: 60px 20px 60px;
+		padding: 140px 20px 60px;
 	}
 	p {
 		padding: 0;
@@ -485,37 +485,55 @@ form a.disableClick {
 .timeline-bar {
 	list-style: none;
 	padding: 0;
+	margin-top: 30px;
 
 	li {
-		padding: 20px;
+		/*padding: 20px;*/
 		width: 100%;
 		margin-bottom: 30px;
 
 		background-color: #fff;
 
-		&:hover {
-
+		p {
+			padding: 20px;
 		}
 	}
 
 	li:nth-child(1) {
-
-		/*border: 5px solid $footer-color;*/
-		border-top: 50px solid #EB8C00;
+		/*border-top: 50px solid #EB8C00;*/
+		.timeline-color {
+			background-color: #EB8C00;
+		}
 	}
 	li:nth-child(2) {
-		border-top: 50px solid #DC6900;
+		/*border-top: 50px solid #DC6900;*/
+		.timeline-color {
+			background-color: #DC6900;
+		}
 	}
 	li:nth-child(3) {
-		border-top: 50px solid #E0301E;
+		/*border-top: 50px solid #E0301E;*/
+		.timeline-color {
+			background-color: #E0301E;
+		}
 	}
 	li:nth-child(4) {
-		border-top: 50px solid #DB536A;
+		/*border-top: 50px solid #DB536A;*/
 		margin-bottom: 10px;
+		.timeline-color {
+			background-color: #DB536A;
+		}
+	}
+
+	.timeline-color {
+		height: 50px;
+		background-color: black;
+		padding: 0;
+		margin: 0;
 	}
 
 	.absolute-number {
-		position: relative;
+		position: absolute;
 		background-color: $pwc-color;
 		height: 60px;
 		width: 60px;
@@ -523,8 +541,8 @@ form a.disableClick {
 		line-height: 60px;
 
 		text-align: center;
-		margin-top: -60px;
-		margin-left: -35px;
+		margin-top: -20px;
+		margin-left: -15px;
 		/*font-family: $pwc-font;*/
 		font-size: 1.5em;
 		color: white;

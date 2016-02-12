@@ -59,6 +59,8 @@
 	.bg-dark-trans {
 		width: 100%;
 
+		border-bottom: 5px solid rgba(0,0,0,0.8);
+
 		h1 {
 			font-family: $base-font-family;
 			font-size: 24px;
@@ -94,10 +96,13 @@
 	z-index: 999;
 	display: inline-block;
 	float: left;
-	margin-bottom: 3px;
+	/*margin-bottom: 3px;*/
 
 
 	.control{
+
+		/*border-bottom: 5px solid black;*/
+
 		h1{
 			/*font-size: 24px;*/
 			font-size: 18px;
@@ -165,6 +170,7 @@
 		.bg-dark-trans {
 		width: 60%;
 		float: right;
+		border: none;
 
 		h1 {
 			font-size: 24px;

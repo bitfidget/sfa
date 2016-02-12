@@ -1,8 +1,12 @@
 @media (min-width: 800px) {
 
-	.sm-hidden{
-		display: block;
+	h1 {
+		line-height: 1.4em;
 	}
+
+	/*.sm-hidden{
+		display: block;
+	}*/
 
 	#welcome .bg-dark-trans{
 		background: rgba(0,0,0,0.4);
@@ -43,6 +47,10 @@
 			width: 75%;
 			float: left;
 		}
+
+		h2 {
+			padding-left: 0;
+		}
 	}
 
 	#how-we-work {
@@ -54,6 +62,10 @@
 			
 				padding-top: 0px;
 			
+		}
+
+		h2:last-of-type {
+			padding-top: 40px;
 		}
 	}
 
@@ -199,21 +211,26 @@
 	.timeline-bar {
 
 		margin: 0;
+		margin-top: 30px;
 
 		li {
 			margin: 0;
 			display: inline-block;
-			width: 22%;
-			padding: 30px;
+			width: 23%;
+			/*padding: 30px;*/
 			/*margin: 1%;*/
 			vertical-align: top;
 			display: table-cell;
-			border-right: 10px solid $footer-color;
+			border-right: 15px solid $footer-color;
+
+			&:hover {
+				top: 50px;
+			}
 		}
 
 		.absolute-number {
-			margin-top: -70px;
-			margin-left: -40px;
+			margin-top: 10px;
+			margin-left: -10px;
 		}
 
 		li:last-child {
@@ -235,5 +252,18 @@
     background-image: url(/img/industry-culture.jpg); }
   .js-carousel-container .bg-industry.slide-5 {
     background-image: url(/img/industry-print.jpg); }
+
+}
+
+
+@media (min-width: 1200px) {
+	#navigation-main .nav-subscribe a.button.sm-hidden, #navigation-main .nav-subscribe p.sm-hidden{
+		display: inline-block;
+	}
+
+	#welcome h1, #industries, #what-we-do h2 {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 }
