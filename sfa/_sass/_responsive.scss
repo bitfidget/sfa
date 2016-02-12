@@ -4,10 +4,6 @@
 		line-height: 1.4em;
 	}
 
-	/*.sm-hidden{
-		display: block;
-	}*/
-
 	#welcome .bg-dark-trans{
 		background: rgba(0,0,0,0.4);
 		p{
@@ -33,9 +29,6 @@
 	}
 
 	#industries {
-
-		/*padding: 0;*/
-
 		.bg-dark-trans{
 			width: 50%;
 			float: right;
@@ -217,8 +210,6 @@
 			margin: 0;
 			display: inline-block;
 			width: 23%;
-			/*padding: 30px;*/
-			/*margin: 1%;*/
 			vertical-align: top;
 			display: table-cell;
 			border-right: 15px solid $footer-color;

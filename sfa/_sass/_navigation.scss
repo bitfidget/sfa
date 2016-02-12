@@ -7,7 +7,6 @@
     border-bottom: 1px solid rgba(66, 63, 64, 0.14);
     background-color: #FFF;
     box-shadow: rgba(66, 63, 64, 0.09) 0px 1px 3px 0px;
-    /*padding: 10px 0;*/
     overflow: hidden;
     position: fixed;
     height: auto;
@@ -66,18 +65,6 @@
     &:hover {
       color: $pwc-color;
     }
-}
-
-/*.js-hide-slide{
-    position: absolute;
-    width: 100%;
-    top: -500px;
-    left: 0;
-    transition: top ease .2s;
-}*/
-
-.js-hide-slide.active{
-    /*top: 130px;*/
 }
 
 
@@ -143,7 +130,4 @@
       float: right;
     }
   }
-
-
-
 }

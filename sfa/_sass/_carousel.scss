@@ -2,10 +2,6 @@
 
 .js-carousel-container{
 	position: relative;
-	/*padding: 20px;*/
-	/*overflow: auto;*/
-	/*background: red;*/
-	/*margin: 0 -20px;*/
 	color: #FFF;
 	max-width: 100%;
 	display: block;
@@ -80,28 +76,13 @@
 
 	
 }
-
-/* Commented out because sliding effect causes there to be overflow on the sides (on mobile)*/
-
-/*.js-carousel-section.left{
-	left: -100%;
-}
-
-.js-carousel-section.right{
-	left: 100%;
-}
-*/
 .js-carousel-control{
 	width: 100%;
 	z-index: 999;
 	display: inline-block;
 	float: left;
-	/*margin-bottom: 3px;*/
-
 
 	.control{
-
-		/*border-bottom: 5px solid black;*/
 
 		h1{
 			/*font-size: 24px;*/
@@ -116,20 +97,12 @@
 		i {
 			color: rgba(255,255,255,0.3);
 			float: right;
-			/*line-height: 58px;
-			font-size: 24px;*/
 			font-size: 24px;/*
 			padding-top: 24px;*/
 			padding-right: 10px;
 			line-height: 58px;
 			transition: color ease .2s;
 		}
-
-		/*&:nth-child(5) {
-			i {
-			line-height: 72px;
-			}
-		}*/
 		.bg-dark-trans{
 			margin-bottom: 3px;
 		}
