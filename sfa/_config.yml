@@ -1,11 +1,9 @@
 # Site settings
 title: Skills for Australia
-email: ""
-description: ""
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.skillsforaustralia.com" # the base hostname & protocol for your site
-twitter_username: ""
-github_username:  ""
+sass: 
+  style: compressed
 
 # Build settings
 markdown: kramdown
