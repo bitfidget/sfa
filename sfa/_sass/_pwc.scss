@@ -1,13 +1,7 @@
-/*h1, h2 {
-	font-family: Georgia, serif;
-}*/
-
 
 .js-hide-slide{
     position: relative;
     width: 100%;
-    /*top: 100px;*/
-    /*left: 100%;*/
     transition: all ease .8s;
     opacity: 0;
     height: 0;
@@ -23,7 +17,7 @@
 
 /*tagline*/
 
-.sm-hidden{
+#navigation-main .nav-subscribe a.button.sm-hidden, #navigation-main .nav-subscribe p.sm-hidden{
 	display: none;
 }
 
@@ -46,7 +40,7 @@
 
 #welcome{
 	h1{
-		padding: 60px 20px 60px;
+		padding: 140px 20px 60px;
 	}
 	p {
 		padding: 0;
@@ -149,8 +143,6 @@
 			/*background: #333;*/
 			border-radius: 50%;
 			display: block;
-			/*width: 80%;
-			max-width: 180px;*/
 			width: 180px;
 			height: 180px;
 			margin: 0 auto;
@@ -205,9 +197,6 @@
 				content: "\F078";
 			}
 		}
-
-		/*$('.active h1').css('color', '$pwc-color');
-		$('.active .team-img-arrow').css('background-color', '$pwc-color');*/
 	}
 
 	.team-img {
@@ -387,19 +376,6 @@ input[type=email] {
 	border-radius: 5px;
 }
 
-/*input[type=submit] {
-	font-family: $base-font-family;
-	font-size: 1em;
-	color: white;
-	background-color: $pwc-color;
-	padding: 15px 30px;
-	border-radius: 5px;
-	border: none;
-
-	&:disabled {
-		background-color: lighten($pwc-color, 40%);
-	}
-}*/
 
 .button {
 	color: white !important;
@@ -462,13 +438,6 @@ form .disableClick {
     display: block;
 }
 
-
-
-/*.bg-color#team {
-	background-color: #e7e7e8;
-}*/
-
-
 /* IMAGES */
 
 .bg-image#welcome {
@@ -486,37 +455,51 @@ form .disableClick {
 .timeline-bar {
 	list-style: none;
 	padding: 0;
+	margin-top: 30px;
 
 	li {
-		padding: 20px;
+		/*padding: 20px;*/
 		width: 100%;
 		margin-bottom: 30px;
 
 		background-color: #fff;
 
-		&:hover {
-
+		p {
+			padding: 20px;
 		}
 	}
 
 	li:nth-child(1) {
-
-		/*border: 5px solid $footer-color;*/
-		border-top: 50px solid #EB8C00;
+		.timeline-color {
+			background-color: #EB8C00;
+		}
 	}
 	li:nth-child(2) {
-		border-top: 50px solid #DC6900;
+		.timeline-color {
+			background-color: #DC6900;
+		}
 	}
 	li:nth-child(3) {
-		border-top: 50px solid #E0301E;
+		.timeline-color {
+			background-color: #E0301E;
+		}
 	}
 	li:nth-child(4) {
-		border-top: 50px solid #DB536A;
 		margin-bottom: 10px;
+		.timeline-color {
+			background-color: #DB536A;
+		}
+	}
+
+	.timeline-color {
+		height: 50px;
+		background-color: black;
+		padding: 0;
+		margin: 0;
 	}
 
 	.absolute-number {
-		position: relative;
+		position: absolute;
 		background-color: $pwc-color;
 		height: 60px;
 		width: 60px;
@@ -524,8 +507,8 @@ form .disableClick {
 		line-height: 60px;
 
 		text-align: center;
-		margin-top: -60px;
-		margin-left: -35px;
+		margin-top: -20px;
+		margin-left: -15px;
 		/*font-family: $pwc-font;*/
 		font-size: 1.5em;
 		color: white;

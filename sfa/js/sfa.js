@@ -33,7 +33,6 @@ window.onload = function() {
 
 // our scrolly navigation
 var scrollTo = function(elem, space) {
-    console.log(elem)
     $('html,body').animate({
             scrollTop: $(elem).offset().top - (60 + space)
         },
@@ -53,13 +52,11 @@ var initAccordion = function() {
 
     $.each($accordions, function(i, accordion) {
 
-    	console.log('start accordion');
         // counter for position of the carousel
         accordion.current = 0;
         accordion.sections = $(accordion).find('.js-team-section-mob');
         accordion.members = $(accordion).find('.js-team-member');
 
-        console.log('accordion %o', accordion);
         $.each(accordion.sections, function(ii, section) {
             $(section).addClass('slide-' + ii).data('slide',ii);
             section.dataset.modifier = (ii);
@@ -89,31 +86,6 @@ var initAccordion = function() {
                 $('.active').slideDown();
               }
 
-
-
-
-
-            // if ($(window).width() <= 800) {
-
-            	// console.log('display staff in mobile version')
-
-	            // $('.js-team-section-mob.active').slideUp();
-
-	            // if ($('.js-team-section-mob.slide-' + target).is(':visible')) {
-	            //     $(accordion).find('.active').removeClass('active');
-	            //     $('.js-team-section-mob').slideUp();
-	            // } else {
-	            //     $('.js-team-section-mob').slideUp();
-
-
-	            //     $('.active').slideDown(function() {
-	            //     	if ($(window).width() <= 800) {
-		           //      	scrollTo($('.js-team-member.slide-' + target), 0)
-			          //     }
-	            //     });
-	            // }
-	          // }
-
         });
     });
 
@@ -121,11 +93,9 @@ var initAccordion = function() {
 
 
 var reintinalizeAccordion = function() {
-	var $accordions = $('.js-a-group')
-	// accordionWidth = $accordions.data('window-width');
+	var $accordions = $('.js-a-group');
 
 	if ($(window).width() >= 800) {
-        //console.log('the with is greater than 800');
         $('.js-team-section-mob').appendTo('.team-details-div');
         $('.js-team-section-mob').hide();
     }
@@ -141,10 +111,8 @@ var reintinalizeAccordion = function() {
 
 $('input').keyup(function() {
     if ($('#firstName').val() != "" && $('#email').val() != "" && $('#position').val()) {
-        // $('#submit').removeAttr('disabled');
         $('#submit').removeClass('disableClick');
     } else {
-        // $('#submit').attr('disabled', true);
         $('#submit').addClass('disableClick');
     }
 })
@@ -168,7 +136,6 @@ function postContactToGoogle() {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   if (!re.test(email)) {
-  	// alert("Please put in a valid email address");
 
   	$('.errorInterest').hide();
   	$('.errorPosition').hide();
@@ -178,7 +145,6 @@ function postContactToGoogle() {
   }
 
   else if (interests == null || interests == "") {
-  	// alert("Please tick at least one area of interest.")
   	$('.errorText').hide();
   	$('.errorPosition').hide();
     document.getElementById('email').style.borderColor='';
@@ -209,11 +175,6 @@ function postContactToGoogle() {
   		traditional: true,
   		statusCode: {
   			0: function () {
-  				
-  	      // CAN we make this a neater, in page message
-  	      // alert("Your form has been submitted.");
-
-  	      // will still get a CORS message for some reason
 
   	      $('form').find('input').val('');
   	      $('input:checkbox').removeAttr('checked');
@@ -226,7 +187,6 @@ function postContactToGoogle() {
 
 	  	  	},
 	  	  200: function () {
-	  	      // console.log("error");
 	  	  }
 	  	}
   	});
@@ -254,7 +214,6 @@ var carouselClick = function(carousel) {
             if ($(window).width() >= 800) {
                 // do nothing
             } else {
-            	//scrollTo($('.control.slide-' + ii), 0)
             }
         }
     });
@@ -264,7 +223,6 @@ var carouselDelay = function(carousel) {
 
     if (carousel.hover === false) {
 
-        console.log('tick ' + carousel.current);
         if (carousel.current < carousel.slides.length - 1) {
             carousel.current++;
         } else {
@@ -307,7 +265,6 @@ var initCarousel = function() {
             if ($(window).width() >= 800) {
 	            if ($(slide).innerHeight() > carousel.height) {
 	                carousel.height = $(slide).innerHeight();
-	                console.log(carousel.height)
 	            }
 	          }
 
@@ -332,14 +289,10 @@ var initCarousel = function() {
 
         // Commented out height because messing with images
 
-        // iterate again to add the same height to all elements
-
-        // if ($(window).width() >= 800) {
         $.each(carousel.slides, function(ii, slide) {
             $(slide).innerHeight(carousel.height);
             $(carousel).innerHeight(carousel.height);
         });
-        // }
         if ($(window).width() < 800) {
         	$.each(carousel.slides, function(ii, slide) {
                 $(slide).innerHeight('');
@@ -347,16 +300,8 @@ var initCarousel = function() {
             });	
         }
 
-        // monitor the hovering of the carousel - stop the animation if hovered
-        // $(carousel).hover(function() {
-        //   carousel.hover = true;
-        // }, function() {
-        //   carousel.hover = false;
-        // });
-
         if ($(window).width() >= 800) {
             carouselClick(carousel);
         }
-			console.log('carousel reintinalized');
     });
 };
