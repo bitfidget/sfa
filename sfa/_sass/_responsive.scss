@@ -80,14 +80,14 @@
 		}
 	}
 
-	#team-col-right {
+	.team-col-right {
 		float: right;
 		width: 75%;
 		padding: 0;
 		margin: 0 !important;
 	}
 
-	#team-col-left {
+	.team-col-left {
 		display: block;
 		float: left;
 		width: 20%;
@@ -108,7 +108,7 @@
 	}
 
 	
-	#team-col-left, #team-col-right {
+	.team-col-left, .team-col-right {
 		padding-top: 60px;
 	}
 

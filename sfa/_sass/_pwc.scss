@@ -401,18 +401,19 @@ input[type=email] {
 	}
 }*/
 
-a.button {
-	color: white;
+.button {
+	color: white !important;
 	background-color: $pwc-color;
 	padding: 10px 20px;
 	border-radius: 5px;
+	border: none;
 
 	&:hover {
 		text-decoration:none;
 	}
 }
 
-form a.disableClick {
+form .disableClick {
 	pointer-events: none;
 	background-color: lighten($pwc-color, 30%);
 }
@@ -449,7 +450,7 @@ form a.disableClick {
 /* Columns */
 
 
-#team-col-left {
+.team-col-left {
 	display: none;
 }
 

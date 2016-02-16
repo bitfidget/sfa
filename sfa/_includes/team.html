@@ -14,12 +14,12 @@
 		<div class="team-details-mob js-team-section-mob">
 
 
-			<div id="team-col-left">
+			<div class="team-col-left">
 				<h1>{{ member.name }}</h1>
 				<h2>{{ member.position }}</h2>
 			</div>
 			
-			<div id="team-col-right">
+			<div class="team-col-right">
 			{% for item in member.contents %}
 			
 			<p>{{ item }}</p>
@@ -42,12 +42,12 @@
 	{% for member in site.data.team %}
 	<section class="team-details js-team-section">
 
-		<div id="team-col-left">
+		<div class="team-col-left">
 			<h1>{{ member.name }}</h1>
 			<h2>{{ member.position }}</h2>
 		</div>
 		
-		<div id="team-col-right">
+		<div class="team-col-right">
 		{% for item in member.contents %}
 		
 			<p>{{ item }}</p>
