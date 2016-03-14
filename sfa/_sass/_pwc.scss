@@ -164,6 +164,7 @@
 			position: absolute;
 			bottom: 0;
 			right: 0;
+			cursor: pointer;
 
 			&:before {
 				font-family: FontAwesome;
@@ -224,6 +225,10 @@
 		background-position: 5px 10px;
 	}
 
+}
+
+.pointer{
+	cursor: pointer;
 }
 
 
@@ -389,6 +394,10 @@ input[type=email] {
 	}
 }
 
+.button:focus{
+	outline: 0;
+}
+
 form .disableClick {
 	pointer-events: none;
 	background-color: lighten($pwc-color, 30%);
@@ -397,6 +406,15 @@ form .disableClick {
 .errorText, .errorInterest, .errorPosition {
 	color: red;
 	display: none;
+}
+
+#mce-success-response,
+#mce-error-response{
+	border-radius: 5px;
+	padding: 20px;
+	color: #FFF;
+	font-weight: bold;
+	background: maroon;
 }
 
 

@@ -140,7 +140,9 @@
 		
 	}
 
-	input[type=text],input[type=email] {
+	input[type=text],
+	input[type=email],
+	.mce_inline_error {
 		width: 40%;
 		/*margin: 20px 0;*/
 
