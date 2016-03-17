@@ -1,11 +1,7 @@
 window.onload = function() {
 
-	// var scrollorama = $.scrollorama({
- //        blocks:'.scrollblock'
- //    });
-
-var $btnsToggle = $('.js-btn-toggle'),
-	resizeTimer;
+    var $btnsToggle = $('.js-btn-toggle');
+	var resizeTimer;
 
     $btnsToggle.on('click touch', function(event) {
         $('.' + event.target.dataset.modifies).toggleClass('active');
@@ -17,16 +13,16 @@ var $btnsToggle = $('.js-btn-toggle'),
         $(v).outerHeight($(v).outerWidth());
     });
 
-    initCarousel();
+    carouselInit();
     initAccordion();
 
     $(window).bind('resize', function() {
         
 		clearTimeout(resizeTimer);
 	  	resizeTimer = setTimeout(function() {
-	        initCarousel();
-	        reintinalizeAccordion();        
-	  	}, 250);
+	        carouselSize();
+	        reintialiseAccordion();        
+	  	}, 500);
         
     });
 };
@@ -69,7 +65,7 @@ var initAccordion = function() {
 
         });
 
-        reintinalizeAccordion();
+        reintialiseAccordion();
 
         accordion.members.on('click touch', function(i, v) {
 
@@ -92,7 +88,7 @@ var initAccordion = function() {
 };
 
 
-var reintinalizeAccordion = function() {
+var reintialiseAccordion = function() {
 	var $accordions = $('.js-a-group');
 
 	if ($(window).width() >= 800) {
@@ -110,116 +106,119 @@ var reintinalizeAccordion = function() {
 };
 
 
-var carouselClick = function(carousel) {
-    $.each(carousel.slides, function(ii, slide) {
-        if (slide.dataset.modifier > carousel.current) {
-            $(slide).removeClass('left active').addClass('right');
-        } else if (slide.dataset.modifier < carousel.current) {
-            $(slide).removeClass('active right').addClass('left');
-        } else {
-            $(slide).removeClass('left right').addClass('active');
-        }
-    });
-
-    $.each(carousel.controls, function(ii, control) {
-        if (control.dataset.modifies != carousel.current) {
-            $(control).removeClass('active');
-        } else {
-            $(control).addClass('active');
-
-            if ($(window).width() >= 800) {
-                // do nothing
-            } else {
-            }
-        }
-    });
+var carouselClick = function(mod) {
+    console.log('open .slide-' + mod)
+    $('.bg-industry').removeClass('active').addClass('left');
+    $('.control').removeClass('active');
+    $('.slide-' + mod).removeClass('left right').addClass('active');
 };
 
-var carouselDelay = function(carousel) {
+var carouselClose = function() {
+    console.log('close .slide')
+    $('.bg-industry').removeClass('active').addClass('left');
+    $('.control').removeClass('active');
+};
 
-    if (carousel.hover === false) {
+var carousel;
 
-        if (carousel.current < carousel.slides.length - 1) {
-            carousel.current++;
-        } else {
-            carousel.current = 0
-        }
-        carouselClick(carousel);
+var carouselSize = function() {
+
+    carousel.width = $(carousel).innerWidth();
+    carousel.height = 0;
+
+
+    if ($(window).width() >= 800) {
+        $.each(carousel.slides, function(ii, slide) {
+            if ($(slide).innerHeight() > carousel.height) {
+                carousel.height = $(slide).innerHeight();
+            }
+        });
+        $.each(carousel.slides, function(ii, slide) {
+            $(slide).innerHeight(carousel.height);
+            $(slide).innerWidth(carousel.width);
+        });
+        $(carousel).innerHeight(carousel.height);
+        carouselClick(carousel.current);
+    } else {
+        $.each(carousel.slides, function(ii, slide) {
+            $(slide).innerHeight('');
+            $(carousel).innerHeight('');
+            $(slide).innerWidth(carousel.width);
+        });
     }
 };
 
-var initCarousel = function() {
+var carouselInit = function() {
 
-    // find all carousels
-    var $carousels = $('.js-carousel-container');
+    carousel = $('.js-carousel-container')[0];
 
-    // split each carousel and deal with it separately as 'carousel'
-    $.each($carousels, function(i, carousel) {
+    carousel.controls = '';
 
-        // set up the carousel instance
+    // get the width of the container for later use
+    carousel.width = $(carousel).innerWidth();
+    // set the height of the container but we'll mess with it later
+    carousel.height = 0;
+    // counter for position of the carousel
+    carousel.current = 0;
+    // find all the slides int he carousel
+    carousel.slides = $(carousel).find('.js-carousel-section');
+    // find all the controls 
+    carousel.controls = $(carousel).find('.js-carousel-control .control');
+    // monitor the hover state on the carousel
+    carousel.hover = false;
 
-        // get the width of the container for later use
-        carousel.width = $(carousel).innerWidth();
-        // set the height of the container but we'll mess with it later
-        carousel.height = 0;
-        // counter for position of the carousel
-        carousel.current = 0;
-        // find all the slides int he carousel
-        carousel.slides = $(carousel).find('.js-carousel-section');
-        // find all the controls 
-        carousel.controls = $(carousel).find('.js-carousel-control .control');
-        // monitor the hover state on the carousel
-        carousel.hover = false;
-
-        // iterate over each slide in carousel and assign it a number, initial state and correct width
-        $.each(carousel.slides, function(ii, slide) {
-            $(slide).addClass('slide-' + ii);
-            slide.dataset.modifier = (ii);
-            $(slide).innerWidth(carousel.width);
-            $(slide).innerHeight('');
-
-            if ($(window).width() >= 800) {
-	            if ($(slide).innerHeight() > carousel.height) {
-	                carousel.height = $(slide).innerHeight();
-	            }
-	          }
-
-        });
-
-        // iterate over the controels and assign them a class also
-        $.each(carousel.controls, function(ii, control) {
-            $(control).addClass('slide-' + ii);
-            control.dataset.modifies = (ii);
-        });
-
-        $(carousel.controls).on('click hover', function(event) {
-        		if ($(this).hasClass('active') && $(window).width() < 800) {
-        			$(this).removeClass('active');
-        			carousel.current = '';
-	            carouselClick(carousel);
-              console.log('close item')
-        		} else {
-	            carousel.current = this.dataset.modifies;
-	            carouselClick(carousel);
-              console.log('open item')
-	          }
-        });
-
-        // Commented out height because messing with images
-
-        $.each(carousel.slides, function(ii, slide) {
-            $(slide).innerHeight(carousel.height);
-            $(carousel).innerHeight(carousel.height);
-        });
-        if ($(window).width() < 800) {
-        	$.each(carousel.slides, function(ii, slide) {
-                $(slide).innerHeight('');
-                $(carousel).innerHeight('');
-            });	
-        }
-
-        if ($(window).width() >= 800) {
-            carouselClick(carousel);
-        }
+    // iterate over each slide in carousel and assign it a number, initial state and correct width
+    $.each(carousel.slides, function(ii, slide) {
+        $(slide).addClass('slide-' + ii);
+        slide.dataset.modifier = (ii);
+        $(slide).innerWidth(carousel.width);
+        $(slide).innerHeight('');
     });
+
+    // iterate over the controls and assign them a class also
+    $.each(carousel.controls, function(ii, control) {
+        $(control).addClass('slide-' + ii);
+        control.dataset.modifies = (ii);
+    });
+
+    // if ($(window).width() < 800) {
+
+    //     $('.control.active').on('click touch', function() {
+    //         carousel.current = -1;
+    //         carouselClose();
+    //     })
+
+    // }
+
+    $(carousel.controls).on('click touch', function(event) {
+        event.preventDefault();
+
+        var mod = this.dataset.modifies;
+
+        if ( $(this).hasClass('active') && ($(window).width() < 800) ) {
+            carousel.current = -1;
+            carouselClose();
+            return false;
+        }
+        
+
+        
+		// if (($(window).width() < 800) && (carousel.current === mod)) {
+  //           carousel.current = -1;
+  //           carouselClose();
+		// } else {
+        carousel.current = mod;
+        carouselClick(mod);
+        // }
+        console.log(carousel.current);
+
+    });
+
+
+    carouselSize();
+
+    
+    
+
+    
 };
